@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Customers___White___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers - White - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinDayView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinDayView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoreActivityIndicator_Down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoreActivityIndicator_Down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_Validate_Control_More" xml:space="preserve">
+    <value>&lt;{0}&gt; phải lớn hơn &lt;{1}&gt;.</value>
+  </data>
+  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnNavigateBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnNavigateBack.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavigationArrow___Next___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavigationArrow - Next - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="area_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\area_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_FullList___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers FullList - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FreeTableS6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FreeTableS6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_ImportProduct___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory ImportProduct - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reports___Gray___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reports - Gray - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="area_using" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\area_using.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinFormManager" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinFormManager.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reports_116x116" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reports 116x116.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinGrid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinGrid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_ExportProduct___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory ExportProduct - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Order_Text_Booking" xml:space="preserve">
+    <value>Đặt trước ({0})</value>
+  </data>
+  <data name="Inventory_ExportProduct___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory ExportProduct - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoKey" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoKey.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Daily___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Daily - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_Product___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory Product - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavigationArrow___Previous___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavigationArrow - Previous - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinTab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinTab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Order_Text_RequestPayment" xml:space="preserve">
+    <value>Chờ thanh toán ({0})</value>
+  </data>
+  <data name="clear_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_NewSupplier___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers NewSupplier - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="00a59e71-1b27-4bd4-a838-0a375ccd1fdb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\00a59e71-1b27-4bd4-a838-0a375ccd1fdb.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WinChart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WinChart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table_booking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_booking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home_NewProduct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home NewProduct.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Daily___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Daily - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Weekly___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Weekly - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_Validate_Control" xml:space="preserve">
+    <value>&lt;{0}&gt; không được trống.</value>
+  </data>
+  <data name="Message_Question_Delete" xml:space="preserve">
+    <value>Bạn có chắc chắc muốn xóa bản ghi này?</value>
+  </data>
+  <data name="Inventory_AddNewProduct___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory AddNewProduct - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory___Gray___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory - Gray - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers___Gray___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers - Gray - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_116x116" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory 116x116.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnItemGet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnItemGet.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Weekly___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Weekly - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnChooseWorkPlace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnChooseWorkPlace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnNavigateNext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnNavigateNext.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders___Gray___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders - Gray - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnCancel.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoreActivityIndicator_Up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoreActivityIndicator_Up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Monthly___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Monthly - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_Error_Input_Dropdown" xml:space="preserve">
+    <value>Dữ liệu &lt;{0}&gt;nhập vào không tồn tại.</value>
+  </data>
+  <data name="CountTableEmpty" xml:space="preserve">
+    <value>Trống {0}/{1} bàn</value>
+  </data>
+  <data name="Customers_Export___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers Export - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnReturnFood" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnReturnFood.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question_128x128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question_128x128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_Product___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory Product - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnExit.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home___Gray___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home - Gray - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnItemEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnItemEdit.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_116x116" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers 116x116.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="area_booking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\area_booking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home___White___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home - White - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="checked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\checked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_Monthly___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders Monthly - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnPay" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_NewCustomer___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers NewCustomer - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_DeleteData_Error" xml:space="preserve">
+    <value>Xóa &lt;{0}&gt; thất bại.</value>
+  </data>
+  <data name="Customers_NewSupplier___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers NewSupplier - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_FullList___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers FullList - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders___White___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders - White - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table_empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnItemDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnItemDelete.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="question" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory_AddNewProduct___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory AddNewProduct - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_NewCustomer___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers NewCustomer - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Reports___White___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Reports - White - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Orders_116x116" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Orders 116x116.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnReport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="table_using" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\table_using.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnItemAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnItemAdd.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Booking_CancelBooking_Question" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn hủy đặt bàn &lt;{0}&gt; không?</value>
+  </data>
+  <data name="btnSaveAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnSaveAdd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customers_Export___White___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customers Export - White - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Message_DeleteData_HadReference" xml:space="preserve">
+    <value>Không thể xóa vì bản ghi &lt;{0}&gt; đã có liên kết tới bảng khác.</value>
+  </data>
+  <data name="restaurant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Inventory___White___36x36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory - White - 36x36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Order_Text_Ordering" xml:space="preserve">
+    <value>Đang phục vụ ({0})</value>
+  </data>
+  <data name="Inventory_ImportProduct___Color___16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Inventory ImportProduct - Color - 16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

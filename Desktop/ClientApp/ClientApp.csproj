@@ -1,0 +1,970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{135E9835-5A6C-4026-8D92-12FAF6ABAFFB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ClientApp</RootNamespace>
+    <AssemblyName>ClientApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Core.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Core.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Excel.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.IO.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.IO.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Reports.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Reports.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.TextDocument.CSharp.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.TextDocument.CSharp.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.TextDocument.TSql.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.TextDocument.TSql.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.TextDocument.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.TextDocument.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.TextDocument.VisualBasic.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.TextDocument.VisualBasic.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Word.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Documents.Word.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Math.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Math.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.Core.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.Core.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataProvider.Adomd.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataProvider.Adomd.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataProvider.Flat.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataProvider.Flat.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataProvider.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataProvider.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataProvider.Xmla.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataProvider.Xmla.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.Flat.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataSource.Flat.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.Mdx.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataSource.Mdx.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataSource.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Olap.DataSource.Xmla.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Olap.DataSource.Xmla.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Shared.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Shared.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Undo.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Undo.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.AppStylistSupport.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.Barcode.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.Barcode.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.Shared.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.Shared.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraDataChart.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.UltraDataChart.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraGauges.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.UltraGauges.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraGeographicMap.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.UltraGeographicMap.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.DataVisualization.UltraSparkline.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.DataVisualization.UltraSparkline.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Misc.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Misc.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.Portable.Core.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.Portable.Core.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.SupportDialogs.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.SupportDialogs.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraChart.v20.1.Design, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraChart.v20.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraGauge.v20.1.Design, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraGauge.v20.1.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinCalcManager.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v20.1.FormulaBuilder, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinCalcManager.v20.1.FormulaBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinCarousel.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinCarousel.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinChart.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinChart.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinDataSource.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinDock.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinDock.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinEditors.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinExplorerBar.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinFormattedText.WordWriter.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGanttView.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGanttView.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGauge.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGauge.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.DocumentExport.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.ExcelExport.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinGrid.WordWriter.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.WordWriter.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinInkProvider.Ink17.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinListBar.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinListView.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinListView.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinLiveTileView.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinLiveTileView.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinMaskedEdit.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinOfficeNavBar.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinOfficeNavBar.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPivotGrid.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinPivotGrid.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinPrintPreviewDialog.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinRadialMenu.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinRadialMenu.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSchedule.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpellChecker.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSpreadsheet.ChartAdapter.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpreadsheet.ChartAdapter.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinSpreadsheet.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinSpreadsheet.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinStatusBar.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabbedMdi.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTabControl.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinToolbars.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTree.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinTree.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Win.v20.1, Version=20.1.20201.104, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Infragistics\2020.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="QuizBit.Contract">
+      <HintPath>..\..\Library\SDK\QuizBit.Contract.dll</HintPath>
+    </Reference>
+    <Reference Include="QuizBit.Entity">
+      <HintPath>..\..\Library\SDK\QuizBit.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ActionMode.cs" />
+    <Compile Include="Common\CommonFunction.cs" />
+    <Compile Include="Common\CommonKey.cs" />
+    <Compile Include="Common\Constant.cs" />
+    <Compile Include="Common\Enumeration\Description.cs" />
+    <Compile Include="Common\Enumeration\EnumBusiness.cs" />
+    <Compile Include="Common\Enumeration\EnumCommon.cs" />
+    <Compile Include="Common\Enumeration\EnumResultDelete.cs" />
+    <Compile Include="Common\Enumeration\EnumResultInsertUpdate.cs" />
+    <Compile Include="Common\EventHandlerCommon.cs" />
+    <Compile Include="Common\MessageBoxCommon.cs" />
+    <Compile Include="Filters\DayViewUIFilter.cs" />
+    <Compile Include="Filters\EditorButtonUIFilter.cs" />
+    <Compile Include="Filters\GridUIFilter.cs" />
+    <Compile Include="Filters\MonthViewUIFilter.cs" />
+    <Compile Include="Filters\NoFocusRectDrawFilter.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\BaseForm\FrmBaseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseForm\FrmBaseDetail.Designer.cs">
+      <DependentUpon>FrmBaseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseForm\FrmBaseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseForm\FrmBaseList.Designer.cs">
+      <DependentUpon>FrmBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseForm\FrmBaseVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\BaseForm\FrmBaseVoucherDetail.Designer.cs">
+      <DependentUpon>FrmBaseVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmBooking.Designer.cs">
+      <DependentUpon>FrmBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmBookingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmBookingDetail.Designer.cs">
+      <DependentUpon>FrmBookingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmInvoice.Designer.cs">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmOrderDetail.Designer.cs">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Business\FrmPrintInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Business\FrmPrintInvoice.Designer.cs">
+      <DependentUpon>FrmPrintInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\FrmCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\FrmCancel.Designer.cs">
+      <DependentUpon>FrmCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctBooking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctBooking.Designer.cs">
+      <DependentUpon>UctBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctChooseFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctChooseFood.Designer.cs">
+      <DependentUpon>UctChooseFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctFood.Designer.cs">
+      <DependentUpon>UctFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctOrder.Designer.cs">
+      <DependentUpon>UctOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctRequestKitchen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctRequestKitchen.Designer.cs">
+      <DependentUpon>UctRequestKitchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Controls\UctTableMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\UctTableMapping.Designer.cs">
+      <DependentUpon>UctTableMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmArea.Designer.cs">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmAreaDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmAreaDetail.Designer.cs">
+      <DependentUpon>FrmAreaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCompanyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCompanyInfo.Designer.cs">
+      <DependentUpon>FrmCompanyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCustomer.Designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmCustomerDetail.Designer.cs">
+      <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItem.Designer.cs">
+      <DependentUpon>FrmInventoryItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemCategory.Designer.cs">
+      <DependentUpon>FrmInventoryItemCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemCategoryDetail.Designer.cs">
+      <DependentUpon>FrmInventoryItemCategoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmInventoryItemDetail.Designer.cs">
+      <DependentUpon>FrmInventoryItemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUnit.Designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUnitDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUnitDetail.designer.cs">
+      <DependentUpon>FrmUnitDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUserDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmUserDetail.Designer.cs">
+      <DependentUpon>FrmUserDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\ReportDataSet.cs">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\Report_PrintSAInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report_PrintSAInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\BaseForm\FrmBaseDetail.resx">
+      <DependentUpon>FrmBaseDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseForm\FrmBaseList.resx">
+      <DependentUpon>FrmBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseForm\FrmBaseVoucherDetail.resx">
+      <DependentUpon>FrmBaseVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmBooking.resx">
+      <DependentUpon>FrmBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmBookingDetail.resx">
+      <DependentUpon>FrmBookingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmInvoice.resx">
+      <DependentUpon>FrmInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmOrderDetail.resx">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Business\FrmPrintInvoice.resx">
+      <DependentUpon>FrmPrintInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\FrmCancel.resx">
+      <DependentUpon>FrmCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\UctChooseFood.resx">
+      <DependentUpon>UctChooseFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\UctFood.resx">
+      <DependentUpon>UctFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\UctOrder.resx">
+      <DependentUpon>UctOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\UctRequestKitchen.resx">
+      <DependentUpon>UctRequestKitchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Controls\UctTableMapping.resx">
+      <DependentUpon>UctTableMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmArea.resx">
+      <DependentUpon>FrmArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmAreaDetail.resx">
+      <DependentUpon>FrmAreaDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmCompanyInfo.resx">
+      <DependentUpon>FrmCompanyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmCustomerDetail.resx">
+      <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmInventoryItem.resx">
+      <DependentUpon>FrmInventoryItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmInventoryItemCategory.resx">
+      <DependentUpon>FrmInventoryItemCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmInventoryItemCategoryDetail.resx">
+      <DependentUpon>FrmInventoryItemCategoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmInventoryItemDetail.resx">
+      <DependentUpon>FrmInventoryItemDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmUnitDetail.resx">
+      <DependentUpon>FrmUnitDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmUserDetail.resx">
+      <DependentUpon>FrmUserDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\Report_PrintSAInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report_PrintSAInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UI\Report\ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UI\Report\ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UI\Report\ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Desktop.BL\Desktop.BL.csproj">
+      <Project>{50bd61fd-cddf-4d15-8981-52509008aa09}</Project>
+      <Name>Desktop.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desktop.Entity\Desktop.Entity.csproj">
+      <Project>{FAA31052-51F9-441E-B4E9-BCF8A8E34280}</Project>
+      <Name>Desktop.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desktop.Lib\Desktop.Lib.csproj">
+      <Project>{4feced48-24e6-498c-80e2-4960e7110910}</Project>
+      <Name>Desktop.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNavigateBack.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnChooseWorkPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSaveAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnCancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoKey.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnNavigateNext.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnItemAdd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnItemEdit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnItemDelete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnItemGet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnExit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers - Gray - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers - White - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers 116x116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers Export - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers Export - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers FullList - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers FullList - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers NewCustomer - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers NewCustomer - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers NewSupplier - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customers NewSupplier - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home - Gray - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home - White - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home NewProduct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory - Gray - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory - White - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory 116x116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory AddNewProduct - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory AddNewProduct - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory ExportProduct - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory ExportProduct - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory ImportProduct - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory ImportProduct - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory Product - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory Product - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreActivityIndicator_Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreActivityIndicator_Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigationArrow - Next - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavigationArrow - Previous - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders - Gray - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders - White - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders 116x116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Daily - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Daily - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Monthly - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Monthly - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Weekly - Color - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Orders Weekly - White - 16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports - Gray - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports - White - 36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reports 116x116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinDayView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinFormManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WinTab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FreeTableS6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area_booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area_using.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_booking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table_using.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnReturnFood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\00a59e71-1b27-4bd4-a838-0a375ccd1fdb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
