@@ -126,8 +126,12 @@ namespace ClientApp.UI.Dictionary
             if (drObjectChange != null)
             {
                 var oldID = drObjectChange.InventoryItemID;
-                drObjectChange.InventoryItemID = Guid.NewGuid();
-                drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                if (FormActionMode == ActionMode.Edit)
+                {
+                    drObjectChange.InventoryItemID = Guid.NewGuid();
+                    drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                }
+                    
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);
             }
             return result;

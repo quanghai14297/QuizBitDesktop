@@ -21,11 +21,12 @@ namespace Desktop.BL
             drNewRow.AreaName = "";
             drNewRow.NumberOfTable = 1;
             drNewRow.Description = "";
-            drNewRow.Inactive = true;
+            drNewRow.Inactive = false;
             drNewRow.CreatedDate = DateTime.Now;
             drNewRow.ModifiedDate = DateTime.Now;
             drNewRow.CreatedBy = Session.UserLogin.DisplayName;
             drNewRow.ModifiedBy = Session.UserLogin.DisplayName;
+            drNewRow.OldIDs = String.Empty;
             table.Rows.InsertAt(drNewRow, 0);
             return drNewRow;
         }

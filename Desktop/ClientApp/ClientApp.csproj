@@ -545,18 +545,6 @@
     <Compile Include="UI\Dictionary\FrmUnitDetail.designer.cs">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Dictionary\FrmUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Dictionary\FrmUser.Designer.cs">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Dictionary\FrmUserDetail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Dictionary\FrmUserDetail.Designer.cs">
-      <DependentUpon>FrmUserDetail.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Report\ReportDataSet.cs">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
     </Compile>
@@ -665,12 +653,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmUnitDetail.resx">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Dictionary\FrmUser.resx">
-      <DependentUpon>FrmUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Dictionary\FrmUserDetail.resx">
-      <DependentUpon>FrmUserDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Report\Report_PrintSAInvoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

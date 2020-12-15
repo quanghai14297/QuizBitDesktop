@@ -33,19 +33,12 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerID");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCode");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MemberCardNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCategoryID");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Birthday");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Mobile");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Address");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Description");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Inactive");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CreatedDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CreatedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ModifiedDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ModifiedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EditVersion");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -123,75 +116,38 @@
             appearance1.TextVAlignAsString = "Middle";
             this.grdList.DisplayLayout.Appearance = appearance1;
             this.grdList.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn1.Header.Editor = null;
             ultraGridColumn1.Header.VisiblePosition = 0;
             ultraGridColumn1.Hidden = true;
             ultraGridColumn2.Header.Caption = "Mã khách hàng";
-            ultraGridColumn2.Header.Editor = null;
             ultraGridColumn2.Header.VisiblePosition = 1;
             ultraGridColumn3.Header.Caption = "Tên khách hàng";
-            ultraGridColumn3.Header.Editor = null;
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.Width = 124;
-            ultraGridColumn4.Header.Editor = null;
-            ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.Hidden = true;
-            ultraGridColumn5.Header.Editor = null;
-            ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.Hidden = true;
             ultraGridColumn6.CellActivation = Infragistics.Win.UltraWinGrid.Activation.NoEdit;
             ultraGridColumn6.Header.Caption = "Ngày sinh";
-            ultraGridColumn6.Header.Editor = null;
-            ultraGridColumn6.Header.VisiblePosition = 5;
-            ultraGridColumn7.Header.Editor = null;
-            ultraGridColumn7.Header.VisiblePosition = 6;
+            ultraGridColumn6.Header.VisiblePosition = 3;
+            ultraGridColumn7.Header.VisiblePosition = 4;
             ultraGridColumn7.Width = 146;
             ultraGridColumn8.Header.Caption = "Điện thoại";
-            ultraGridColumn8.Header.Editor = null;
-            ultraGridColumn8.Header.VisiblePosition = 7;
+            ultraGridColumn8.Header.VisiblePosition = 5;
             ultraGridColumn8.Width = 107;
             ultraGridColumn9.Header.Caption = "Địa chỉ";
-            ultraGridColumn9.Header.Editor = null;
-            ultraGridColumn9.Header.VisiblePosition = 8;
+            ultraGridColumn9.Header.VisiblePosition = 6;
             ultraGridColumn9.Width = 153;
             ultraGridColumn10.Header.Caption = "Mô tả";
-            ultraGridColumn10.Header.Editor = null;
-            ultraGridColumn10.Header.VisiblePosition = 9;
-            ultraGridColumn11.Header.Editor = null;
-            ultraGridColumn11.Header.VisiblePosition = 10;
+            ultraGridColumn10.Header.VisiblePosition = 7;
+            ultraGridColumn11.Header.VisiblePosition = 8;
             ultraGridColumn11.Hidden = true;
-            ultraGridColumn12.Header.Editor = null;
-            ultraGridColumn12.Header.VisiblePosition = 11;
-            ultraGridColumn12.Hidden = true;
-            ultraGridColumn13.Header.Editor = null;
-            ultraGridColumn13.Header.VisiblePosition = 12;
-            ultraGridColumn13.Hidden = true;
-            ultraGridColumn14.Header.Editor = null;
-            ultraGridColumn14.Header.VisiblePosition = 13;
-            ultraGridColumn14.Hidden = true;
-            ultraGridColumn15.Header.Editor = null;
-            ultraGridColumn15.Header.VisiblePosition = 14;
-            ultraGridColumn15.Hidden = true;
-            ultraGridColumn16.Header.Editor = null;
-            ultraGridColumn16.Header.VisiblePosition = 15;
-            ultraGridColumn16.Hidden = true;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
             ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
             ultraGridColumn6,
             ultraGridColumn7,
             ultraGridColumn8,
             ultraGridColumn9,
             ultraGridColumn10,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13,
-            ultraGridColumn14,
-            ultraGridColumn15,
-            ultraGridColumn16});
+            ultraGridColumn11});
             this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.grdList.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;

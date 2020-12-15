@@ -69,6 +69,7 @@ namespace ClientApp.UI.Dictionary
         {
             base.InitNewRow();
             objBLDetail.InitNewRow(DsDictionary.Area);
+           
             BsDetail.MoveFirst();
             txtAreaName.Focus();
         }
@@ -101,8 +102,11 @@ namespace ClientApp.UI.Dictionary
             if (drObjectChange != null)
             {
                 var oldID = drObjectChange.AreaID;
-                drObjectChange.AreaID = Guid.NewGuid();
-                drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                if (FormActionMode == ActionMode.Edit)
+                {
+                    drObjectChange.AreaID = Guid.NewGuid();
+                    drObjectChange.OldIDs += (string.IsNullOrEmpty(drObjectChange.OldIDs.ToString()) ? "" : ";") + oldID;
+                }
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);
             }
             return result;

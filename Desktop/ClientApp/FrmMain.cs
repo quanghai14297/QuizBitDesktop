@@ -142,7 +142,7 @@ namespace ClientApp
             var fList = findOpenedForm("FrmOrder");
             if (fList == null)
             {
-                fList = new FrmUser();
+                //fList = new FrmUser();
                 fList.MdiParent = this;
             }
             fList.Show();
@@ -163,7 +163,7 @@ namespace ClientApp
                     fList = findOpenedForm("FrmOrder");
                     if (fList == null)
                     {
-                        fList = new FrmUser();
+                        //fList = new FrmUser();
                         fList.MdiParent = this;
                     }
                     break;
@@ -171,7 +171,7 @@ namespace ClientApp
                     fList = findOpenedForm("FrmUser");
                     if (fList == null)
                     {
-                        fList = new FrmUser();
+                        //fList = new FrmUser();
                         fList.MdiParent = this;
                     }
                     break;

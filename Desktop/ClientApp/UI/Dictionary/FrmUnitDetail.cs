@@ -79,9 +79,14 @@ namespace ClientApp.UI.Dictionary
             DictionaryDataSet.UnitRow drObjectChange = (DictionaryDataSet.UnitRow)tableChanged.Rows[0];
             if (drObjectChange != null)
             {
+
                 var oldID = drObjectChange.UnitID;
-                drObjectChange.UnitID = Guid.NewGuid();
-                //drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                if (FormActionMode == ActionMode.Edit)
+                {
+                    drObjectChange.UnitID = Guid.NewGuid();
+                    drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                }
+
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);
             }
             return result;
