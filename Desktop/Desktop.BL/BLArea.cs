@@ -43,6 +43,7 @@ namespace Desktop.BL
             drNewRow.ModifiedDate = DateTime.Now;
             drNewRow.CreatedBy = Session.UserLogin.DisplayName;
             drNewRow.ModifiedBy = Session.UserLogin.DisplayName;
+            drNewRow.OldIDs = String.Empty;
             table.Rows.InsertAt(drNewRow, 0);
             return drNewRow;
         }

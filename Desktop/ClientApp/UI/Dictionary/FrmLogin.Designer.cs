@@ -222,6 +222,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(223, 19);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.Text = "123456";
             this.txtPassword.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtPassword.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
@@ -246,6 +247,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(223, 19);
             this.txtUserName.TabIndex = 3;
+            this.txtUserName.Text = "tqhai1";
             this.txtUserName.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtUserName.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 

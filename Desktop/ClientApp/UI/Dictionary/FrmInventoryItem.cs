@@ -64,10 +64,10 @@ namespace ClientApp.UI.Dictionary
             base.ShowFormDetail(actionMode);
             using (var fDetail = new FrmInventoryItemDetail())
             {
-                fDetail.FormActionMode = actionMode;
                 fDetail.DsDictionary = dsDictionary;
                 fDetail.BsDetail = bsList;
                 fDetail.objBLDetail = oBL;
+                fDetail.FormActionMode = actionMode;
                 if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.InventoryItem.RejectChanges();
                 else dsDictionary.InventoryItem.AcceptChanges();
                 ActiveAndSelectRow();

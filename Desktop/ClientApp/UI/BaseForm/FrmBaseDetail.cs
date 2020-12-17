@@ -251,7 +251,6 @@ namespace ClientApp.UI.BaseForm
         /// </summary>
         protected virtual void LoadDataForm()
         {
-            ChangeFormByActionMode();
             btnSaveAdd.Visible = false;
             btnSave.Location = new Point(btnCancel.Location.X - 8 - 75, btnCancel.Location.Y);
         }

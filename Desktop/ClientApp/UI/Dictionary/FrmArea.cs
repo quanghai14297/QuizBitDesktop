@@ -51,10 +51,10 @@ namespace ClientApp.UI.Dictionary
             base.ShowFormDetail(actionMode);
             using (var fDetail = new FrmAreaDetail())
             {
-                fDetail.FormActionMode = actionMode;
                 fDetail.DsDictionary = dsDictionary;
                 fDetail.BsDetail = bsList;
                 fDetail.objBLDetail = oBL;
+                fDetail.FormActionMode = actionMode;
                 if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Area.RejectChanges();
                 else dsDictionary.Area.AcceptChanges();
                 ActiveAndSelectRow();

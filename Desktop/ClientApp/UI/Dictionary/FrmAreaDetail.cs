@@ -102,10 +102,10 @@ namespace ClientApp.UI.Dictionary
             if (drObjectChange != null)
             {
                 var oldID = drObjectChange.AreaID;
-                if (FormActionMode == ActionMode.Edit)
+                if (FormActionMode == ActionMode.AddNew || FormActionMode == ActionMode.Copy)
                 {
                     drObjectChange.AreaID = Guid.NewGuid();
-                    drObjectChange.OldIDs += (string.IsNullOrEmpty(drObjectChange.OldIDs.ToString()) ? "" : ";") + oldID;
+                   
                 }
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);
             }

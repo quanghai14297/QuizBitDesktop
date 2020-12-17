@@ -122,14 +122,13 @@ namespace ClientApp.UI.Dictionary
                 if (tableChanged.Rows.Count == 0)
                     return (int)EnumResultInsertUpdate.Success;
             }
-            DictionaryDataSet.InventoryItemRow drObjectChange = (DictionaryDataSet.InventoryItemRow)tableChanged.Rows[0];
+            DictionaryDataSet.InventoryItemRow drObjectChange = (DictionaryDataSet.InventoryItemRow)((System.Data.DataRowView)bsDetail.Current).Row;
             if (drObjectChange != null)
             {
                 var oldID = drObjectChange.InventoryItemID;
-                if (FormActionMode == ActionMode.Edit)
+                if (FormActionMode == ActionMode.AddNew || FormActionMode == ActionMode.Copy)
                 {
                     drObjectChange.InventoryItemID = Guid.NewGuid();
-                    drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
                 }
                     
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);

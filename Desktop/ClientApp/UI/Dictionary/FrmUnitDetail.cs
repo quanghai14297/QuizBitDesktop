@@ -81,10 +81,10 @@ namespace ClientApp.UI.Dictionary
             {
 
                 var oldID = drObjectChange.UnitID;
-                if (FormActionMode == ActionMode.Edit)
+                if (FormActionMode == ActionMode.AddNew || FormActionMode == ActionMode.Copy)
                 {
                     drObjectChange.UnitID = Guid.NewGuid();
-                    drObjectChange.OldIDs += string.IsNullOrEmpty(drObjectChange.OldIDs) ? "" : ";" + oldID;
+                   
                 }
 
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);

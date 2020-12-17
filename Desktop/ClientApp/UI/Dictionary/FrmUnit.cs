@@ -22,6 +22,7 @@ namespace ClientApp.UI.Dictionary
             var table = oBL.Get();
             if (table != null && table.Rows.Count > 0)
             {
+                dsDictionary.Unit.Clear();
                 dsDictionary.Merge(table);
                 dsDictionary.AcceptChanges();
             }
@@ -38,10 +39,11 @@ namespace ClientApp.UI.Dictionary
             base.ShowFormDetail(actionMode);
             using (var fDetail = new FrmUnitDetail())
             {
-                fDetail.FormActionMode = actionMode;
+                
                 fDetail.DsDictionary = dsDictionary;
                 fDetail.BsDetail = bsList;
                 fDetail.objBLDetail = oBL;
+                fDetail.FormActionMode = actionMode;
                 if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Unit.RejectChanges();
                 else dsDictionary.Unit.AcceptChanges();
                 ActiveAndSelectRow();
