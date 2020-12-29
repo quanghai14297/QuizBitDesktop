@@ -1,6 +1,6 @@
 ﻿namespace ClientApp.UI.Dictionary
 {
-    partial class FrmInventoryItemCategory
+    partial class frmRoleUser
     {
         /// <summary>
         /// Required designer variable.
@@ -29,18 +29,6 @@
         private void InitializeComponent()
         {
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("InventoryItemCategory", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("InventoryItemCategoryID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("InventoryItemCategoryCode");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("InventoryItemCategoryName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Description");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("SortOrder");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Inactive");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CreatedDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CreatedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ModifiedDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ModifiedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OldIDs");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -72,11 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             this.SuspendLayout();
             // 
-            // bsList
-            // 
-            this.bsList.DataMember = "InventoryItemCategory";
-            this.bsList.DataSource = this.dsDictionary;
-            // 
             // tbrFunction
             // 
             this.tbrFunction.MenuSettings.ForceSerialization = true;
@@ -95,9 +78,9 @@
             // 
             this.pnlDetail.Location = new System.Drawing.Point(0, 275);
             // 
-            // tabInfo
+            // UltraTabPageControl1
             // 
-            this.tabInfo.TabPageMargins.ForceSerialization = true;
+            this.UltraTabPageControl1.Location = new System.Drawing.Point(1, 20);
             // 
             // pnlTitle
             // 
@@ -105,57 +88,13 @@
             // pnlSearch
             // 
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "Nhóm thực đơn";
-            // 
             // grdList
             // 
-            this.grdList.DataSource = this.bsList;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
             appearance1.TextVAlignAsString = "Middle";
             this.grdList.DisplayLayout.Appearance = appearance1;
             this.grdList.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Hidden = true;
-            ultraGridColumn3.Header.Caption = "Mã nhóm thực đơn";
-            ultraGridColumn3.Header.VisiblePosition = 1;
-            ultraGridColumn3.Width = 171;
-            ultraGridColumn4.Header.Caption = "Tên nhóm thực đơn";
-            ultraGridColumn4.Header.VisiblePosition = 2;
-            ultraGridColumn4.Width = 321;
-            ultraGridColumn6.Header.Caption = "Mô tả";
-            ultraGridColumn6.Header.VisiblePosition = 3;
-            ultraGridColumn6.Width = 229;
-            ultraGridColumn10.Header.VisiblePosition = 4;
-            ultraGridColumn10.Hidden = true;
-            ultraGridColumn11.Header.Caption = "Ngừng theo dõi";
-            ultraGridColumn11.Header.VisiblePosition = 5;
-            ultraGridColumn11.Hidden = true;
-            ultraGridColumn12.Header.VisiblePosition = 7;
-            ultraGridColumn12.Hidden = true;
-            ultraGridColumn13.Header.VisiblePosition = 8;
-            ultraGridColumn13.Hidden = true;
-            ultraGridColumn14.Header.VisiblePosition = 9;
-            ultraGridColumn14.Hidden = true;
-            ultraGridColumn15.Header.VisiblePosition = 10;
-            ultraGridColumn15.Hidden = true;
-            ultraGridColumn2.Header.VisiblePosition = 6;
-            ultraGridColumn2.Hidden = true;
-            ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn6,
-            ultraGridColumn10,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13,
-            ultraGridColumn14,
-            ultraGridColumn15,
-            ultraGridColumn2});
-            this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.grdList.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
             this.grdList.DisplayLayout.DefaultSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(202)))));
@@ -231,14 +170,13 @@
             this.grdList.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
             this.grdList.Size = new System.Drawing.Size(800, 238);
             // 
-            // FrmInventoryItemCategory
+            // frmRoleUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmInventoryItemCategory";
-            this.Tag = "Nhóm thực đơn";
-            this.Text = "FrmInventoryItemCategory";
+            this.Name = "frmRoleUser";
+            this.Text = "frmRoleUser";
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
             this.frmBaseList_Fill_Panel.ClientArea.ResumeLayout(false);

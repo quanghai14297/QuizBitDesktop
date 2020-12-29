@@ -42,12 +42,12 @@ namespace ClientApp.UI.Dictionary
 
         protected override void ShowFormDetail(ActionMode actionMode)
         {
-            if (DateTime.Now.TimeOfDay > Session.StartDate.TimeOfDay && DateTime.Now.TimeOfDay < Session.EndDate.TimeOfDay)
-            {
-                MessageBoxCommon.ShowExclamation("Trong giờ làm việc không được thay đổi thiết lập khu vực");
-                if (actionMode == ActionMode.AddNew) return;
-                actionMode = ActionMode.View;
-            }
+            //if (DateTime.Now.TimeOfDay > Session.StartDate.TimeOfDay && DateTime.Now.TimeOfDay < Session.EndDate.TimeOfDay)
+            //{
+            //    MessageBoxCommon.ShowExclamation("Trong giờ làm việc không được thay đổi thiết lập khu vực");
+            //    if (actionMode == ActionMode.AddNew) return;
+            //    actionMode = ActionMode.View;
+            //}
             base.ShowFormDetail(actionMode);
             using (var fDetail = new FrmAreaDetail())
             {

@@ -316,18 +316,37 @@ namespace ClientApp.UI.Business
         {
             int result = 1;
             BsDetail.EndEdit();
-
-            var tableChanged = dsDictionary.Booking.GetChanges();
-            if (tableChanged == null)
-            {
-                return (int)EnumResultInsertUpdate.Success;
-            }
-            else
-            {
-                if (tableChanged.Rows.Count == 0)
-                    return (int)EnumResultInsertUpdate.Success;
-            }
-            DictionaryDataSet.BookingRow drObjectChange = (DictionaryDataSet.BookingRow)tableChanged.Rows[0];
+            //var tableChanged = dsDictionary.Booking.GetChanges();
+            //if (tableChanged == null)
+            //{
+            //    return (int)EnumResultInsertUpdate.Success;
+            //}
+            //else
+            //{
+            //    if (tableChanged.Rows.Count == 0)
+            //        return (int)EnumResultInsertUpdate.Success;
+            //}
+            //DictionaryDataSet.BookingRow drObjectChange = (DictionaryDataSet.BookingRow)tableChanged.Rows[0];
+            DictionaryDataSet.BookingDataTable table = DsDictionary.Booking;
+            DictionaryDataSet.BookingRow drObjectChange = table.NewBookingRow();
+            drObjectChange.BookingID = Guid.NewGuid();
+            drObjectChange.BookingDate = DateTime.Now;
+            drObjectChange.BookingStatus = 0;
+            drObjectChange.FromTime = DateTime.Now;
+            drObjectChange.NumberOfPeople = 1;
+            drObjectChange.RequestMeal = "";
+            drObjectChange.EmployeeID = Session.UserLogin.EmployeeID;
+            drObjectChange.CreatedDate = DateTime.Now;
+            drObjectChange.CreatedBy = Session.UserLogin.UserName;
+            drObjectChange.ModifiedDate = DateTime.Now;
+            drObjectChange.ModifiedBy = Session.UserLogin.UserName;
+            drObjectChange.BookingNo = txtBookingNo.Text;
+            drObjectChange.BookingDate = DateTime.Parse(dteBookingDate.Text);
+            drObjectChange.TableID = (Guid)cboTableMapping.Value;
+            drObjectChange.NumberOfPeople = Int32.Parse(txtNumberOfPeople.Text);
+            drObjectChange.CustomerID = Guid.Parse(cboCustomerID.Value.ToString());
+            drObjectChange.BookingDate = DateTime.Now;
+            drObjectChange.CancelDescription = txtDescription.Text;
             if (drObjectChange != null)
             {
                 drObjectChange.ModifiedDate = DateTime.Now;

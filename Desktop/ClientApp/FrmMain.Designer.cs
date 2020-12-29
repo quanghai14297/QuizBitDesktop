@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
@@ -40,20 +38,22 @@
             Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.UltraToolbar ultraToolbar1 = new Infragistics.Win.UltraWinToolbars.UltraToolbar("tbrMain");
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool1 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuSystem");
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool2 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuCategory");
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool3 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuBusiness");
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool4 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuHelp");
-            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.UltraToolbar ultraToolbar2 = new Infragistics.Win.UltraWinToolbars.UltraToolbar("tbrFunctionShare");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool5 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnSelectWorkPlace");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool1 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnSearch");
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool5 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("mnuSystem");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool9 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnLogin");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool10 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnLogout");
@@ -80,17 +80,17 @@
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool25 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnFeedback");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool26 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnAbout");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnSearch");
-            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool4 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnReport");
-            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnSelectWorkPlace");
             Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool4 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnReport");
+            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnSelectWorkPlace");
+            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool4 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnArea");
             Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool5 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnInventoryItemCategory");
             Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("btnInventoryItem");
+            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup ultraExplorerBarGroup1 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem1 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
@@ -112,20 +112,27 @@
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup ultraExplorerBarGroup2 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem7 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem10 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
+            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem11 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup ultraExplorerBarGroup3 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup();
+            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem8 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
+            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem9 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinStatusBar.UltraStatusPanel ultraStatusPanel1 = new Infragistics.Win.UltraWinStatusBar.UltraStatusPanel();
             Infragistics.Win.UltraWinStatusBar.UltraStatusPanel ultraStatusPanel2 = new Infragistics.Win.UltraWinStatusBar.UltraStatusPanel();
             Infragistics.Win.UltraWinStatusBar.UltraStatusPanel ultraStatusPanel3 = new Infragistics.Win.UltraWinStatusBar.UltraStatusPanel();
@@ -163,8 +170,8 @@
             // 
             // pnlMarginRight
             // 
-            appearance25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.pnlMarginRight.Appearance = appearance25;
+            appearance27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.pnlMarginRight.Appearance = appearance27;
             this.pnlMarginRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlMarginRight.Location = new System.Drawing.Point(1275, 80);
             this.pnlMarginRight.Name = "pnlMarginRight";
@@ -184,46 +191,46 @@
             // 
             // tbrManager
             // 
-            appearance28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            appearance28.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            appearance28.BorderColor = System.Drawing.Color.Red;
-            appearance28.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.Appearance = appearance28;
+            appearance30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            appearance30.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            appearance30.BorderColor = System.Drawing.Color.Red;
+            appearance30.ForeColor = System.Drawing.Color.Black;
+            this.tbrManager.Appearance = appearance30;
             this.tbrManager.DesignerFlags = 1;
-            appearance29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            appearance29.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            this.tbrManager.DockAreaAppearance = appearance29;
+            appearance31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            appearance31.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            this.tbrManager.DockAreaAppearance = appearance31;
             this.tbrManager.DockWithinContainer = this;
             this.tbrManager.DockWithinContainerBaseType = typeof(System.Windows.Forms.Form);
             this.tbrManager.FormDisplayStyle = Infragistics.Win.UltraWinToolbars.FormDisplayStyle.RoundedSizable;
-            appearance30.ForeColor = System.Drawing.Color.Black;
-            appearance30.ForeColorDisabled = System.Drawing.Color.Gray;
-            this.tbrManager.MenuSettings.Appearance = appearance30;
-            appearance31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            appearance31.BorderColor = System.Drawing.Color.Red;
-            appearance31.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.MenuSettings.HotTrackAppearance = appearance31;
-            appearance32.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            appearance32.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption;
             appearance32.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.MenuSettings.ToolAppearance = appearance32;
+            appearance32.ForeColorDisabled = System.Drawing.Color.Gray;
+            this.tbrManager.MenuSettings.Appearance = appearance32;
             appearance33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             appearance33.BorderColor = System.Drawing.Color.Red;
-            this.tbrManager.MiniToolbar.Settings.HotTrackAppearance = appearance33;
-            appearance34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance34.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance34.ForeColor = System.Drawing.Color.White;
-            appearance34.ForeColorDisabled = System.Drawing.Color.Silver;
-            this.tbrManager.Ribbon.CaptionAreaActiveAppearance = appearance34;
-            appearance35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            this.tbrManager.Ribbon.CaptionAreaAppearance = appearance35;
-            appearance36.ForeColor = System.Drawing.Color.Black;
-            appearance36.ForeColorDisabled = System.Drawing.Color.Gray;
-            this.tbrManager.Ribbon.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.Appearance = appearance36;
-            appearance37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            appearance37.BorderColor = System.Drawing.Color.Red;
-            appearance37.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.Ribbon.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.HotTrackAppearance = appearance37;
+            appearance33.ForeColor = System.Drawing.Color.Black;
+            this.tbrManager.MenuSettings.HotTrackAppearance = appearance33;
+            appearance34.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            appearance34.BackColor2 = System.Drawing.SystemColors.GradientInactiveCaption;
+            appearance34.ForeColor = System.Drawing.Color.Black;
+            this.tbrManager.MenuSettings.ToolAppearance = appearance34;
+            appearance35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            appearance35.BorderColor = System.Drawing.Color.Red;
+            this.tbrManager.MiniToolbar.Settings.HotTrackAppearance = appearance35;
+            appearance36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance36.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance36.ForeColor = System.Drawing.Color.White;
+            appearance36.ForeColorDisabled = System.Drawing.Color.Silver;
+            this.tbrManager.Ribbon.CaptionAreaActiveAppearance = appearance36;
+            appearance37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            this.tbrManager.Ribbon.CaptionAreaAppearance = appearance37;
+            appearance38.ForeColor = System.Drawing.Color.Black;
+            appearance38.ForeColorDisabled = System.Drawing.Color.Gray;
+            this.tbrManager.Ribbon.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.Appearance = appearance38;
+            appearance39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            appearance39.BorderColor = System.Drawing.Color.Red;
+            appearance39.ForeColor = System.Drawing.Color.Black;
+            this.tbrManager.Ribbon.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.HotTrackAppearance = appearance39;
             this.tbrManager.ShowFullMenusDelay = 500;
             this.tbrManager.ShowQuickCustomizeButton = false;
             this.tbrManager.Style = Infragistics.Win.UltraWinToolbars.ToolbarStyle.Office2013;
@@ -237,8 +244,8 @@
             PopupMenuTool2,
             PopupMenuTool3,
             PopupMenuTool4});
-            appearance38.ForeColor = System.Drawing.Color.Black;
-            ultraToolbar1.Settings.Appearance = appearance38;
+            appearance40.ForeColor = System.Drawing.Color.Black;
+            ultraToolbar1.Settings.Appearance = appearance40;
             ultraToolbar1.Settings.ToolDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.TextOnlyAlways;
             ultraToolbar1.Text = "Menu";
             ultraToolbar2.DockedColumn = 0;
@@ -246,25 +253,25 @@
             ultraToolbar2.NonInheritedTools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool5,
             ButtonTool1});
-            appearance39.ForeColor = System.Drawing.Color.Black;
-            ultraToolbar2.Settings.Appearance = appearance39;
-            appearance40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            appearance40.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            appearance40.BorderColor = System.Drawing.Color.Red;
-            appearance40.BorderColor2 = System.Drawing.Color.Red;
-            ultraToolbar2.Settings.HotTrackAppearance = appearance40;
+            appearance41.ForeColor = System.Drawing.Color.Black;
+            ultraToolbar2.Settings.Appearance = appearance41;
+            appearance42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            appearance42.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            appearance42.BorderColor = System.Drawing.Color.Red;
+            appearance42.BorderColor2 = System.Drawing.Color.Red;
+            ultraToolbar2.Settings.HotTrackAppearance = appearance42;
             ultraToolbar2.Settings.ToolDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
             ultraToolbar2.Text = "Chức năng";
             this.tbrManager.Toolbars.AddRange(new Infragistics.Win.UltraWinToolbars.UltraToolbar[] {
             ultraToolbar1,
             ultraToolbar2});
-            appearance41.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.ToolbarSettings.Appearance = appearance41;
-            appearance42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            appearance42.BorderColor = System.Drawing.Color.Red;
-            this.tbrManager.ToolbarSettings.HotTrackAppearance = appearance42;
             appearance43.ForeColor = System.Drawing.Color.Black;
-            this.tbrManager.ToolbarSettings.ToolAppearance = appearance43;
+            this.tbrManager.ToolbarSettings.Appearance = appearance43;
+            appearance44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            appearance44.BorderColor = System.Drawing.Color.Red;
+            this.tbrManager.ToolbarSettings.HotTrackAppearance = appearance44;
+            appearance45.ForeColor = System.Drawing.Color.Black;
+            this.tbrManager.ToolbarSettings.ToolAppearance = appearance45;
             PopupMenuTool5.SharedPropsInternal.Caption = "&Hệ thống";
             PopupMenuTool5.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool9,
@@ -295,15 +302,15 @@
             ButtonTool22.SharedPropsInternal.Caption = "Hóa đơn";
             ButtonTool25.SharedPropsInternal.Caption = "Phản hồi";
             ButtonTool26.SharedPropsInternal.Caption = "Giới thiệu";
-            appearance44.Image = global::ClientApp.Properties.Resources.btnSearch;
-            ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = appearance44;
+            appearance46.Image = global::ClientApp.Properties.Resources.btnSearch;
+            ButtonTool2.SharedPropsInternal.AppearancesSmall.Appearance = appearance46;
             ButtonTool2.SharedPropsInternal.Caption = "Tìm kiếm...";
             ButtonTool2.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
-            appearance45.Image = global::ClientApp.Properties.Resources.btnReport;
-            ButtonTool4.SharedPropsInternal.AppearancesSmall.Appearance = appearance45;
+            appearance47.Image = global::ClientApp.Properties.Resources.btnReport;
+            ButtonTool4.SharedPropsInternal.AppearancesSmall.Appearance = appearance47;
             ButtonTool4.SharedPropsInternal.Caption = "Báo cáo";
-            appearance46.Image = global::ClientApp.Properties.Resources.btnChooseWorkPlace;
-            ButtonTool6.SharedPropsInternal.AppearancesSmall.Appearance = appearance46;
+            appearance48.Image = global::ClientApp.Properties.Resources.btnChooseWorkPlace;
+            ButtonTool6.SharedPropsInternal.AppearancesSmall.Appearance = appearance48;
             ButtonTool6.SharedPropsInternal.Caption = "Thông tin nhà hàng";
             buttonTool4.SharedPropsInternal.Caption = "Khu vực";
             buttonTool5.SharedPropsInternal.Caption = "Nhóm thực đơn";
@@ -369,8 +376,8 @@
             // 
             // pnlMarginBottom
             // 
-            appearance26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.pnlMarginBottom.Appearance = appearance26;
+            appearance28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.pnlMarginBottom.Appearance = appearance28;
             this.pnlMarginBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlMarginBottom.Location = new System.Drawing.Point(1, 709);
             this.pnlMarginBottom.Name = "pnlMarginBottom";
@@ -379,8 +386,8 @@
             // 
             // pnlMarginLeft
             // 
-            appearance24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.pnlMarginLeft.Appearance = appearance24;
+            appearance26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.pnlMarginLeft.Appearance = appearance26;
             this.pnlMarginLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMarginLeft.Location = new System.Drawing.Point(1, 80);
             this.pnlMarginLeft.Name = "pnlMarginLeft";
@@ -389,8 +396,8 @@
             // 
             // pnlMarginTop
             // 
-            appearance27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.pnlMarginTop.Appearance = appearance27;
+            appearance29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.pnlMarginTop.Appearance = appearance29;
             this.pnlMarginTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMarginTop.Location = new System.Drawing.Point(1, 76);
             this.pnlMarginTop.Name = "pnlMarginTop";
@@ -450,9 +457,13 @@
             ultraExplorerBarItem7.Key = "expVoucher";
             appearance14.Image = ((object)(resources.GetObject("appearance14.Image")));
             ultraExplorerBarItem7.Settings.AppearancesSmall.Appearance = appearance14;
-            ultraExplorerBarItem7.Text = "Hóa đơn";
+            ultraExplorerBarItem7.Text = "Nhân viên";
+            ultraExplorerBarItem10.Text = "Thông tin tài khoản";
+            ultraExplorerBarItem11.Text = "Phân quyền";
             ultraExplorerBarGroup2.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
-            ultraExplorerBarItem7});
+            ultraExplorerBarItem7,
+            ultraExplorerBarItem10,
+            ultraExplorerBarItem11});
             ultraExplorerBarGroup2.ItemSettings.AllowDragCopy = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
             ultraExplorerBarGroup2.ItemSettings.AllowDragMove = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
             ultraExplorerBarGroup2.ItemSettings.AllowEdit = Infragistics.Win.DefaultableBoolean.False;
@@ -470,19 +481,34 @@
             appearance20.Image = ((object)(resources.GetObject("appearance20.Image")));
             ultraExplorerBarGroup2.Settings.AppearancesSmall.HeaderAppearance = appearance20;
             ultraExplorerBarGroup2.Settings.NavigationPaneCollapsedGroupAreaText = "Nghiệp vụ";
-            ultraExplorerBarGroup2.Text = "Nghiệp vụ";
-            ultraExplorerBarGroup2.Visible = false;
+            ultraExplorerBarGroup2.Text = "Hệ thống";
+            ultraExplorerBarItem8.Key = "expOverview";
+            ultraExplorerBarItem8.Text = "Tổng quan";
+            ultraExplorerBarItem9.Key = "expReportSales";
+            ultraExplorerBarItem9.Text = "Báo cáo doanh thu";
+            ultraExplorerBarGroup3.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
+            ultraExplorerBarItem8,
+            ultraExplorerBarItem9});
+            ultraExplorerBarGroup3.ItemSettings.AllowDragCopy = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
+            ultraExplorerBarGroup3.ItemSettings.AllowDragMove = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
+            ultraExplorerBarGroup3.ItemSettings.AllowEdit = Infragistics.Win.DefaultableBoolean.False;
+            appearance21.BorderColor = System.Drawing.Color.White;
+            ultraExplorerBarGroup3.ItemSettings.AppearancesSmall.ActiveAppearance = appearance21;
+            appearance22.BorderColor = System.Drawing.Color.White;
+            ultraExplorerBarGroup3.ItemSettings.AppearancesSmall.Appearance = appearance22;
+            ultraExplorerBarGroup3.Text = "Báo cáo";
             this.exbMain.Groups.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup[] {
             ultraExplorerBarGroup1,
-            ultraExplorerBarGroup2});
+            ultraExplorerBarGroup2,
+            ultraExplorerBarGroup3});
             this.exbMain.GroupSettings.AllowDrag = Infragistics.Win.DefaultableBoolean.False;
             this.exbMain.GroupSettings.AllowEdit = Infragistics.Win.DefaultableBoolean.False;
             this.exbMain.GroupSettings.AllowItemDrop = Infragistics.Win.DefaultableBoolean.False;
             this.exbMain.GroupSettings.AllowItemUncheck = Infragistics.Win.DefaultableBoolean.False;
-            appearance21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance21.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance21.ForeColor = System.Drawing.Color.Black;
-            this.exbMain.GroupSettings.AppearancesSmall.NavigationPaneHeaderAppearance = appearance21;
+            appearance23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance23.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance23.ForeColor = System.Drawing.Color.Black;
+            this.exbMain.GroupSettings.AppearancesSmall.NavigationPaneHeaderAppearance = appearance23;
             this.exbMain.GroupSettings.NavigationPaneCollapsedGroupAreaText = "Menu";
             this.exbMain.GroupSettings.Style = Infragistics.Win.UltraWinExplorerBar.GroupStyle.SmallImagesWithText;
             this.exbMain.ImageSizeLarge = new System.Drawing.Size(28, 28);
@@ -493,15 +519,15 @@
             this.exbMain.ItemSettings.HotTrackStyle = Infragistics.Win.UltraWinExplorerBar.ItemHotTrackStyle.HighlightEntireItem;
             this.exbMain.Location = new System.Drawing.Point(5, 80);
             this.exbMain.Name = "exbMain";
-            appearance22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance22.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.exbMain.NavigationOverflowButtonAreaAppearance = appearance22;
+            appearance24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance24.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.exbMain.NavigationOverflowButtonAreaAppearance = appearance24;
             this.exbMain.NavigationPaneExpansionMode = Infragistics.Win.UltraWinExplorerBar.NavigationPaneExpansionMode.OnButtonClick;
             this.exbMain.NavigationPaneFlyoutSize = new System.Drawing.Size(175, 0);
-            appearance23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance23.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.exbMain.NavigationSplitterAppearance = appearance23;
+            appearance25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance25.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.exbMain.NavigationSplitterAppearance = appearance25;
             this.exbMain.Size = new System.Drawing.Size(175, 629);
             this.exbMain.Style = Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarStyle.OutlookNavigationPane;
             this.exbMain.TabIndex = 32;
@@ -536,19 +562,19 @@
             // 
             // stbMain
             // 
-            appearance47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            appearance47.ForeColor = System.Drawing.Color.Black;
-            appearance47.TextHAlignAsString = "Center";
-            this.stbMain.Appearance = appearance47;
+            appearance49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            appearance49.ForeColor = System.Drawing.Color.Black;
+            appearance49.TextHAlignAsString = "Center";
+            this.stbMain.Appearance = appearance49;
             this.stbMain.InterPanelSpacing = 0;
             this.stbMain.Location = new System.Drawing.Point(0, 713);
             this.stbMain.Name = "stbMain";
             this.stbMain.Padding = new Infragistics.Win.UltraWinStatusBar.UIElementMargins(0, 2, 0, 1);
-            appearance48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(198)))), ((int)(((byte)(238)))));
-            appearance48.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(198)))), ((int)(((byte)(238)))));
-            appearance48.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(147)))), ((int)(((byte)(208)))));
-            appearance48.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(147)))), ((int)(((byte)(208)))));
-            this.stbMain.PanelAppearance = appearance48;
+            appearance50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(198)))), ((int)(((byte)(238)))));
+            appearance50.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(198)))), ((int)(((byte)(238)))));
+            appearance50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(147)))), ((int)(((byte)(208)))));
+            appearance50.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(147)))), ((int)(((byte)(208)))));
+            this.stbMain.PanelAppearance = appearance50;
             ultraStatusPanel1.Key = "stbUserName";
             ultraStatusPanel1.Padding = new System.Drawing.Size(8, 0);
             ultraStatusPanel1.SizingMode = Infragistics.Win.UltraWinStatusBar.PanelSizingMode.Automatic;

@@ -415,23 +415,40 @@ namespace ClientApp.UI.Business
             int result = 1;
             BsDetail.EndEdit();
 
-            var tableChanged = dsDictionary.Order.GetChanges();
-            var tableDetailChanged = dsDictionary.OrderDetail.GetChanges();
-            if (tableChanged == null && tableDetailChanged == null)
-            {
-                return (int)EnumResultInsertUpdate.Success;
-            }
-            else
-            {
-                //if (tableChanged.Rows.Count == 0 && tableDetailChanged.Rows.Count == 0)
-                //    return (int)EnumResultInsertUpdate.Success;
-            }
-            DictionaryDataSet.OrderRow drObjectChange = (DictionaryDataSet.OrderRow)CurrentRow;
+            //var tableChanged = dsDictionary.Order.GetChanges();
+            //var tableDetailChanged = dsDictionary.OrderDetail.GetChanges();
+            //if (tableChanged == null && tableDetailChanged == null)
+            //{
+            //    return (int)EnumResultInsertUpdate.Success;
+            //}
+            //else
+            //{
+            //    //if (tableChanged.Rows.Count == 0 && tableDetailChanged.Rows.Count == 0)
+            //    //    return (int)EnumResultInsertUpdate.Success;
+            //}
+            //DictionaryDataSet.OrderRow drObjectChange = (DictionaryDataSet.OrderRow)CurrentRow;
+            DictionaryDataSet.OrderDataTable table = DsDictionary.Order;
+            DictionaryDataSet.OrderRow drObjectChange = table.NewOrderRow();
+            drObjectChange.OrderID = Guid.NewGuid();
+            drObjectChange.OrderNo = txtOrderNo.Text;
+            drObjectChange.OrderDate = DateTime.Now;
+            drObjectChange.OrderStatus = 0;
+            drObjectChange.NumberOfPeople = 1;
+            drObjectChange.EmployeeID = Session.UserLogin.EmployeeID;
+            drObjectChange.CreatedDate = DateTime.Now;
+            drObjectChange.CreatedBy = Session.UserLogin.UserName;
+            drObjectChange.ModifiedDate = DateTime.Now;
+            drObjectChange.ModifiedBy = Session.UserLogin.UserName;
+            drObjectChange.TableID = Guid.Parse(cboTableMapping.Value.ToString());
+            drObjectChange.CustomerID = Guid.Parse(cboCustomerID.Value.ToString());
+            drObjectChange.NumberOfPeople = Int32.Parse(txtNumberOfPeople.Text);
+            drObjectChange.OrderDate = DateTime.Now;
+            drObjectChange.CancelReason = txtCancelReason.Text;
             if (drObjectChange != null)
             {
                 drObjectChange.ModifiedDate = DateTime.Now;
                 drObjectChange.ModifiedBy = Session.UserLogin.UserName;
-                objBLDetail.InsertUpdate(DsDictionary, dsDictionary.Order.Rows.IndexOf(drObjectChange));
+                objBLDetail.InsertUpdateOrder(drObjectChange,DsDictionary);
             }
             return result;
         }

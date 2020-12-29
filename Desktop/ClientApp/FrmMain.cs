@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using ClientApp.UI.Dictionary;
 using ClientApp.UI.Business;
+using ClientApp.UI.Report;
 using Desktop.BL;
 using Desktop.Entity;
 using QuizBit.Entity;
@@ -172,6 +173,22 @@ namespace ClientApp
                     if (fList == null)
                     {
                         //fList = new FrmUser();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expReportSales":
+                    fList = findOpenedForm("frmReportSales");
+                    if (fList == null)
+                    {
+                        fList = new frmReportSales();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expOverview":
+                    fList = findOpenedForm("frmOverview");
+                    if (fList == null)
+                    {
+                        fList = new frmOverview();
                         fList.MdiParent = this;
                     }
                     break;

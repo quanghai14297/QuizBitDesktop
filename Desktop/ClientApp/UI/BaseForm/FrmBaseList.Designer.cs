@@ -121,7 +121,7 @@
             // 
             // UltraTabPageControl1
             // 
-            this.UltraTabPageControl1.Location = new System.Drawing.Point(1, 20);
+            this.UltraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.UltraTabPageControl1.Name = "UltraTabPageControl1";
             this.UltraTabPageControl1.Size = new System.Drawing.Size(798, 129);
             // 
@@ -431,7 +431,7 @@
             // 
             // UltraTabSharedControlsPage1
             // 
-            this.UltraTabSharedControlsPage1.Location = new System.Drawing.Point(-10000, -10000);
+            this.UltraTabSharedControlsPage1.Location = new System.Drawing.Point(1, 20);
             this.UltraTabSharedControlsPage1.Name = "UltraTabSharedControlsPage1";
             this.UltraTabSharedControlsPage1.Size = new System.Drawing.Size(798, 129);
             // 

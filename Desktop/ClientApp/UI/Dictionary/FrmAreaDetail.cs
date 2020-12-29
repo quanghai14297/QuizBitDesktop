@@ -58,7 +58,7 @@ namespace ClientApp.UI.Dictionary
                     {
                         MessageBoxCommon.ShowExclamation(string.Format(Properties.Resources.Message_Validate_Control_More, txtNumberOfTable.Tag, "0"));
                         txtNumberOfTable.Focus();
-                        return false;
+                        return false; 
                     }
                 }
             }

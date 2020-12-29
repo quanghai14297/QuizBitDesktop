@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
     </Reference>
@@ -48,6 +51,26 @@
     </Reference>
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.Schedule.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar.SuperGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.37, Culture=neutral, PublicKeyToken=f90dc37c26666a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.Instrumentation.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304">
       <HintPath>..\packages\CrystalReports.FlashControlV71.13.0.3501\lib\net20\FlashControlV71.dll</HintPath>
@@ -473,6 +496,18 @@
     <Compile Include="UI\Controls\UctTableMapping.Designer.cs">
       <DependentUpon>UctTableMapping.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Dictionary\frmRoleUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\frmRoleUser.Designer.cs">
+      <DependentUpon>frmRoleUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Dictionary\FrmArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -502,6 +537,12 @@
     </Compile>
     <Compile Include="UI\Dictionary\FrmCustomerDetail.Designer.cs">
       <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Dictionary\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Dictionary\FrmInventoryItem.cs">
       <SubType>Form</SubType>
@@ -544,6 +585,18 @@
     </Compile>
     <Compile Include="UI\Dictionary\FrmUnitDetail.designer.cs">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\frmOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmOverview.Designer.cs">
+      <DependentUpon>frmOverview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSales.Designer.cs">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Report\ReportDataSet.cs">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
@@ -618,6 +671,12 @@
     <EmbeddedResource Include="UI\Controls\UctTableMapping.resx">
       <DependentUpon>UctTableMapping.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\frmRoleUser.resx">
+      <DependentUpon>frmRoleUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmArea.resx">
       <DependentUpon>FrmArea.cs</DependentUpon>
     </EmbeddedResource>
@@ -632,6 +691,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmCustomerDetail.resx">
       <DependentUpon>FrmCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmInventoryItem.resx">
       <DependentUpon>FrmInventoryItem.cs</DependentUpon>
@@ -653,6 +715,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmUnitDetail.resx">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmOverview.resx">
+      <DependentUpon>frmOverview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmReportSales.resx">
+      <DependentUpon>frmReportSales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Report\Report_PrintSAInvoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

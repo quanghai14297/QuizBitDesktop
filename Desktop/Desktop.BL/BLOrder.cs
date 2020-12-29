@@ -39,12 +39,19 @@ namespace Desktop.BL
             table.Rows.InsertAt(drNewRow, 0);
             return drNewRow;
         }
-
+        /// <summary>
+        /// Cập nhật dữ liệu
+        /// </summary>
+        /// <param name="ds"></param>
+        public bool InsertUpdateOrder(DataRow masterData, DictionaryDataSet ds)
+        {
+            return oDL.InsertUpdateDataMasterDetail(masterData, ds.Tables["OrderDetail"]);
+        }
         public DataRow InitNewRowDetail(DictionaryDataSet.OrderDetailDataTable table, DictionaryDataSet.OrderRow master, Guid inventoryItemID)
         {
             DictionaryDataSet.OrderDetailRow drNewRow = table.NewOrderDetailRow();
             drNewRow.OrderDetailID = Guid.NewGuid();
-            drNewRow.OrderID = master.OrderID;
+            drNewRow.OrderID = Guid.NewGuid();
             drNewRow.InventoryItemID = inventoryItemID;
             drNewRow.Quantity = 1;
             drNewRow.SortOrder = table.Rows.Count + 1;
