@@ -23,6 +23,11 @@ namespace Desktop.Entity
         public const string CustomerID = "CustomerID";
         public const string CustomerName = "CustomerName";
 
+        public const string UserName = "UserName";
+
+        public const string EmployeeID = "EmployeeID";
+        public const string EmployeeName = "EmployeeName";
+
         public const string AreaID = "AreaID";
         public const string AreaName = "AreaName";
 

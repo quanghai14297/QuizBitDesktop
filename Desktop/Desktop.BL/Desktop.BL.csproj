@@ -52,6 +52,7 @@
     <Compile Include="BLBase.cs" />
     <Compile Include="BLBooking.cs" />
     <Compile Include="BLCustomer.cs" />
+    <Compile Include="BLEmployee.cs" />
     <Compile Include="BLInventoryItem.cs" />
     <Compile Include="BLInventoryItemCategory.cs" />
     <Compile Include="BLOrder.cs" />

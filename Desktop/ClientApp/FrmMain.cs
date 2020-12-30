@@ -24,7 +24,8 @@ namespace ClientApp
 
         const string btnInventoryItemCategory = "btnInventoryItemCategory";
         const string expInventoryItemCategory = "expInventoryItemCategory";
-
+        
+             const string expEmployee = "expEmployee";
         const string btnInventoryItem = "btnInventoryItem";
         const string expInventoryItem = "expInventoryItem";
 
@@ -207,6 +208,14 @@ namespace ClientApp
                     if (fList == null)
                     {
                         fList = new FrmInventoryItemCategory();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case expEmployee:
+                    fList = findOpenedForm("frmEmployee");
+                    if (fList == null)
+                    {
+                        fList = new frmEmployee();
                         fList.MdiParent = this;
                     }
                     break;

@@ -63,6 +63,7 @@
     <Compile Include="DLBase.cs" />
     <Compile Include="DLBooking.cs" />
     <Compile Include="DLCustomer.cs" />
+    <Compile Include="DLEmployee.cs" />
     <Compile Include="DLInventoryItem.cs" />
     <Compile Include="DLInventoryItemCategory.cs" />
     <Compile Include="DLKey.cs" />

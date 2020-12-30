@@ -454,7 +454,7 @@
             ultraExplorerBarGroup1.Settings.NavigationPaneCollapsedGroupAreaText = "Danh mục";
             ultraExplorerBarGroup1.Text = "Danh mục";
             ultraExplorerBarGroup1.ToolTipText = "Danh mục";
-            ultraExplorerBarItem7.Key = "expVoucher";
+            ultraExplorerBarItem7.Key = "expEmployee";
             appearance14.Image = ((object)(resources.GetObject("appearance14.Image")));
             ultraExplorerBarItem7.Settings.AppearancesSmall.Appearance = appearance14;
             ultraExplorerBarItem7.Text = "Nhân viên";

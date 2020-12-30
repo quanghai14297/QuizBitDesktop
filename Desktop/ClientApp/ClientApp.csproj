@@ -496,6 +496,12 @@
     <Compile Include="UI\Controls\UctTableMapping.Designer.cs">
       <DependentUpon>UctTableMapping.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Dictionary\FrmEmployeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Dictionary\FrmEmployeeDetail.Designer.cs">
+      <DependentUpon>FrmEmployeeDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Dictionary\frmRoleUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -670,6 +676,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Controls\UctTableMapping.resx">
       <DependentUpon>UctTableMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Dictionary\FrmEmployeeDetail.resx">
+      <DependentUpon>FrmEmployeeDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\frmRoleUser.resx">
       <DependentUpon>frmRoleUser.cs</DependentUpon>
