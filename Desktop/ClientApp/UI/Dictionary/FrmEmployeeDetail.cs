@@ -75,7 +75,14 @@ namespace ClientApp.UI.Dictionary
         {
             int result = 1;
             BsDetail.EndEdit();
-
+            if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
+            {
+                if(txtPassword.Text == txtCofirmPassword.Text)
+                {
+                    MessageBoxCommon.ShowExclamation("Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại.");
+                }
+                
+            }
             var tableChanged = dsDictionary.Employee.GetChanges();
             if (tableChanged == null)
             {
@@ -97,6 +104,81 @@ namespace ClientApp.UI.Dictionary
         private void Control_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             base.ControlTextEditor_Validate(sender);
+        }
+
+        private void tabGeneralInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabInfo_SelectedTabChanged(object sender, Infragistics.Win.UltraWinTabControl.SelectedTabChangedEventArgs e)
+        {
+            try
+            {
+                if (e.Tab.Key == "tabGeneralInfo")
+                {
+                    this.Size = new System.Drawing.Size(465, 333);
+                }
+                else if (e.Tab.Key == "tabAccount")
+                {
+                    this.Size = new System.Drawing.Size(465, 190);
+                }
+                else if (e.Tab.Key == "tabRole")
+                {
+                    this.Size = new System.Drawing.Size(465, 195);
+                }
+            }
+            catch (System.Exception)
+            {
+
+            }
+
+          
+        }
+
+        private void rbAdmin_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (rbAdmin.Checked)
+            {
+                ckCooker.Enabled = false;
+                ckOrder.Enabled = false;
+                ckReceptionist.Enabled = false;
+
+                ckCooker.Checked = true;
+                ckOrder.Checked = true;
+                ckReceptionist.Checked = true;
+            }
+            else
+            {
+                ckCooker.Enabled = true;
+                ckOrder.Enabled = true;
+                ckReceptionist.Enabled = true;
+
+                ckCooker.Checked = false;
+                ckOrder.Checked = false;
+                ckReceptionist.Checked = false;
+            }
+        }
+
+        private void rbEmployee_CheckedChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void txtEmployeeCode_ValueChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtEmployeeCode.Text) && !string.IsNullOrEmpty(txtEmployeeName.Text))
+            {
+                
+            }
+        }
+
+        private void txtEmployeeName_ValueChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtEmployeeCode.Text) && !string.IsNullOrEmpty(txtEmployeeName.Text))
+            {
+
+            }
         }
     }
 }

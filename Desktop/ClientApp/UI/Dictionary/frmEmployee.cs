@@ -49,7 +49,7 @@ namespace ClientApp.UI.Dictionary
                 fDetail.BsDetail = bsList;
                 fDetail.objBLDetail = oBL;
                 fDetail.FormActionMode = actionMode;
-                if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Customer.RejectChanges();
+                if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Employee.RejectChanges();
                 else dsDictionary.Customer.AcceptChanges();
             }
             ActiveAndSelectRow();
