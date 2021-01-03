@@ -177,6 +177,11 @@
             this.tabGeneralInfo.Size = new System.Drawing.Size(444, 229);
             this.tabGeneralInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tabGeneralInfo_Paint);
             // 
+            // bsDetail
+            // 
+            this.bsDetail.DataMember = "Employee";
+            this.bsDetail.DataSource = this.dsDictionary;
+            // 
             // ClientArea_Fill_Panel
             // 
             this.ClientArea_Fill_Panel.Size = new System.Drawing.Size(463, 301);
@@ -189,6 +194,7 @@
             this.ultraTabPageControl1.Controls.Add(this.ultraLabel6);
             this.ultraTabPageControl1.Controls.Add(this.txtUserName);
             this.ultraTabPageControl1.Controls.Add(this.ultraLabel7);
+            this.ultraTabPageControl1.Enabled = false;
             this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Name = "ultraTabPageControl1";
             this.ultraTabPageControl1.Size = new System.Drawing.Size(444, 229);
@@ -208,6 +214,7 @@
             this.txtCofirmPassword.Tag = "Tên khách hàng";
             this.txtCofirmPassword.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtCofirmPassword.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.txtCofirmPassword.ValueChanged += new System.EventHandler(this.txtCofirmPassword_ValueChanged);
             // 
             // ultraLabel5
             // 
@@ -235,6 +242,7 @@
             this.txtPassword.Tag = "Tên khách hàng";
             this.txtPassword.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtPassword.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.txtPassword.ValueChanged += new System.EventHandler(this.txtPassword_ValueChanged);
             // 
             // ultraLabel6
             // 
@@ -262,6 +270,7 @@
             this.txtUserName.Tag = "Mã khách hàng";
             this.txtUserName.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtUserName.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.txtUserName.ValueChanged += new System.EventHandler(this.txtUserName_ValueChanged);
             // 
             // ultraLabel7
             // 
@@ -281,6 +290,7 @@
             this.ultraTabPageControl2.Controls.Add(this.ckReceptionist);
             this.ultraTabPageControl2.Controls.Add(this.rbEmployee);
             this.ultraTabPageControl2.Controls.Add(this.rbAdmin);
+            this.ultraTabPageControl2.Enabled = false;
             this.ultraTabPageControl2.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl2.Name = "ultraTabPageControl2";
             this.ultraTabPageControl2.Size = new System.Drawing.Size(444, 229);

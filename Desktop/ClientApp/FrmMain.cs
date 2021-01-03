@@ -24,8 +24,8 @@ namespace ClientApp
 
         const string btnInventoryItemCategory = "btnInventoryItemCategory";
         const string expInventoryItemCategory = "expInventoryItemCategory";
-        
-             const string expEmployee = "expEmployee";
+
+        const string expEmployee = "expEmployee";
         const string btnInventoryItem = "btnInventoryItem";
         const string expInventoryItem = "expInventoryItem";
 
@@ -182,6 +182,38 @@ namespace ClientApp
                     if (fList == null)
                     {
                         fList = new frmReportSales();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expReportSalesArea":
+                    fList = findOpenedForm("frmReportSalesArea");
+                    if (fList == null)
+                    {
+                        fList = new frmReportSalesArea();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expReportSalesCustomer":
+                    fList = findOpenedForm("frmReportSalesByCustomer");
+                    if (fList == null)
+                    {
+                        fList = new frmReportSalesByCustomer();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expReportSalesEmployee":
+                    fList = findOpenedForm("frmReportSalesByEmployee");
+                    if (fList == null)
+                    {
+                        fList = new frmReportSalesByEmployee();
+                        fList.MdiParent = this;
+                    }
+                    break;
+                case "expSellingInventory":
+                    fList = findOpenedForm("frmSellingInventory");
+                    if (fList == null)
+                    {
+                        fList = new frmSellingInventory();
                         fList.MdiParent = this;
                     }
                     break;

@@ -27,13 +27,15 @@ namespace ClientApp.UI.Dictionary
         protected override void BindingData()
         {
             base.BindingData();
-            txtEmployeeCode.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.EmployeeCodeColumn.ColumnName, true));
-            txtEmployeeName.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.EmployeeNameColumn.ColumnName, true));
-            dteBirthday.DataBindings.Add(new Binding("Value", BsDetail, DsDictionary.Employee.BirthdayColumn.ColumnName, true));
-            txtEmail.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.EmailColumn.ColumnName, true));
-            txtMobile.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.MobileColumn.ColumnName, true));
-            txtAddress.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.AddressColumn.ColumnName, true));
-            txtDescription.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Employee.DescriptionColumn.ColumnName, true));
+            txtEmployeeCode.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmployeeCodeColumn.ColumnName, true));
+            txtEmployeeName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmployeeNameColumn.ColumnName, true));
+            dteBirthday.DataBindings.Add(new Binding("Value", bsDetail, DsDictionary.EmployeeInfor.BirthdayColumn.ColumnName, true));
+            txtEmail.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmailColumn.ColumnName, true));
+            txtMobile.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.MobileColumn.ColumnName, true));
+            txtAddress.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.AddressColumn.ColumnName, true));
+            txtDescription.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.DescriptionColumn.ColumnName, true));
+            txtUserName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.UserNameColumn.ColumnName, true));
+            txtPassword.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.PasswordColumn.ColumnName, true));
         }
 
         protected override bool ValidateForm()
@@ -57,7 +59,7 @@ namespace ClientApp.UI.Dictionary
         protected override void InitNewRow()
         {
             base.InitNewRow();
-            objBLDetail.InitNewRow(DsDictionary.Employee);
+            objBLDetail.InitNewRow(DsDictionary.EmployeeInfor);
             BsDetail.MoveFirst();
             txtEmployeeCode.Focus();
         }
@@ -65,8 +67,8 @@ namespace ClientApp.UI.Dictionary
         protected override void InitCopyRow()
         {
             base.InitNewRow();
-            DictionaryDataSet.EmployeeRow drCurrent = (DictionaryDataSet.EmployeeRow)((DataRowView)bsDetail.Current).Row;
-            objBLDetail.InitCopyRow(DsDictionary.Employee, drCurrent);
+            DictionaryDataSet.EmployeeInforRow drCurrent = (DictionaryDataSet.EmployeeInforRow)((DataRowView)bsDetail.Current).Row;
+            objBLDetail.InitCopyRow(DsDictionary.EmployeeInfor, drCurrent);
             BsDetail.MoveFirst();
             txtEmployeeCode.Focus();
         }
@@ -77,11 +79,11 @@ namespace ClientApp.UI.Dictionary
             BsDetail.EndEdit();
             if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
             {
-                if(txtPassword.Text == txtCofirmPassword.Text)
+                if (txtPassword.Text == txtCofirmPassword.Text)
                 {
                     MessageBoxCommon.ShowExclamation("Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại.");
                 }
-                
+
             }
             var tableChanged = dsDictionary.Employee.GetChanges();
             if (tableChanged == null)
@@ -133,7 +135,7 @@ namespace ClientApp.UI.Dictionary
 
             }
 
-          
+
         }
 
         private void rbAdmin_CheckedChanged(object sender, System.EventArgs e)
@@ -169,7 +171,12 @@ namespace ClientApp.UI.Dictionary
         {
             if (!string.IsNullOrEmpty(txtEmployeeCode.Text) && !string.IsNullOrEmpty(txtEmployeeName.Text))
             {
-                
+                tabInfo.Tabs[1].Enabled = true;
+            }
+            else
+            {
+                tabInfo.Tabs[1].Enabled = false;
+                tabInfo.Tabs[2].Enabled = false;
             }
         }
 
@@ -177,7 +184,48 @@ namespace ClientApp.UI.Dictionary
         {
             if (!string.IsNullOrEmpty(txtEmployeeCode.Text) && !string.IsNullOrEmpty(txtEmployeeName.Text))
             {
+                tabInfo.Tabs[1].Enabled = true;
+            }
+            else
+            {
+                tabInfo.Tabs[1].Enabled = false;
+                tabInfo.Tabs[2].Enabled = false;
+            }
+        }
 
+        private void txtUserName_ValueChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
+            {
+                tabInfo.Tabs[2].Enabled = true;
+            }
+            else
+            {
+                tabInfo.Tabs[2].Enabled = false;
+            }
+        }
+
+        private void txtPassword_ValueChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
+            {
+                tabInfo.Tabs[2].Enabled = true;
+            }
+            else
+            {
+                tabInfo.Tabs[2].Enabled = false;
+            }
+        }
+
+        private void txtCofirmPassword_ValueChanged(object sender, System.EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
+            {
+                tabInfo.Tabs[2].Enabled = true;
+            }
+            else
+            {
+                tabInfo.Tabs[2].Enabled = false;
             }
         }
     }

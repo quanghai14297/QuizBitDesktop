@@ -21,9 +21,9 @@ namespace Desktop.BL
         /// Khởi tạo dữ liệu
         /// </summary>
         /// <param name="table"></param>
-        public DataRow InitNewRow(DictionaryDataSet.EmployeeDataTable table)
+        public DataRow InitNewRow(DictionaryDataSet.EmployeeInforDataTable table)
         {
-            DictionaryDataSet.EmployeeRow drNewRow = table.NewEmployeeRow();
+            DictionaryDataSet.EmployeeInforRow drNewRow = table.NewEmployeeInforRow();
             drNewRow.EmployeeID = Guid.NewGuid();
             drNewRow.EmployeeCode = "";
             drNewRow.EmployeeName = "";
@@ -36,9 +36,9 @@ namespace Desktop.BL
             return drNewRow;
         }
 
-        public DataRow InitCopyRow(DictionaryDataSet.EmployeeDataTable table, DictionaryDataSet.EmployeeRow row)
+        public DataRow InitCopyRow(DictionaryDataSet.EmployeeInforDataTable table, DictionaryDataSet.EmployeeInforRow row)
         {
-            DictionaryDataSet.EmployeeRow drNewRow = table.NewEmployeeRow();
+            DictionaryDataSet.EmployeeInforRow drNewRow = table.NewEmployeeInforRow();
             drNewRow.EmployeeID = Guid.NewGuid();
             drNewRow.EmployeeCode = row.EmployeeCode;
             drNewRow.EmployeeName = row.EmployeeName;
@@ -55,12 +55,12 @@ namespace Desktop.BL
             return new DL.DLEmployee(Session.Token).Get();
         }
 
-        public int InsertUpdate(DictionaryDataSet.EmployeeRow drObjectChange)
+        public int InsertUpdate(DictionaryDataSet.EmployeeInforRow drObjectChange)
         {
             return new DL.DLEmployee(Session.Token).InsertUpdate(drObjectChange);
         }
 
-        public bool CheckCodeExists(DictionaryDataSet.EmployeeRow drObjectChange)
+        public bool CheckCodeExists(DictionaryDataSet.EmployeeInforRow drObjectChange)
         {
             return new DL.DLEmployee(Session.Token).CheckCodeExists(drObjectChange);
         }

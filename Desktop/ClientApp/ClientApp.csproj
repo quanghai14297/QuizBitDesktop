@@ -604,6 +604,30 @@
     <Compile Include="UI\Report\frmReportSales.Designer.cs">
       <DependentUpon>frmReportSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Report\frmReportSalesArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSalesArea.Designer.cs">
+      <DependentUpon>frmReportSalesArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSalesByCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSalesByCustomer.Designer.cs">
+      <DependentUpon>frmReportSalesByCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSalesByEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmReportSalesByEmployee.Designer.cs">
+      <DependentUpon>frmReportSalesByEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report\frmSellingInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report\frmSellingInventory.Designer.cs">
+      <DependentUpon>frmSellingInventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Report\ReportDataSet.cs">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
     </Compile>
@@ -730,6 +754,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Report\frmReportSales.resx">
       <DependentUpon>frmReportSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmReportSalesArea.resx">
+      <DependentUpon>frmReportSalesArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmReportSalesByCustomer.resx">
+      <DependentUpon>frmReportSalesByCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmReportSalesByEmployee.resx">
+      <DependentUpon>frmReportSalesByEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report\frmSellingInventory.resx">
+      <DependentUpon>frmSellingInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Report\Report_PrintSAInvoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

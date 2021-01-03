@@ -58,7 +58,7 @@ namespace Desktop.DL
             return 1;
         }
 
-        public bool CheckCodeExists(DictionaryDataSet.EmployeeRow drObjectChange)
+        public bool CheckCodeExists(DictionaryDataSet.EmployeeInforRow drObjectChange)
         {
             ServiceResult result = CloudServiceFactory.ExecuteFunction("Employee/CheckCodeExists", CommonFunction.GetItem<Employee>(drObjectChange), HeaderParameter);
             return result.Success;

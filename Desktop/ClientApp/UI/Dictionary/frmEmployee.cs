@@ -27,7 +27,7 @@ namespace ClientApp.UI.Dictionary
             var table = oBL.Get();
             if (table != null && table.Rows.Count > 0)
             {
-                dsDictionary.Customer.Clear();
+                dsDictionary.Employee.Clear();
                 dsDictionary.Merge(table);
                 dsDictionary.AcceptChanges();
             }

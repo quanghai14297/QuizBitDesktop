@@ -68,6 +68,7 @@
     <Compile Include="DLInventoryItemCategory.cs" />
     <Compile Include="DLKey.cs" />
     <Compile Include="DLOrder.cs" />
+    <Compile Include="DLReport.cs" />
     <Compile Include="DLSAInvoice.cs" />
     <Compile Include="DLSendKitchen.cs" />
     <Compile Include="DLSystemInfo.cs" />
