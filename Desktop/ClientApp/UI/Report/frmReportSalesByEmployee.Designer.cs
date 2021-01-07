@@ -76,23 +76,23 @@
             this._frmBaseList_Toolbars_Dock_Area_Left = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this._frmBaseList_Toolbars_Dock_Area_Right = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this.bsList = new System.Windows.Forms.BindingSource(this.components);
-            this.dsDictionary = new Desktop.Entity.DictionaryDataSet();
             this.ultraDateTimeEditor2 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ultraDateTimeEditor1 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.frmSellingInventory_Fill_Panel = new Infragistics.Win.Misc.UltraPanel();
-            this.ultraDateTimeEditor3 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label3 = new System.Windows.Forms.Label();
+            this.ultraDateTimeEditor3 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
+            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).BeginInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.SuspendLayout();
             this.frmSellingInventory_Fill_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -314,10 +314,10 @@
             this._frmBaseList_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(0, 425);
             this._frmBaseList_Toolbars_Dock_Area_Right.ToolbarsManager = this.tbrFunction;
             // 
-            // dsDictionary
+            // bsList
             // 
-            this.dsDictionary.DataSetName = "DictionaryDataSet";
-            this.dsDictionary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bsList.DataMember = "ReportSalesEmployee";
+            this.bsList.DataSource = this.dsReport;
             // 
             // ultraDateTimeEditor2
             // 
@@ -375,14 +375,6 @@
             this.frmSellingInventory_Fill_Panel.Size = new System.Drawing.Size(800, 425);
             this.frmSellingInventory_Fill_Panel.TabIndex = 34;
             // 
-            // ultraDateTimeEditor3
-            // 
-            this.ultraDateTimeEditor3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ultraDateTimeEditor3.Location = new System.Drawing.Point(400, 4);
-            this.ultraDateTimeEditor3.Name = "ultraDateTimeEditor3";
-            this.ultraDateTimeEditor3.Size = new System.Drawing.Size(90, 21);
-            this.ultraDateTimeEditor3.TabIndex = 28;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -392,6 +384,19 @@
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "Bộ phận";
+            // 
+            // ultraDateTimeEditor3
+            // 
+            this.ultraDateTimeEditor3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ultraDateTimeEditor3.Location = new System.Drawing.Point(400, 4);
+            this.ultraDateTimeEditor3.Name = "ultraDateTimeEditor3";
+            this.ultraDateTimeEditor3.Size = new System.Drawing.Size(90, 21);
+            this.ultraDateTimeEditor3.TabIndex = 28;
+            // 
+            // dsReport
+            // 
+            this.dsReport.DataSetName = "ReportDataSet";
+            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // frmReportSalesByEmployee
             // 
@@ -409,13 +414,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).EndInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.ResumeLayout(false);
             this.frmSellingInventory_Fill_Panel.ClientArea.PerformLayout();
             this.frmSellingInventory_Fill_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,7 +435,6 @@
         internal Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea _frmBaseList_Toolbars_Dock_Area_Left;
         internal Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea _frmBaseList_Toolbars_Dock_Area_Right;
         protected System.Windows.Forms.BindingSource bsList;
-        protected Desktop.Entity.DictionaryDataSet dsDictionary;
         private Infragistics.Win.UltraWinEditors.UltraDateTimeEditor ultraDateTimeEditor2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -438,5 +442,6 @@
         private Infragistics.Win.Misc.UltraPanel frmSellingInventory_Fill_Panel;
         private Infragistics.Win.UltraWinEditors.UltraDateTimeEditor ultraDateTimeEditor3;
         private System.Windows.Forms.Label label3;
+        private ReportDataSet dsReport;
     }
 }

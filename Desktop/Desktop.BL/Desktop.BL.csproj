@@ -35,8 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="QuizBit.Entity">
-      <HintPath>..\..\Library\SDK\QuizBit.Entity.dll</HintPath>
+    <Reference Include="QuizBit.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClientApp\bin\Debug\QuizBit.Entity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,9 +58,11 @@
     <Compile Include="BLInventoryItemCategory.cs" />
     <Compile Include="BLOrder.cs" />
     <Compile Include="BLReport.cs" />
+    <Compile Include="BLRole.cs" />
     <Compile Include="BLSAInvoice.cs" />
     <Compile Include="BLSendKitchen.cs" />
     <Compile Include="BLUnit.cs" />
+    <Compile Include="BLUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="ShareDictionary.cs" />

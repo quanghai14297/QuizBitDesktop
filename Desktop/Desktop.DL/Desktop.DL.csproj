@@ -44,8 +44,9 @@
     <Reference Include="QuizBit.Contract">
       <HintPath>..\..\Library\SDK\QuizBit.Contract.dll</HintPath>
     </Reference>
-    <Reference Include="QuizBit.Entity">
-      <HintPath>..\..\Library\SDK\QuizBit.Entity.dll</HintPath>
+    <Reference Include="QuizBit.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ClientApp\bin\Debug\QuizBit.Entity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -69,11 +70,13 @@
     <Compile Include="DLKey.cs" />
     <Compile Include="DLOrder.cs" />
     <Compile Include="DLReport.cs" />
+    <Compile Include="DLRole.cs" />
     <Compile Include="DLSAInvoice.cs" />
     <Compile Include="DLSendKitchen.cs" />
     <Compile Include="DLSystemInfo.cs" />
     <Compile Include="DLTableMapping.cs" />
     <Compile Include="DLUnit.cs" />
+    <Compile Include="DLUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

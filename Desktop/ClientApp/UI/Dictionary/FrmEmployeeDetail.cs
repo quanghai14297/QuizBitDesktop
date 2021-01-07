@@ -13,7 +13,7 @@ namespace ClientApp.UI.Dictionary
         }
 
         private BLEmployee _oBL;
-
+        BindingSource bsUser = new BindingSource();
         public BLEmployee objBLDetail
         {
             get
@@ -23,19 +23,35 @@ namespace ClientApp.UI.Dictionary
             }
             set { _oBL = value; }
         }
-
+       
         protected override void BindingData()
         {
-            base.BindingData();
-            txtEmployeeCode.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmployeeCodeColumn.ColumnName, true));
-            txtEmployeeName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmployeeNameColumn.ColumnName, true));
-            dteBirthday.DataBindings.Add(new Binding("Value", bsDetail, DsDictionary.EmployeeInfor.BirthdayColumn.ColumnName, true));
-            txtEmail.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.EmailColumn.ColumnName, true));
-            txtMobile.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.MobileColumn.ColumnName, true));
-            txtAddress.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.AddressColumn.ColumnName, true));
-            txtDescription.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.DescriptionColumn.ColumnName, true));
-            txtUserName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.UserNameColumn.ColumnName, true));
-            txtPassword.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.EmployeeInfor.PasswordColumn.ColumnName, true));
+             base.BindingData();
+            txtEmployeeCode.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.EmployeeCodeColumn.ColumnName, true));
+            txtEmployeeName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.EmployeeNameColumn.ColumnName, true));
+            dteBirthday.DataBindings.Add(new Binding("Value", bsDetail, DsDictionary.Employee.BirthdayColumn.ColumnName, true));
+            txtEmail.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.EmailColumn.ColumnName, true));
+            txtMobile.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.MobileColumn.ColumnName, true));
+            txtAddress.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.AddressColumn.ColumnName, true));
+            txtDescription.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.DescriptionColumn.ColumnName, true));
+            txtUserName.Text = ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).UserName;
+            txtPassword.Text= ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).Password;
+            txtCofirmPassword.Text = txtPassword.Text;
+            if (((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "Admin" || ((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "QL")
+            {
+                rbAdmin.Checked = true;
+                ckCooker.Enabled = false;
+                ckOrder.Enabled = false;
+                ckReceptionist.Enabled = false;
+
+                ckCooker.Checked = true;
+                ckOrder.Checked = true;
+                ckReceptionist.Checked = true;
+            }
+            else
+            {
+
+            }
         }
 
         protected override bool ValidateForm()
@@ -128,6 +144,26 @@ namespace ClientApp.UI.Dictionary
                 else if (e.Tab.Key == "tabRole")
                 {
                     this.Size = new System.Drawing.Size(465, 195);
+                    if (rbAdmin.Checked)
+                    {
+                        ckCooker.Enabled = false;
+                        ckOrder.Enabled = false;
+                        ckReceptionist.Enabled = false;
+
+                        ckCooker.Checked = true;
+                        ckOrder.Checked = true;
+                        ckReceptionist.Checked = true;
+                    }
+                    else
+                    {
+                        ckCooker.Enabled = true;
+                        ckOrder.Enabled = true;
+                        ckReceptionist.Enabled = true;
+
+                        ckCooker.Checked = false;
+                        ckOrder.Checked = false;
+                        ckReceptionist.Checked = false;
+                    }
                 }
             }
             catch (System.Exception)

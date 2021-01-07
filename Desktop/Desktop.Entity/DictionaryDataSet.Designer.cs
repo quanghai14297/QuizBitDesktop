@@ -1540,6 +1540,12 @@ namespace Desktop.Entity {
             
             private global::System.Data.DataColumn columnUserID;
             
+            private global::System.Data.DataColumn columnRoleCode;
+            
+            private global::System.Data.DataColumn columnRoleName;
+            
+            private global::System.Data.DataColumn columnInactive;
+            
             private global::System.Data.DataColumn columnRoleID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1593,6 +1599,30 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RoleCodeColumn {
+                get {
+                    return this.columnRoleCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn RoleNameColumn {
+                get {
+                    return this.columnRoleName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InactiveColumn {
+                get {
+                    return this.columnInactive;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn RoleIDColumn {
                 get {
                     return this.columnRoleID;
@@ -1636,11 +1666,14 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UserJoinRoleRow AddUserJoinRoleRow(System.Guid UserJoinRoleID, System.Guid UserID, int RoleID) {
+            public UserJoinRoleRow AddUserJoinRoleRow(System.Guid UserJoinRoleID, System.Guid UserID, string RoleCode, string RoleName, bool Inactive, int RoleID) {
                 UserJoinRoleRow rowUserJoinRoleRow = ((UserJoinRoleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UserJoinRoleID,
                         UserID,
+                        RoleCode,
+                        RoleName,
+                        Inactive,
                         RoleID};
                 rowUserJoinRoleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserJoinRoleRow);
@@ -1673,6 +1706,9 @@ namespace Desktop.Entity {
             internal void InitVars() {
                 this.columnUserJoinRoleID = base.Columns["UserJoinRoleID"];
                 this.columnUserID = base.Columns["UserID"];
+                this.columnRoleCode = base.Columns["RoleCode"];
+                this.columnRoleName = base.Columns["RoleName"];
+                this.columnInactive = base.Columns["Inactive"];
                 this.columnRoleID = base.Columns["RoleID"];
             }
             
@@ -1683,12 +1719,20 @@ namespace Desktop.Entity {
                 base.Columns.Add(this.columnUserJoinRoleID);
                 this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUserID);
+                this.columnRoleCode = new global::System.Data.DataColumn("RoleCode", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRoleCode);
+                this.columnRoleName = new global::System.Data.DataColumn("RoleName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRoleName);
+                this.columnInactive = new global::System.Data.DataColumn("Inactive", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInactive);
                 this.columnRoleID = new global::System.Data.DataColumn("RoleID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRoleID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserJoinRoleID}, true));
                 this.columnUserJoinRoleID.AllowDBNull = false;
                 this.columnUserJoinRoleID.Unique = true;
+                this.columnRoleCode.MaxLength = 50;
+                this.columnRoleName.MaxLength = 255;
                 this.columnRoleID.AllowDBNull = false;
             }
             
@@ -12250,6 +12294,54 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RoleCode {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserJoinRole.RoleCodeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RoleCode\' in table \'UserJoinRole\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserJoinRole.RoleCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string RoleName {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserJoinRole.RoleNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'RoleName\' in table \'UserJoinRole\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserJoinRole.RoleNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Inactive {
+                get {
+                    try {
+                        return ((bool)(this[this.tableUserJoinRole.InactiveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Inactive\' in table \'UserJoinRole\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserJoinRole.InactiveColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int RoleID {
                 get {
                     return ((int)(this[this.tableUserJoinRole.RoleIDColumn]));
@@ -12269,6 +12361,42 @@ namespace Desktop.Entity {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetUserIDNull() {
                 this[this.tableUserJoinRole.UserIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRoleCodeNull() {
+                return this.IsNull(this.tableUserJoinRole.RoleCodeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRoleCodeNull() {
+                this[this.tableUserJoinRole.RoleCodeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsRoleNameNull() {
+                return this.IsNull(this.tableUserJoinRole.RoleNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetRoleNameNull() {
+                this[this.tableUserJoinRole.RoleNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInactiveNull() {
+                return this.IsNull(this.tableUserJoinRole.InactiveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInactiveNull() {
+                this[this.tableUserJoinRole.InactiveColumn] = global::System.Convert.DBNull;
             }
         }
         

@@ -115,7 +115,11 @@ namespace ClientApp.UI.Business
             tabAreaTableMapping.UseMnemonics = DefaultableBoolean.True;
             // Danh sách Tab
             UltraTabsCollection tabs = tabAreaTableMapping.Tabs;
-
+            if(dsDictionary.Area.Rows.Count == 0)
+            {
+                lblArea_Detail_Title.Text = String.Empty;
+                    lblArea_Detail.Text = String.Empty;
+            }
             foreach (DictionaryDataSet.AreaRow iArea in dsDictionary.Area.Rows)
             {
                 // Tăng tổng toàn cửa hàng
@@ -152,9 +156,9 @@ namespace ClientApp.UI.Business
                     }
                 }
                 ultraTab.TabPage.Controls.Add(flowLayout);
+                ChangeAreaStatus();
             }
             tabAreaTableMapping.EndUpdate();
-            ChangeAreaStatus();
         }
 
         private void Table_DoubleClick(object sender, EventArgs e)

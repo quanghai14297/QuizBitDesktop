@@ -53,7 +53,7 @@ namespace ClientApp.UI.Report
             var table = oBL.GetReportSalesCustomer(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
             if (table != null && table.Rows.Count > 0)
             {
-                dsReport.RepotSalesEmployee.Clear();
+                dsReport.ReportSalesEmployee.Clear();
                 dsReport.Merge(table);
                 dsReport.AcceptChanges();
             }
@@ -64,7 +64,7 @@ namespace ClientApp.UI.Report
             var table = oBL.GetReportSalesCustomer(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
             if (table != null && table.Rows.Count > 0)
             {
-                dsReport.RepotSalesEmployee.Clear();
+                dsReport.ReportSalesEmployee.Clear();
                 dsReport.Merge(table);
                 dsReport.AcceptChanges();
             }

@@ -56,6 +56,9 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ProbationDate");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReceiveDate");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TerminationDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UserName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Password");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("DisplayName");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReasonTermination");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
@@ -187,7 +190,13 @@
             ultraGridColumn25.Hidden = true;
             ultraGridColumn26.Header.VisiblePosition = 25;
             ultraGridColumn26.Hidden = true;
-            ultraGridColumn27.Header.VisiblePosition = 26;
+            ultraGridColumn28.Header.VisiblePosition = 26;
+            ultraGridColumn28.Hidden = true;
+            ultraGridColumn29.Header.VisiblePosition = 28;
+            ultraGridColumn29.Hidden = true;
+            ultraGridColumn30.Header.VisiblePosition = 29;
+            ultraGridColumn30.Hidden = true;
+            ultraGridColumn27.Header.VisiblePosition = 27;
             ultraGridColumn27.Hidden = true;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
@@ -216,6 +225,9 @@
             ultraGridColumn24,
             ultraGridColumn25,
             ultraGridColumn26,
+            ultraGridColumn28,
+            ultraGridColumn29,
+            ultraGridColumn30,
             ultraGridColumn27});
             this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;

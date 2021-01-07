@@ -109,6 +109,7 @@ namespace ClientApp.UI.Dictionary
                 }
                 result = objBLDetail.InsertUpdate(drObjectChange, oldID);
             }
+            
             return result;
         }
 

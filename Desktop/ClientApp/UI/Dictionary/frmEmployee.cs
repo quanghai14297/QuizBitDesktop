@@ -19,16 +19,21 @@ namespace ClientApp.UI.Dictionary
             InitializeComponent();
         }
         private BLEmployee oBL;
-
+        private BLUser oBLUser;
+        private BLRole oBLRole;
         protected override void LoadDataForm()
         {
             base.LoadDataForm();
             SetVisibleTabInfo(false);
+           
             var table = oBL.Get();
+           
+
             if (table != null && table.Rows.Count > 0)
             {
                 dsDictionary.Employee.Clear();
                 dsDictionary.Merge(table);
+
                 dsDictionary.AcceptChanges();
             }
         }
@@ -37,11 +42,34 @@ namespace ClientApp.UI.Dictionary
         {
             base.InitBusinessObject();
             oBL = new BLEmployee();
+            oBLUser = new BLUser();
+            oBLRole = new BLRole();
         }
 
         protected override void ShowFormDetail(ActionMode actionMode)
         {
             base.ShowFormDetail(actionMode);
+            string UserID = ((Desktop.Entity.DictionaryDataSet.EmployeeRow)((System.Data.DataRowView)bsList.Current).Row).UserID.ToString();
+            var tableUser = oBLUser.Get();
+            var tableRole = oBLRole.Get();
+            DictionaryDataSet.UserDataTable dt = new DictionaryDataSet.UserDataTable();
+            DictionaryDataSet.UserJoinRoleDataTable dtRole = new DictionaryDataSet.UserJoinRoleDataTable();
+            if (tableUser.Select("UserID = '" + UserID + "'").Count() > 0)
+            {
+                dt.ImportRow(tableUser.Select("UserID = '" + UserID + "'")[0]);
+                dsDictionary.User.Clear();
+                dsDictionary.Merge(dt);
+            }
+            DataRow[] dr = tableRole.Select("UserID = '" + UserID + "'");
+            if (dr.Count() > 0)
+            {
+                for (int i = 0; i < dr.Count(); i++)
+                {
+                    dtRole.ImportRow(dr[i]);
+                }
+                dsDictionary.Role.Clear();
+                dsDictionary.Merge(dtRole);
+            }
             using (var fDetail = new FrmEmployeeDetail())
             {
 

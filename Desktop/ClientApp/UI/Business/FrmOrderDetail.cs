@@ -444,6 +444,7 @@ namespace ClientApp.UI.Business
             drObjectChange.NumberOfPeople = Int32.Parse(txtNumberOfPeople.Text);
             drObjectChange.OrderDate = DateTime.Now;
             drObjectChange.CancelReason = txtCancelReason.Text;
+            //////Chỗ này nhớ lấy booking id
             if (drObjectChange != null)
             {
                 drObjectChange.ModifiedDate = DateTime.Now;

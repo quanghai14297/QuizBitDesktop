@@ -30,10 +30,10 @@
         {
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.txtDescription = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.txtInventoryItemCategoryCode = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.lblDescriptionTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -143,8 +143,8 @@
             // 
             // lblDescriptionTitle
             // 
-            appearance8.TextVAlignAsString = "Middle";
-            this.lblDescriptionTitle.Appearance = appearance8;
+            appearance5.TextVAlignAsString = "Middle";
+            this.lblDescriptionTitle.Appearance = appearance5;
             this.lblDescriptionTitle.Location = new System.Drawing.Point(8, 56);
             this.lblDescriptionTitle.Name = "lblDescriptionTitle";
             this.lblDescriptionTitle.Size = new System.Drawing.Size(80, 23);
@@ -153,9 +153,9 @@
             // 
             // lblInventoryItemCategoryCodeTitle
             // 
-            appearance9.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance9.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance9;
+            appearance6.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance6.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance6;
             this.lblInventoryItemCategoryCodeTitle.Location = new System.Drawing.Point(8, 8);
             this.lblInventoryItemCategoryCodeTitle.Name = "lblInventoryItemCategoryCodeTitle";
             this.lblInventoryItemCategoryCodeTitle.Size = new System.Drawing.Size(80, 23);
@@ -181,9 +181,9 @@
             // 
             // lblInventoryItemCategoryNameTitle
             // 
-            appearance7.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance7.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryNameTitle.Appearance = appearance7;
+            appearance2.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance2.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryNameTitle.Appearance = appearance2;
             this.lblInventoryItemCategoryNameTitle.Location = new System.Drawing.Point(8, 32);
             this.lblInventoryItemCategoryNameTitle.Name = "lblInventoryItemCategoryNameTitle";
             this.lblInventoryItemCategoryNameTitle.Size = new System.Drawing.Size(80, 23);

@@ -57,6 +57,7 @@ namespace ClientApp.UI.Dictionary
                 fDetail.FormActionMode = actionMode;
                 if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Area.RejectChanges();
                 else dsDictionary.Area.AcceptChanges();
+                LoadDataForm();
                 ActiveAndSelectRow();
             }
         }

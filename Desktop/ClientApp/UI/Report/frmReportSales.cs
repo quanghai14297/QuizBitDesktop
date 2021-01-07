@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Desktop.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace ClientApp.UI.Report
         {
             InitializeComponent();
         }
+        private BLReport oBL;
         /// <summary>
         /// Lấy ra ngày đầu tiên trong tháng có chứa 
         /// 1 ngày bất kỳ được truyền vào
@@ -43,8 +45,16 @@ namespace ClientApp.UI.Report
         }
         private void frmReportSales_Load(object sender, EventArgs e)
         {
+            oBL = new BLReport();
             dtFromDate.Value = GetFirstDayOfMonth(DateTime.Now);
             dtToDate.Value = GetLastDayOfMonth(DateTime.Now);
+            var table = oBL.GetReportSales(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
+            if (table != null && table.Rows.Count > 0)
+            {
+                dsReport.SAInvoiceViewer.Clear();
+                dsReport.Merge(table);
+                dsReport.AcceptChanges();
+            }
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -66,6 +76,18 @@ namespace ClientApp.UI.Report
 
         }
 
-        
+        private void btnGetData_Click(object sender, EventArgs e)
+        {
+            oBL = new BLReport();
+            dtFromDate.Value = GetFirstDayOfMonth(DateTime.Now);
+            dtToDate.Value = GetLastDayOfMonth(DateTime.Now);
+            var table = oBL.GetReportSales(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
+            if (table != null && table.Rows.Count > 0)
+            {
+                dsReport.SAInvoiceViewer.Clear();
+                dsReport.Merge(table);
+                dsReport.AcceptChanges();
+            }
+        }
     }
 }

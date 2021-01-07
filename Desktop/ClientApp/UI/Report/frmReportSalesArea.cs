@@ -46,7 +46,21 @@ namespace ClientApp.UI.Report
             var table = oBL.GetReportSalesArea(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
             if (table != null && table.Rows.Count > 0)
             {
-                dsReport.RepotSalesEmployee.Clear();
+                dsReport.ReportSalesArea.Clear();
+                dsReport.Merge(table);
+                dsReport.AcceptChanges();
+            }
+        }
+
+        private void btnGetData_Click(object sender, EventArgs e)
+        {
+            oBL = new BLReport();
+            dtFromDate.Value = GetFirstDayOfMonth(DateTime.Now);
+            dtToDate.Value = GetLastDayOfMonth(DateTime.Now);
+            var table = oBL.GetReportSalesArea(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
+            if (table != null && table.Rows.Count > 0)
+            {
+                dsReport.ReportSalesArea.Clear();
                 dsReport.Merge(table);
                 dsReport.AcceptChanges();
             }

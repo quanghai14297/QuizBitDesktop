@@ -18,12 +18,16 @@ namespace Desktop.BL
         }
         public DataTable GetReportSalesCustomer(DateTime FromDate, DateTime ToDate)
         {
-            return new DL.DLReport(Session.Token).GetReportSalesCustomer(FromDate,ToDate);
+            return new DL.DLReport(Session.Token).GetReportSalesCustomer(FromDate, ToDate);
         }
         public DataTable GetReportSalesArea(DateTime FromDate, DateTime ToDate)
         {
             return new DL.DLReport(Session.Token).GetReportSalesArea(FromDate, ToDate);
         }
-        
+
+        public DataTable GetReportSales(DateTime FromDate, DateTime ToDate)
+        {
+            return new DL.DLReport(Session.Token).GetReportSales(FromDate, ToDate);
+        }
     }
 }

@@ -491,6 +491,26 @@ namespace ClientApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_business_report_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_business_report_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_name_tag_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_name_tag_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inventory___Gray___36x36 {
             get {
                 object obj = ResourceManager.GetObject("Inventory___Gray___36x36", resourceCulture);

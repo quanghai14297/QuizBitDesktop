@@ -174,6 +174,7 @@
             this.tabGeneralInfo.Controls.Add(this.txtEmployeeCode);
             this.tabGeneralInfo.Controls.Add(this.lblDescriptionTitle);
             this.tabGeneralInfo.Controls.Add(this.lblInventoryItemCategoryCodeTitle);
+            this.tabGeneralInfo.Location = new System.Drawing.Point(-10000, -10000);
             this.tabGeneralInfo.Size = new System.Drawing.Size(444, 229);
             this.tabGeneralInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tabGeneralInfo_Paint);
             // 
@@ -195,7 +196,7 @@
             this.ultraTabPageControl1.Controls.Add(this.txtUserName);
             this.ultraTabPageControl1.Controls.Add(this.ultraLabel7);
             this.ultraTabPageControl1.Enabled = false;
-            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
+            this.ultraTabPageControl1.Location = new System.Drawing.Point(1, 20);
             this.ultraTabPageControl1.Name = "ultraTabPageControl1";
             this.ultraTabPageControl1.Size = new System.Drawing.Size(444, 229);
             // 
@@ -209,6 +210,7 @@
             this.txtCofirmPassword.Location = new System.Drawing.Point(111, 54);
             this.txtCofirmPassword.MaxLength = 255;
             this.txtCofirmPassword.Name = "txtCofirmPassword";
+            this.txtCofirmPassword.PasswordChar = '*';
             this.txtCofirmPassword.Size = new System.Drawing.Size(329, 21);
             this.txtCofirmPassword.TabIndex = 11;
             this.txtCofirmPassword.Tag = "Tên khách hàng";
@@ -237,6 +239,7 @@
             this.txtPassword.Location = new System.Drawing.Point(111, 30);
             this.txtPassword.MaxLength = 255;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(329, 21);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Tag = "Tên khách hàng";

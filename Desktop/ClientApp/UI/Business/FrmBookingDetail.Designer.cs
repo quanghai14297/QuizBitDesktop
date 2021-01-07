@@ -476,7 +476,6 @@
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(305, 23);
             this.lblCustomerName.TabIndex = 11;
-            this.lblCustomerName.Text = "Tên khách hàng";
             // 
             // lblCustomerAddress
             // 
@@ -487,7 +486,6 @@
             this.lblCustomerAddress.Name = "lblCustomerAddress";
             this.lblCustomerAddress.Size = new System.Drawing.Size(305, 23);
             this.lblCustomerAddress.TabIndex = 15;
-            this.lblCustomerAddress.Text = "Địa chỉ";
             // 
             // lblCustomerMobile
             // 
@@ -498,7 +496,6 @@
             this.lblCustomerMobile.Name = "lblCustomerMobile";
             this.lblCustomerMobile.Size = new System.Drawing.Size(305, 23);
             this.lblCustomerMobile.TabIndex = 13;
-            this.lblCustomerMobile.Text = "Số điện thoại";
             // 
             // ultraLabel6
             // 

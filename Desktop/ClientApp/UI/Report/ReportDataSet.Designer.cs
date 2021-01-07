@@ -26,11 +26,11 @@ namespace ClientApp.UI.Report {
         
         private SAInvoiceViewerDataTable tableSAInvoiceViewer;
         
-        private RepotSalesAreaDataTable tableRepotSalesArea;
+        private ReportSalesAreaDataTable tableReportSalesArea;
         
-        private RepotSalesCustomerDataTable tableRepotSalesCustomer;
+        private ReportSalesCustomerDataTable tableReportSalesCustomer;
         
-        private RepotSalesEmployeeDataTable tableRepotSalesEmployee;
+        private ReportSalesEmployeeDataTable tableReportSalesEmployee;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -63,14 +63,14 @@ namespace ClientApp.UI.Report {
                 if ((ds.Tables["SAInvoiceViewer"] != null)) {
                     base.Tables.Add(new SAInvoiceViewerDataTable(ds.Tables["SAInvoiceViewer"]));
                 }
-                if ((ds.Tables["RepotSalesArea"] != null)) {
-                    base.Tables.Add(new RepotSalesAreaDataTable(ds.Tables["RepotSalesArea"]));
+                if ((ds.Tables["ReportSalesArea"] != null)) {
+                    base.Tables.Add(new ReportSalesAreaDataTable(ds.Tables["ReportSalesArea"]));
                 }
-                if ((ds.Tables["RepotSalesCustomer"] != null)) {
-                    base.Tables.Add(new RepotSalesCustomerDataTable(ds.Tables["RepotSalesCustomer"]));
+                if ((ds.Tables["ReportSalesCustomer"] != null)) {
+                    base.Tables.Add(new ReportSalesCustomerDataTable(ds.Tables["ReportSalesCustomer"]));
                 }
-                if ((ds.Tables["RepotSalesEmployee"] != null)) {
-                    base.Tables.Add(new RepotSalesEmployeeDataTable(ds.Tables["RepotSalesEmployee"]));
+                if ((ds.Tables["ReportSalesEmployee"] != null)) {
+                    base.Tables.Add(new ReportSalesEmployeeDataTable(ds.Tables["ReportSalesEmployee"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -104,9 +104,9 @@ namespace ClientApp.UI.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RepotSalesAreaDataTable RepotSalesArea {
+        public ReportSalesAreaDataTable ReportSalesArea {
             get {
-                return this.tableRepotSalesArea;
+                return this.tableReportSalesArea;
             }
         }
         
@@ -114,9 +114,9 @@ namespace ClientApp.UI.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RepotSalesCustomerDataTable RepotSalesCustomer {
+        public ReportSalesCustomerDataTable ReportSalesCustomer {
             get {
-                return this.tableRepotSalesCustomer;
+                return this.tableReportSalesCustomer;
             }
         }
         
@@ -124,9 +124,9 @@ namespace ClientApp.UI.Report {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public RepotSalesEmployeeDataTable RepotSalesEmployee {
+        public ReportSalesEmployeeDataTable ReportSalesEmployee {
             get {
-                return this.tableRepotSalesEmployee;
+                return this.tableReportSalesEmployee;
             }
         }
         
@@ -200,14 +200,14 @@ namespace ClientApp.UI.Report {
                 if ((ds.Tables["SAInvoiceViewer"] != null)) {
                     base.Tables.Add(new SAInvoiceViewerDataTable(ds.Tables["SAInvoiceViewer"]));
                 }
-                if ((ds.Tables["RepotSalesArea"] != null)) {
-                    base.Tables.Add(new RepotSalesAreaDataTable(ds.Tables["RepotSalesArea"]));
+                if ((ds.Tables["ReportSalesArea"] != null)) {
+                    base.Tables.Add(new ReportSalesAreaDataTable(ds.Tables["ReportSalesArea"]));
                 }
-                if ((ds.Tables["RepotSalesCustomer"] != null)) {
-                    base.Tables.Add(new RepotSalesCustomerDataTable(ds.Tables["RepotSalesCustomer"]));
+                if ((ds.Tables["ReportSalesCustomer"] != null)) {
+                    base.Tables.Add(new ReportSalesCustomerDataTable(ds.Tables["ReportSalesCustomer"]));
                 }
-                if ((ds.Tables["RepotSalesEmployee"] != null)) {
-                    base.Tables.Add(new RepotSalesEmployeeDataTable(ds.Tables["RepotSalesEmployee"]));
+                if ((ds.Tables["ReportSalesEmployee"] != null)) {
+                    base.Tables.Add(new ReportSalesEmployeeDataTable(ds.Tables["ReportSalesEmployee"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -248,22 +248,22 @@ namespace ClientApp.UI.Report {
                     this.tableSAInvoiceViewer.InitVars();
                 }
             }
-            this.tableRepotSalesArea = ((RepotSalesAreaDataTable)(base.Tables["RepotSalesArea"]));
+            this.tableReportSalesArea = ((ReportSalesAreaDataTable)(base.Tables["ReportSalesArea"]));
             if ((initTable == true)) {
-                if ((this.tableRepotSalesArea != null)) {
-                    this.tableRepotSalesArea.InitVars();
+                if ((this.tableReportSalesArea != null)) {
+                    this.tableReportSalesArea.InitVars();
                 }
             }
-            this.tableRepotSalesCustomer = ((RepotSalesCustomerDataTable)(base.Tables["RepotSalesCustomer"]));
+            this.tableReportSalesCustomer = ((ReportSalesCustomerDataTable)(base.Tables["ReportSalesCustomer"]));
             if ((initTable == true)) {
-                if ((this.tableRepotSalesCustomer != null)) {
-                    this.tableRepotSalesCustomer.InitVars();
+                if ((this.tableReportSalesCustomer != null)) {
+                    this.tableReportSalesCustomer.InitVars();
                 }
             }
-            this.tableRepotSalesEmployee = ((RepotSalesEmployeeDataTable)(base.Tables["RepotSalesEmployee"]));
+            this.tableReportSalesEmployee = ((ReportSalesEmployeeDataTable)(base.Tables["ReportSalesEmployee"]));
             if ((initTable == true)) {
-                if ((this.tableRepotSalesEmployee != null)) {
-                    this.tableRepotSalesEmployee.InitVars();
+                if ((this.tableReportSalesEmployee != null)) {
+                    this.tableReportSalesEmployee.InitVars();
                 }
             }
         }
@@ -278,12 +278,12 @@ namespace ClientApp.UI.Report {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableSAInvoiceViewer = new SAInvoiceViewerDataTable();
             base.Tables.Add(this.tableSAInvoiceViewer);
-            this.tableRepotSalesArea = new RepotSalesAreaDataTable();
-            base.Tables.Add(this.tableRepotSalesArea);
-            this.tableRepotSalesCustomer = new RepotSalesCustomerDataTable();
-            base.Tables.Add(this.tableRepotSalesCustomer);
-            this.tableRepotSalesEmployee = new RepotSalesEmployeeDataTable();
-            base.Tables.Add(this.tableRepotSalesEmployee);
+            this.tableReportSalesArea = new ReportSalesAreaDataTable();
+            base.Tables.Add(this.tableReportSalesArea);
+            this.tableReportSalesCustomer = new ReportSalesCustomerDataTable();
+            base.Tables.Add(this.tableReportSalesCustomer);
+            this.tableReportSalesEmployee = new ReportSalesEmployeeDataTable();
+            base.Tables.Add(this.tableReportSalesEmployee);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -294,19 +294,19 @@ namespace ClientApp.UI.Report {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeRepotSalesArea() {
+        private bool ShouldSerializeReportSalesArea() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeRepotSalesCustomer() {
+        private bool ShouldSerializeReportSalesCustomer() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeRepotSalesEmployee() {
+        private bool ShouldSerializeReportSalesEmployee() {
             return false;
         }
         
@@ -369,13 +369,13 @@ namespace ClientApp.UI.Report {
         public delegate void SAInvoiceViewerRowChangeEventHandler(object sender, SAInvoiceViewerRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void RepotSalesAreaRowChangeEventHandler(object sender, RepotSalesAreaRowChangeEvent e);
+        public delegate void ReportSalesAreaRowChangeEventHandler(object sender, ReportSalesAreaRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void RepotSalesCustomerRowChangeEventHandler(object sender, RepotSalesCustomerRowChangeEvent e);
+        public delegate void ReportSalesCustomerRowChangeEventHandler(object sender, ReportSalesCustomerRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void RepotSalesEmployeeRowChangeEventHandler(object sender, RepotSalesEmployeeRowChangeEvent e);
+        public delegate void ReportSalesEmployeeRowChangeEventHandler(object sender, ReportSalesEmployeeRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1888,7 +1888,7 @@ namespace ClientApp.UI.Report {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RepotSalesAreaDataTable : global::System.Data.TypedTableBase<RepotSalesAreaRow> {
+        public partial class ReportSalesAreaDataTable : global::System.Data.TypedTableBase<ReportSalesAreaRow> {
             
             private global::System.Data.DataColumn columnAreaName;
             
@@ -1898,10 +1898,12 @@ namespace ClientApp.UI.Report {
             
             private global::System.Data.DataColumn columnTotalSaleAmount;
             
+            private global::System.Data.DataColumn columnTableName;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaDataTable() {
-                this.TableName = "RepotSalesArea";
+            public ReportSalesAreaDataTable() {
+                this.TableName = "ReportSalesArea";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1909,7 +1911,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesAreaDataTable(global::System.Data.DataTable table) {
+            internal ReportSalesAreaDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1926,7 +1928,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected RepotSalesAreaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportSalesAreaDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1965,6 +1967,14 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TableNameColumn {
+                get {
+                    return this.columnTableName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1974,48 +1984,49 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaRow this[int index] {
+            public ReportSalesAreaRow this[int index] {
                 get {
-                    return ((RepotSalesAreaRow)(this.Rows[index]));
+                    return ((ReportSalesAreaRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesAreaRowChangeEventHandler RepotSalesAreaRowChanging;
+            public event ReportSalesAreaRowChangeEventHandler ReportSalesAreaRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesAreaRowChangeEventHandler RepotSalesAreaRowChanged;
+            public event ReportSalesAreaRowChangeEventHandler ReportSalesAreaRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesAreaRowChangeEventHandler RepotSalesAreaRowDeleting;
+            public event ReportSalesAreaRowChangeEventHandler ReportSalesAreaRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesAreaRowChangeEventHandler RepotSalesAreaRowDeleted;
+            public event ReportSalesAreaRowChangeEventHandler ReportSalesAreaRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddRepotSalesAreaRow(RepotSalesAreaRow row) {
+            public void AddReportSalesAreaRow(ReportSalesAreaRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaRow AddRepotSalesAreaRow(string AreaName, string TotalAmount, string TotalVATAmount, string TotalSaleAmount) {
-                RepotSalesAreaRow rowRepotSalesAreaRow = ((RepotSalesAreaRow)(this.NewRow()));
+            public ReportSalesAreaRow AddReportSalesAreaRow(string AreaName, decimal TotalAmount, decimal TotalVATAmount, decimal TotalSaleAmount, string TableName) {
+                ReportSalesAreaRow rowReportSalesAreaRow = ((ReportSalesAreaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AreaName,
                         TotalAmount,
                         TotalVATAmount,
-                        TotalSaleAmount};
-                rowRepotSalesAreaRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRepotSalesAreaRow);
-                return rowRepotSalesAreaRow;
+                        TotalSaleAmount,
+                        TableName};
+                rowReportSalesAreaRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportSalesAreaRow);
+                return rowReportSalesAreaRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                RepotSalesAreaDataTable cln = ((RepotSalesAreaDataTable)(base.Clone()));
+                ReportSalesAreaDataTable cln = ((ReportSalesAreaDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2023,7 +2034,7 @@ namespace ClientApp.UI.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RepotSalesAreaDataTable();
+                return new ReportSalesAreaDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2033,6 +2044,7 @@ namespace ClientApp.UI.Report {
                 this.columnTotalAmount = base.Columns["TotalAmount"];
                 this.columnTotalVATAmount = base.Columns["TotalVATAmount"];
                 this.columnTotalSaleAmount = base.Columns["TotalSaleAmount"];
+                this.columnTableName = base.Columns["TableName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2040,38 +2052,40 @@ namespace ClientApp.UI.Report {
             private void InitClass() {
                 this.columnAreaName = new global::System.Data.DataColumn("AreaName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAreaName);
-                this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTotalAmount = new global::System.Data.DataColumn("TotalAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalAmount);
-                this.columnTotalVATAmount = new global::System.Data.DataColumn("TotalVATAmount", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTotalVATAmount = new global::System.Data.DataColumn("TotalVATAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalVATAmount);
-                this.columnTotalSaleAmount = new global::System.Data.DataColumn("TotalSaleAmount", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTotalSaleAmount = new global::System.Data.DataColumn("TotalSaleAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalSaleAmount);
+                this.columnTableName = new global::System.Data.DataColumn("TableName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTableName);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaRow NewRepotSalesAreaRow() {
-                return ((RepotSalesAreaRow)(this.NewRow()));
+            public ReportSalesAreaRow NewReportSalesAreaRow() {
+                return ((ReportSalesAreaRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RepotSalesAreaRow(builder);
+                return new ReportSalesAreaRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(RepotSalesAreaRow);
+                return typeof(ReportSalesAreaRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RepotSalesAreaRowChanged != null)) {
-                    this.RepotSalesAreaRowChanged(this, new RepotSalesAreaRowChangeEvent(((RepotSalesAreaRow)(e.Row)), e.Action));
+                if ((this.ReportSalesAreaRowChanged != null)) {
+                    this.ReportSalesAreaRowChanged(this, new ReportSalesAreaRowChangeEvent(((ReportSalesAreaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2079,8 +2093,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RepotSalesAreaRowChanging != null)) {
-                    this.RepotSalesAreaRowChanging(this, new RepotSalesAreaRowChangeEvent(((RepotSalesAreaRow)(e.Row)), e.Action));
+                if ((this.ReportSalesAreaRowChanging != null)) {
+                    this.ReportSalesAreaRowChanging(this, new ReportSalesAreaRowChangeEvent(((ReportSalesAreaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2088,8 +2102,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RepotSalesAreaRowDeleted != null)) {
-                    this.RepotSalesAreaRowDeleted(this, new RepotSalesAreaRowChangeEvent(((RepotSalesAreaRow)(e.Row)), e.Action));
+                if ((this.ReportSalesAreaRowDeleted != null)) {
+                    this.ReportSalesAreaRowDeleted(this, new ReportSalesAreaRowChangeEvent(((ReportSalesAreaRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2097,14 +2111,14 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RepotSalesAreaRowDeleting != null)) {
-                    this.RepotSalesAreaRowDeleting(this, new RepotSalesAreaRowChangeEvent(((RepotSalesAreaRow)(e.Row)), e.Action));
+                if ((this.ReportSalesAreaRowDeleting != null)) {
+                    this.ReportSalesAreaRowDeleting(this, new ReportSalesAreaRowChangeEvent(((ReportSalesAreaRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveRepotSalesAreaRow(RepotSalesAreaRow row) {
+            public void RemoveReportSalesAreaRow(ReportSalesAreaRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2131,7 +2145,7 @@ namespace ClientApp.UI.Report {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RepotSalesAreaDataTable";
+                attribute2.FixedValue = "ReportSalesAreaDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2177,7 +2191,7 @@ namespace ClientApp.UI.Report {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RepotSalesCustomerDataTable : global::System.Data.TypedTableBase<RepotSalesCustomerRow> {
+        public partial class ReportSalesCustomerDataTable : global::System.Data.TypedTableBase<ReportSalesCustomerRow> {
             
             private global::System.Data.DataColumn columnCustomerCode;
             
@@ -2191,8 +2205,8 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerDataTable() {
-                this.TableName = "RepotSalesCustomer";
+            public ReportSalesCustomerDataTable() {
+                this.TableName = "ReportSalesCustomer";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2200,7 +2214,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesCustomerDataTable(global::System.Data.DataTable table) {
+            internal ReportSalesCustomerDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2217,7 +2231,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected RepotSalesCustomerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportSalesCustomerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2273,49 +2287,49 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerRow this[int index] {
+            public ReportSalesCustomerRow this[int index] {
                 get {
-                    return ((RepotSalesCustomerRow)(this.Rows[index]));
+                    return ((ReportSalesCustomerRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesCustomerRowChangeEventHandler RepotSalesCustomerRowChanging;
+            public event ReportSalesCustomerRowChangeEventHandler ReportSalesCustomerRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesCustomerRowChangeEventHandler RepotSalesCustomerRowChanged;
+            public event ReportSalesCustomerRowChangeEventHandler ReportSalesCustomerRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesCustomerRowChangeEventHandler RepotSalesCustomerRowDeleting;
+            public event ReportSalesCustomerRowChangeEventHandler ReportSalesCustomerRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesCustomerRowChangeEventHandler RepotSalesCustomerRowDeleted;
+            public event ReportSalesCustomerRowChangeEventHandler ReportSalesCustomerRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddRepotSalesCustomerRow(RepotSalesCustomerRow row) {
+            public void AddReportSalesCustomerRow(ReportSalesCustomerRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerRow AddRepotSalesCustomerRow(string CustomerCode, string TotalAmount, string TotalVATAmount, string TotalSaleAmount, string CustomerName) {
-                RepotSalesCustomerRow rowRepotSalesCustomerRow = ((RepotSalesCustomerRow)(this.NewRow()));
+            public ReportSalesCustomerRow AddReportSalesCustomerRow(string CustomerCode, string TotalAmount, string TotalVATAmount, string TotalSaleAmount, string CustomerName) {
+                ReportSalesCustomerRow rowReportSalesCustomerRow = ((ReportSalesCustomerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CustomerCode,
                         TotalAmount,
                         TotalVATAmount,
                         TotalSaleAmount,
                         CustomerName};
-                rowRepotSalesCustomerRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRepotSalesCustomerRow);
-                return rowRepotSalesCustomerRow;
+                rowReportSalesCustomerRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportSalesCustomerRow);
+                return rowReportSalesCustomerRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                RepotSalesCustomerDataTable cln = ((RepotSalesCustomerDataTable)(base.Clone()));
+                ReportSalesCustomerDataTable cln = ((ReportSalesCustomerDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2323,7 +2337,7 @@ namespace ClientApp.UI.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RepotSalesCustomerDataTable();
+                return new ReportSalesCustomerDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2355,28 +2369,28 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerRow NewRepotSalesCustomerRow() {
-                return ((RepotSalesCustomerRow)(this.NewRow()));
+            public ReportSalesCustomerRow NewReportSalesCustomerRow() {
+                return ((ReportSalesCustomerRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RepotSalesCustomerRow(builder);
+                return new ReportSalesCustomerRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(RepotSalesCustomerRow);
+                return typeof(ReportSalesCustomerRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RepotSalesCustomerRowChanged != null)) {
-                    this.RepotSalesCustomerRowChanged(this, new RepotSalesCustomerRowChangeEvent(((RepotSalesCustomerRow)(e.Row)), e.Action));
+                if ((this.ReportSalesCustomerRowChanged != null)) {
+                    this.ReportSalesCustomerRowChanged(this, new ReportSalesCustomerRowChangeEvent(((ReportSalesCustomerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2384,8 +2398,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RepotSalesCustomerRowChanging != null)) {
-                    this.RepotSalesCustomerRowChanging(this, new RepotSalesCustomerRowChangeEvent(((RepotSalesCustomerRow)(e.Row)), e.Action));
+                if ((this.ReportSalesCustomerRowChanging != null)) {
+                    this.ReportSalesCustomerRowChanging(this, new ReportSalesCustomerRowChangeEvent(((ReportSalesCustomerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2393,8 +2407,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RepotSalesCustomerRowDeleted != null)) {
-                    this.RepotSalesCustomerRowDeleted(this, new RepotSalesCustomerRowChangeEvent(((RepotSalesCustomerRow)(e.Row)), e.Action));
+                if ((this.ReportSalesCustomerRowDeleted != null)) {
+                    this.ReportSalesCustomerRowDeleted(this, new ReportSalesCustomerRowChangeEvent(((ReportSalesCustomerRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2402,14 +2416,14 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RepotSalesCustomerRowDeleting != null)) {
-                    this.RepotSalesCustomerRowDeleting(this, new RepotSalesCustomerRowChangeEvent(((RepotSalesCustomerRow)(e.Row)), e.Action));
+                if ((this.ReportSalesCustomerRowDeleting != null)) {
+                    this.ReportSalesCustomerRowDeleting(this, new ReportSalesCustomerRowChangeEvent(((ReportSalesCustomerRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveRepotSalesCustomerRow(RepotSalesCustomerRow row) {
+            public void RemoveReportSalesCustomerRow(ReportSalesCustomerRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2436,7 +2450,7 @@ namespace ClientApp.UI.Report {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RepotSalesCustomerDataTable";
+                attribute2.FixedValue = "ReportSalesCustomerDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2482,7 +2496,7 @@ namespace ClientApp.UI.Report {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class RepotSalesEmployeeDataTable : global::System.Data.TypedTableBase<RepotSalesEmployeeRow> {
+        public partial class ReportSalesEmployeeDataTable : global::System.Data.TypedTableBase<ReportSalesEmployeeRow> {
             
             private global::System.Data.DataColumn columnEmployeeCode;
             
@@ -2496,8 +2510,8 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeDataTable() {
-                this.TableName = "RepotSalesEmployee";
+            public ReportSalesEmployeeDataTable() {
+                this.TableName = "ReportSalesEmployee";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2505,7 +2519,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesEmployeeDataTable(global::System.Data.DataTable table) {
+            internal ReportSalesEmployeeDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2522,7 +2536,7 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected RepotSalesEmployeeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportSalesEmployeeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2578,49 +2592,49 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeRow this[int index] {
+            public ReportSalesEmployeeRow this[int index] {
                 get {
-                    return ((RepotSalesEmployeeRow)(this.Rows[index]));
+                    return ((ReportSalesEmployeeRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesEmployeeRowChangeEventHandler RepotSalesEmployeeRowChanging;
+            public event ReportSalesEmployeeRowChangeEventHandler ReportSalesEmployeeRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesEmployeeRowChangeEventHandler RepotSalesEmployeeRowChanged;
+            public event ReportSalesEmployeeRowChangeEventHandler ReportSalesEmployeeRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesEmployeeRowChangeEventHandler RepotSalesEmployeeRowDeleting;
+            public event ReportSalesEmployeeRowChangeEventHandler ReportSalesEmployeeRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event RepotSalesEmployeeRowChangeEventHandler RepotSalesEmployeeRowDeleted;
+            public event ReportSalesEmployeeRowChangeEventHandler ReportSalesEmployeeRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddRepotSalesEmployeeRow(RepotSalesEmployeeRow row) {
+            public void AddReportSalesEmployeeRow(ReportSalesEmployeeRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeRow AddRepotSalesEmployeeRow(string EmployeeCode, string TotalAmount, string TotalVATAmount, string TotalSaleAmount, string EmployeeName) {
-                RepotSalesEmployeeRow rowRepotSalesEmployeeRow = ((RepotSalesEmployeeRow)(this.NewRow()));
+            public ReportSalesEmployeeRow AddReportSalesEmployeeRow(string EmployeeCode, string TotalAmount, string TotalVATAmount, string TotalSaleAmount, string EmployeeName) {
+                ReportSalesEmployeeRow rowReportSalesEmployeeRow = ((ReportSalesEmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeCode,
                         TotalAmount,
                         TotalVATAmount,
                         TotalSaleAmount,
                         EmployeeName};
-                rowRepotSalesEmployeeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRepotSalesEmployeeRow);
-                return rowRepotSalesEmployeeRow;
+                rowReportSalesEmployeeRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportSalesEmployeeRow);
+                return rowReportSalesEmployeeRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                RepotSalesEmployeeDataTable cln = ((RepotSalesEmployeeDataTable)(base.Clone()));
+                ReportSalesEmployeeDataTable cln = ((ReportSalesEmployeeDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2628,7 +2642,7 @@ namespace ClientApp.UI.Report {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new RepotSalesEmployeeDataTable();
+                return new ReportSalesEmployeeDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2660,28 +2674,28 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeRow NewRepotSalesEmployeeRow() {
-                return ((RepotSalesEmployeeRow)(this.NewRow()));
+            public ReportSalesEmployeeRow NewReportSalesEmployeeRow() {
+                return ((ReportSalesEmployeeRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new RepotSalesEmployeeRow(builder);
+                return new ReportSalesEmployeeRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(RepotSalesEmployeeRow);
+                return typeof(ReportSalesEmployeeRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.RepotSalesEmployeeRowChanged != null)) {
-                    this.RepotSalesEmployeeRowChanged(this, new RepotSalesEmployeeRowChangeEvent(((RepotSalesEmployeeRow)(e.Row)), e.Action));
+                if ((this.ReportSalesEmployeeRowChanged != null)) {
+                    this.ReportSalesEmployeeRowChanged(this, new ReportSalesEmployeeRowChangeEvent(((ReportSalesEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2689,8 +2703,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.RepotSalesEmployeeRowChanging != null)) {
-                    this.RepotSalesEmployeeRowChanging(this, new RepotSalesEmployeeRowChangeEvent(((RepotSalesEmployeeRow)(e.Row)), e.Action));
+                if ((this.ReportSalesEmployeeRowChanging != null)) {
+                    this.ReportSalesEmployeeRowChanging(this, new ReportSalesEmployeeRowChangeEvent(((ReportSalesEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2698,8 +2712,8 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.RepotSalesEmployeeRowDeleted != null)) {
-                    this.RepotSalesEmployeeRowDeleted(this, new RepotSalesEmployeeRowChangeEvent(((RepotSalesEmployeeRow)(e.Row)), e.Action));
+                if ((this.ReportSalesEmployeeRowDeleted != null)) {
+                    this.ReportSalesEmployeeRowDeleted(this, new ReportSalesEmployeeRowChangeEvent(((ReportSalesEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2707,14 +2721,14 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.RepotSalesEmployeeRowDeleting != null)) {
-                    this.RepotSalesEmployeeRowDeleting(this, new RepotSalesEmployeeRowChangeEvent(((RepotSalesEmployeeRow)(e.Row)), e.Action));
+                if ((this.ReportSalesEmployeeRowDeleting != null)) {
+                    this.ReportSalesEmployeeRowDeleting(this, new ReportSalesEmployeeRowChangeEvent(((ReportSalesEmployeeRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveRepotSalesEmployeeRow(RepotSalesEmployeeRow row) {
+            public void RemoveReportSalesEmployeeRow(ReportSalesEmployeeRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2741,7 +2755,7 @@ namespace ClientApp.UI.Report {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "RepotSalesEmployeeDataTable";
+                attribute2.FixedValue = "ReportSalesEmployeeDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4586,15 +4600,15 @@ namespace ClientApp.UI.Report {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class RepotSalesAreaRow : global::System.Data.DataRow {
+        public partial class ReportSalesAreaRow : global::System.Data.DataRow {
             
-            private RepotSalesAreaDataTable tableRepotSalesArea;
+            private ReportSalesAreaDataTable tableReportSalesArea;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesAreaRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportSalesAreaRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRepotSalesArea = ((RepotSalesAreaDataTable)(this.Table));
+                this.tableReportSalesArea = ((ReportSalesAreaDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4602,126 +4616,154 @@ namespace ClientApp.UI.Report {
             public string AreaName {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesArea.AreaNameColumn]));
+                        return ((string)(this[this.tableReportSalesArea.AreaNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'AreaName\' in table \'RepotSalesArea\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'AreaName\' in table \'ReportSalesArea\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesArea.AreaNameColumn] = value;
+                    this[this.tableReportSalesArea.AreaNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TotalAmount {
+            public decimal TotalAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesArea.TotalAmountColumn]));
+                        return ((decimal)(this[this.tableReportSalesArea.TotalAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'RepotSalesArea\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'ReportSalesArea\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesArea.TotalAmountColumn] = value;
+                    this[this.tableReportSalesArea.TotalAmountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TotalVATAmount {
+            public decimal TotalVATAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesArea.TotalVATAmountColumn]));
+                        return ((decimal)(this[this.tableReportSalesArea.TotalVATAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'RepotSalesArea\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'ReportSalesArea\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesArea.TotalVATAmountColumn] = value;
+                    this[this.tableReportSalesArea.TotalVATAmountColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string TotalSaleAmount {
+            public decimal TotalSaleAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesArea.TotalSaleAmountColumn]));
+                        return ((decimal)(this[this.tableReportSalesArea.TotalSaleAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'RepotSalesArea\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'ReportSalesArea\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesArea.TotalSaleAmountColumn] = value;
+                    this[this.tableReportSalesArea.TotalSaleAmountColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TableName {
+                get {
+                    try {
+                        return ((string)(this[this.tableReportSalesArea.TableNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TableName\' in table \'ReportSalesArea\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReportSalesArea.TableNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsAreaNameNull() {
-                return this.IsNull(this.tableRepotSalesArea.AreaNameColumn);
+                return this.IsNull(this.tableReportSalesArea.AreaNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetAreaNameNull() {
-                this[this.tableRepotSalesArea.AreaNameColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesArea.AreaNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalAmountNull() {
-                return this.IsNull(this.tableRepotSalesArea.TotalAmountColumn);
+                return this.IsNull(this.tableReportSalesArea.TotalAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalAmountNull() {
-                this[this.tableRepotSalesArea.TotalAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesArea.TotalAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalVATAmountNull() {
-                return this.IsNull(this.tableRepotSalesArea.TotalVATAmountColumn);
+                return this.IsNull(this.tableReportSalesArea.TotalVATAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalVATAmountNull() {
-                this[this.tableRepotSalesArea.TotalVATAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesArea.TotalVATAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalSaleAmountNull() {
-                return this.IsNull(this.tableRepotSalesArea.TotalSaleAmountColumn);
+                return this.IsNull(this.tableReportSalesArea.TotalSaleAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalSaleAmountNull() {
-                this[this.tableRepotSalesArea.TotalSaleAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesArea.TotalSaleAmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTableNameNull() {
+                return this.IsNull(this.tableReportSalesArea.TableNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTableNameNull() {
+                this[this.tableReportSalesArea.TableNameColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class RepotSalesCustomerRow : global::System.Data.DataRow {
+        public partial class ReportSalesCustomerRow : global::System.Data.DataRow {
             
-            private RepotSalesCustomerDataTable tableRepotSalesCustomer;
+            private ReportSalesCustomerDataTable tableReportSalesCustomer;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesCustomerRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportSalesCustomerRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRepotSalesCustomer = ((RepotSalesCustomerDataTable)(this.Table));
+                this.tableReportSalesCustomer = ((ReportSalesCustomerDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4729,14 +4771,14 @@ namespace ClientApp.UI.Report {
             public string CustomerCode {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesCustomer.CustomerCodeColumn]));
+                        return ((string)(this[this.tableReportSalesCustomer.CustomerCodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerCode\' in table \'RepotSalesCustomer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerCode\' in table \'ReportSalesCustomer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesCustomer.CustomerCodeColumn] = value;
+                    this[this.tableReportSalesCustomer.CustomerCodeColumn] = value;
                 }
             }
             
@@ -4745,14 +4787,14 @@ namespace ClientApp.UI.Report {
             public string TotalAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesCustomer.TotalAmountColumn]));
+                        return ((string)(this[this.tableReportSalesCustomer.TotalAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'RepotSalesCustomer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'ReportSalesCustomer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesCustomer.TotalAmountColumn] = value;
+                    this[this.tableReportSalesCustomer.TotalAmountColumn] = value;
                 }
             }
             
@@ -4761,14 +4803,14 @@ namespace ClientApp.UI.Report {
             public string TotalVATAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesCustomer.TotalVATAmountColumn]));
+                        return ((string)(this[this.tableReportSalesCustomer.TotalVATAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'RepotSalesCustomer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'ReportSalesCustomer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesCustomer.TotalVATAmountColumn] = value;
+                    this[this.tableReportSalesCustomer.TotalVATAmountColumn] = value;
                 }
             }
             
@@ -4777,14 +4819,14 @@ namespace ClientApp.UI.Report {
             public string TotalSaleAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesCustomer.TotalSaleAmountColumn]));
+                        return ((string)(this[this.tableReportSalesCustomer.TotalSaleAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'RepotSalesCustomer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'ReportSalesCustomer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesCustomer.TotalSaleAmountColumn] = value;
+                    this[this.tableReportSalesCustomer.TotalSaleAmountColumn] = value;
                 }
             }
             
@@ -4793,90 +4835,90 @@ namespace ClientApp.UI.Report {
             public string CustomerName {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesCustomer.CustomerNameColumn]));
+                        return ((string)(this[this.tableReportSalesCustomer.CustomerNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'RepotSalesCustomer\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CustomerName\' in table \'ReportSalesCustomer\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesCustomer.CustomerNameColumn] = value;
+                    this[this.tableReportSalesCustomer.CustomerNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCustomerCodeNull() {
-                return this.IsNull(this.tableRepotSalesCustomer.CustomerCodeColumn);
+                return this.IsNull(this.tableReportSalesCustomer.CustomerCodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCustomerCodeNull() {
-                this[this.tableRepotSalesCustomer.CustomerCodeColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesCustomer.CustomerCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalAmountNull() {
-                return this.IsNull(this.tableRepotSalesCustomer.TotalAmountColumn);
+                return this.IsNull(this.tableReportSalesCustomer.TotalAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalAmountNull() {
-                this[this.tableRepotSalesCustomer.TotalAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesCustomer.TotalAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalVATAmountNull() {
-                return this.IsNull(this.tableRepotSalesCustomer.TotalVATAmountColumn);
+                return this.IsNull(this.tableReportSalesCustomer.TotalVATAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalVATAmountNull() {
-                this[this.tableRepotSalesCustomer.TotalVATAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesCustomer.TotalVATAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalSaleAmountNull() {
-                return this.IsNull(this.tableRepotSalesCustomer.TotalSaleAmountColumn);
+                return this.IsNull(this.tableReportSalesCustomer.TotalSaleAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalSaleAmountNull() {
-                this[this.tableRepotSalesCustomer.TotalSaleAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesCustomer.TotalSaleAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsCustomerNameNull() {
-                return this.IsNull(this.tableRepotSalesCustomer.CustomerNameColumn);
+                return this.IsNull(this.tableReportSalesCustomer.CustomerNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCustomerNameNull() {
-                this[this.tableRepotSalesCustomer.CustomerNameColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesCustomer.CustomerNameColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class RepotSalesEmployeeRow : global::System.Data.DataRow {
+        public partial class ReportSalesEmployeeRow : global::System.Data.DataRow {
             
-            private RepotSalesEmployeeDataTable tableRepotSalesEmployee;
+            private ReportSalesEmployeeDataTable tableReportSalesEmployee;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal RepotSalesEmployeeRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportSalesEmployeeRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRepotSalesEmployee = ((RepotSalesEmployeeDataTable)(this.Table));
+                this.tableReportSalesEmployee = ((ReportSalesEmployeeDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4884,14 +4926,14 @@ namespace ClientApp.UI.Report {
             public string EmployeeCode {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesEmployee.EmployeeCodeColumn]));
+                        return ((string)(this[this.tableReportSalesEmployee.EmployeeCodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeCode\' in table \'RepotSalesEmployee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeCode\' in table \'ReportSalesEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesEmployee.EmployeeCodeColumn] = value;
+                    this[this.tableReportSalesEmployee.EmployeeCodeColumn] = value;
                 }
             }
             
@@ -4900,14 +4942,14 @@ namespace ClientApp.UI.Report {
             public string TotalAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesEmployee.TotalAmountColumn]));
+                        return ((string)(this[this.tableReportSalesEmployee.TotalAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'RepotSalesEmployee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalAmount\' in table \'ReportSalesEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesEmployee.TotalAmountColumn] = value;
+                    this[this.tableReportSalesEmployee.TotalAmountColumn] = value;
                 }
             }
             
@@ -4916,14 +4958,14 @@ namespace ClientApp.UI.Report {
             public string TotalVATAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesEmployee.TotalVATAmountColumn]));
+                        return ((string)(this[this.tableReportSalesEmployee.TotalVATAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'RepotSalesEmployee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalVATAmount\' in table \'ReportSalesEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesEmployee.TotalVATAmountColumn] = value;
+                    this[this.tableReportSalesEmployee.TotalVATAmountColumn] = value;
                 }
             }
             
@@ -4932,14 +4974,14 @@ namespace ClientApp.UI.Report {
             public string TotalSaleAmount {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesEmployee.TotalSaleAmountColumn]));
+                        return ((string)(this[this.tableReportSalesEmployee.TotalSaleAmountColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'RepotSalesEmployee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TotalSaleAmount\' in table \'ReportSalesEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesEmployee.TotalSaleAmountColumn] = value;
+                    this[this.tableReportSalesEmployee.TotalSaleAmountColumn] = value;
                 }
             }
             
@@ -4948,75 +4990,75 @@ namespace ClientApp.UI.Report {
             public string EmployeeName {
                 get {
                     try {
-                        return ((string)(this[this.tableRepotSalesEmployee.EmployeeNameColumn]));
+                        return ((string)(this[this.tableReportSalesEmployee.EmployeeNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeName\' in table \'RepotSalesEmployee\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeName\' in table \'ReportSalesEmployee\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRepotSalesEmployee.EmployeeNameColumn] = value;
+                    this[this.tableReportSalesEmployee.EmployeeNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEmployeeCodeNull() {
-                return this.IsNull(this.tableRepotSalesEmployee.EmployeeCodeColumn);
+                return this.IsNull(this.tableReportSalesEmployee.EmployeeCodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmployeeCodeNull() {
-                this[this.tableRepotSalesEmployee.EmployeeCodeColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesEmployee.EmployeeCodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalAmountNull() {
-                return this.IsNull(this.tableRepotSalesEmployee.TotalAmountColumn);
+                return this.IsNull(this.tableReportSalesEmployee.TotalAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalAmountNull() {
-                this[this.tableRepotSalesEmployee.TotalAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesEmployee.TotalAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalVATAmountNull() {
-                return this.IsNull(this.tableRepotSalesEmployee.TotalVATAmountColumn);
+                return this.IsNull(this.tableReportSalesEmployee.TotalVATAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalVATAmountNull() {
-                this[this.tableRepotSalesEmployee.TotalVATAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesEmployee.TotalVATAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTotalSaleAmountNull() {
-                return this.IsNull(this.tableRepotSalesEmployee.TotalSaleAmountColumn);
+                return this.IsNull(this.tableReportSalesEmployee.TotalSaleAmountColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTotalSaleAmountNull() {
-                this[this.tableRepotSalesEmployee.TotalSaleAmountColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesEmployee.TotalSaleAmountColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsEmployeeNameNull() {
-                return this.IsNull(this.tableRepotSalesEmployee.EmployeeNameColumn);
+                return this.IsNull(this.tableReportSalesEmployee.EmployeeNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetEmployeeNameNull() {
-                this[this.tableRepotSalesEmployee.EmployeeNameColumn] = global::System.Convert.DBNull;
+                this[this.tableReportSalesEmployee.EmployeeNameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5058,22 +5100,22 @@ namespace ClientApp.UI.Report {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class RepotSalesAreaRowChangeEvent : global::System.EventArgs {
+        public class ReportSalesAreaRowChangeEvent : global::System.EventArgs {
             
-            private RepotSalesAreaRow eventRow;
+            private ReportSalesAreaRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaRowChangeEvent(RepotSalesAreaRow row, global::System.Data.DataRowAction action) {
+            public ReportSalesAreaRowChangeEvent(ReportSalesAreaRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesAreaRow Row {
+            public ReportSalesAreaRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5092,22 +5134,22 @@ namespace ClientApp.UI.Report {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class RepotSalesCustomerRowChangeEvent : global::System.EventArgs {
+        public class ReportSalesCustomerRowChangeEvent : global::System.EventArgs {
             
-            private RepotSalesCustomerRow eventRow;
+            private ReportSalesCustomerRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerRowChangeEvent(RepotSalesCustomerRow row, global::System.Data.DataRowAction action) {
+            public ReportSalesCustomerRowChangeEvent(ReportSalesCustomerRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesCustomerRow Row {
+            public ReportSalesCustomerRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5126,22 +5168,22 @@ namespace ClientApp.UI.Report {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class RepotSalesEmployeeRowChangeEvent : global::System.EventArgs {
+        public class ReportSalesEmployeeRowChangeEvent : global::System.EventArgs {
             
-            private RepotSalesEmployeeRow eventRow;
+            private ReportSalesEmployeeRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeRowChangeEvent(RepotSalesEmployeeRow row, global::System.Data.DataRowAction action) {
+            public ReportSalesEmployeeRowChangeEvent(ReportSalesEmployeeRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public RepotSalesEmployeeRow Row {
+            public ReportSalesEmployeeRow Row {
                 get {
                     return this.eventRow;
                 }

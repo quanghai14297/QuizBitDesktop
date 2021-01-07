@@ -11,7 +11,11 @@ namespace ClientApp.UI.Report
 
     partial class ReportDataSet
     {
-        partial class RepotSalesAreaDataTable
+        partial class ReportSalesCustomerDataTable
+        {
+        }
+
+        partial class ReportSalesAreaDataTable
         {
         }
     }
