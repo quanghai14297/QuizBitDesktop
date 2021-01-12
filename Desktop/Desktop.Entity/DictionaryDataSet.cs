@@ -4,5 +4,8 @@
 
     partial class DictionaryDataSet
     {
+        partial class EmployeeDataTable
+        {
+        }
     }
 }

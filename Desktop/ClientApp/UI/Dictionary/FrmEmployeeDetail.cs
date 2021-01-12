@@ -1,5 +1,6 @@
 ﻿using Desktop.BL;
 using Desktop.Entity;
+using System;
 using System.Data;
 using System.Windows.Forms;
 
@@ -23,10 +24,10 @@ namespace ClientApp.UI.Dictionary
             }
             set { _oBL = value; }
         }
-       
+
         protected override void BindingData()
         {
-             base.BindingData();
+            base.BindingData();
             txtEmployeeCode.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.EmployeeCodeColumn.ColumnName, true));
             txtEmployeeName.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.EmployeeNameColumn.ColumnName, true));
             dteBirthday.DataBindings.Add(new Binding("Value", bsDetail, DsDictionary.Employee.BirthdayColumn.ColumnName, true));
@@ -34,10 +35,19 @@ namespace ClientApp.UI.Dictionary
             txtMobile.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.MobileColumn.ColumnName, true));
             txtAddress.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.AddressColumn.ColumnName, true));
             txtDescription.DataBindings.Add(new Binding("Text", bsDetail, DsDictionary.Employee.DescriptionColumn.ColumnName, true));
-            txtUserName.Text = ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).UserName;
-            txtPassword.Text= ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).Password;
-            txtCofirmPassword.Text = txtPassword.Text;
-            if (((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "Admin" || ((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "QL")
+            if (FormActionMode == ActionMode.AddNew)
+            {
+                txtUserName.Text = string.Empty;
+                txtPassword.Text = string.Empty;
+            }
+            else
+            {
+                txtUserName.Text = DsDictionary.User.Rows.Count > 0 ? ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).UserName : "";
+                txtPassword.Text = DsDictionary.User.Rows.Count > 0 ? ((Desktop.Entity.DictionaryDataSet.UserRow)DsDictionary.User.Rows[0]).Password : "";
+                txtCofirmPassword.Text = txtPassword.Text;
+            }
+
+            if (DsDictionary.UserJoinRole.Rows.Count > 0 && (((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "Admin" || ((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "QL"))
             {
                 rbAdmin.Checked = true;
                 ckCooker.Enabled = false;
@@ -75,7 +85,7 @@ namespace ClientApp.UI.Dictionary
         protected override void InitNewRow()
         {
             base.InitNewRow();
-            objBLDetail.InitNewRow(DsDictionary.EmployeeInfor);
+            objBLDetail.InitNewRow(DsDictionary.Employee);
             BsDetail.MoveFirst();
             txtEmployeeCode.Focus();
         }
@@ -83,8 +93,8 @@ namespace ClientApp.UI.Dictionary
         protected override void InitCopyRow()
         {
             base.InitNewRow();
-            DictionaryDataSet.EmployeeInforRow drCurrent = (DictionaryDataSet.EmployeeInforRow)((DataRowView)bsDetail.Current).Row;
-            objBLDetail.InitCopyRow(DsDictionary.EmployeeInfor, drCurrent);
+            DictionaryDataSet.EmployeeRow drCurrent = (DictionaryDataSet.EmployeeRow)((DataRowView)bsDetail.Current).Row;
+            objBLDetail.InitCopyRow(DsDictionary.Employee, drCurrent);
             BsDetail.MoveFirst();
             txtEmployeeCode.Focus();
         }
@@ -92,14 +102,16 @@ namespace ClientApp.UI.Dictionary
         protected override int SaveData()
         {
             int result = 1;
+            bool checkAccount = false;
             BsDetail.EndEdit();
             if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
             {
-                if (txtPassword.Text == txtCofirmPassword.Text)
+                if (txtPassword.Text != txtCofirmPassword.Text)
                 {
                     MessageBoxCommon.ShowExclamation("Mật khẩu xác nhận không khớp. Vui lòng kiểm tra lại.");
+                    return 0;
                 }
-
+                checkAccount = true;
             }
             var tableChanged = dsDictionary.Employee.GetChanges();
             if (tableChanged == null)
@@ -115,6 +127,17 @@ namespace ClientApp.UI.Dictionary
             if (drObjectChange != null)
             {
                 result = objBLDetail.InsertUpdate(drObjectChange);
+                if (result == 1 && checkAccount)
+                {
+                    DictionaryDataSet.UserDataTable table = new DictionaryDataSet.UserDataTable();
+                    DictionaryDataSet.UserRow drUser = table.NewUserRow();
+                    drUser.UserID = Guid.NewGuid();
+                    drUser.UserName = txtUserName.Text;
+                    drUser.Password = txtPassword.Text;
+                    drUser.DisplayName = txtEmployeeName.Text;
+                    drUser.Inactive = false;
+                    objBLDetail.InsertUpdateUser(drUser);
+                }
             }
             return result;
         }

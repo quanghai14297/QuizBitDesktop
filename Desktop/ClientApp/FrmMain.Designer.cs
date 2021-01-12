@@ -118,7 +118,6 @@
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup ultraExplorerBarGroup3 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarGroup();
-            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem8 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem9 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem10 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem12 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
@@ -482,8 +481,6 @@
             ultraExplorerBarGroup2.Settings.AppearancesSmall.HeaderAppearance = appearance20;
             ultraExplorerBarGroup2.Settings.NavigationPaneCollapsedGroupAreaText = "Nghiệp vụ";
             ultraExplorerBarGroup2.Text = "Hệ thống";
-            ultraExplorerBarItem8.Key = "expOverview";
-            ultraExplorerBarItem8.Text = "Tổng quan";
             ultraExplorerBarItem9.Key = "expReportSales";
             ultraExplorerBarItem9.Text = "Báo cáo doanh thu";
             ultraExplorerBarItem10.Key = "expReportSalesArea";
@@ -495,7 +492,6 @@
             ultraExplorerBarItem14.Key = "expSellingInventory";
             ultraExplorerBarItem14.Text = "Báo cáo DT theo mặt hàng";
             ultraExplorerBarGroup3.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
-            ultraExplorerBarItem8,
             ultraExplorerBarItem9,
             ultraExplorerBarItem10,
             ultraExplorerBarItem12,

@@ -174,7 +174,6 @@
             this.tabGeneralInfo.Controls.Add(this.txtEmployeeCode);
             this.tabGeneralInfo.Controls.Add(this.lblDescriptionTitle);
             this.tabGeneralInfo.Controls.Add(this.lblInventoryItemCategoryCodeTitle);
-            this.tabGeneralInfo.Location = new System.Drawing.Point(-10000, -10000);
             this.tabGeneralInfo.Size = new System.Drawing.Size(444, 229);
             this.tabGeneralInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tabGeneralInfo_Paint);
             // 
@@ -196,7 +195,7 @@
             this.ultraTabPageControl1.Controls.Add(this.txtUserName);
             this.ultraTabPageControl1.Controls.Add(this.ultraLabel7);
             this.ultraTabPageControl1.Enabled = false;
-            this.ultraTabPageControl1.Location = new System.Drawing.Point(1, 20);
+            this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Name = "ultraTabPageControl1";
             this.ultraTabPageControl1.Size = new System.Drawing.Size(444, 229);
             // 
@@ -482,6 +481,7 @@
             appearance10.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
             this.dteBirthday.Appearance = appearance10;
             this.dteBirthday.AutoSize = false;
+            this.dteBirthday.FormatString = "dd/MM/yyyy";
             this.dteBirthday.Location = new System.Drawing.Point(88, 56);
             this.dteBirthday.Name = "dteBirthday";
             this.dteBirthday.Size = new System.Drawing.Size(350, 21);

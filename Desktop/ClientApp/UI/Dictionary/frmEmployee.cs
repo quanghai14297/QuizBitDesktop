@@ -32,6 +32,29 @@ namespace ClientApp.UI.Dictionary
             if (table != null && table.Rows.Count > 0)
             {
                 dsDictionary.Employee.Clear();
+                foreach (DataRow dr in table.Rows) // search whole table
+                {
+                    if (dr["Gender"].ToString() == "0") // if id==2
+                    {
+                        dr["GenderDisplay"] = "Nam"; 
+                    }
+                    else
+                    {
+                        dr["GenderDisplay"] = "Nữ";
+                    }
+                    if (dr["JobStatus"].ToString() == "0") // if id==2
+                    {
+                        dr["JobStatusDisplay"] = "Thử việc";
+                    }
+                    else if (dr["JobStatus"].ToString() == "1") // if id==2
+                    {
+                        dr["JobStatusDisplay"] = "Đang làm việc";
+                    }
+                    else
+                    {
+                        dr["JobStatusDisplay"] = "Đã nghỉ việc";
+                    }
+                }
                 dsDictionary.Merge(table);
 
                 dsDictionary.AcceptChanges();
@@ -116,7 +139,7 @@ namespace ClientApp.UI.Dictionary
 
                 foreach (var item in rowsDeleted)
                 {
-                    bsList.RemoveAt(bsList.Find(ColumnName.CustomerID, item));
+                    bsList.RemoveAt(bsList.Find(ColumnName.EmployeeID, item));
                 }
 
                 if (rowsDeleted.Count > 0)

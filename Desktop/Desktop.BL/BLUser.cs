@@ -20,6 +20,6 @@ namespace Desktop.BL
         {
             return new DL.DLUser(Session.Token).Get();
         }
-
+        
     }
 }

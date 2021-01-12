@@ -592,12 +592,6 @@
     <Compile Include="UI\Dictionary\FrmUnitDetail.designer.cs">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Report\frmOverview.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Report\frmOverview.Designer.cs">
-      <DependentUpon>frmOverview.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Report\frmReportSales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -748,9 +742,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Dictionary\FrmUnitDetail.resx">
       <DependentUpon>FrmUnitDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Report\frmOverview.resx">
-      <DependentUpon>frmOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Report\frmReportSales.resx">
       <DependentUpon>frmReportSales.cs</DependentUpon>
@@ -1066,6 +1057,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-name-tag-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

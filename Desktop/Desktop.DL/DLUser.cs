@@ -36,6 +36,7 @@ namespace Desktop.DL
             Token = token;
             InitStored();
         }
+
         public DataTable Get()
         {
             ServiceResult<List<User>> list = CloudServiceFactory<List<User>>.ExecuteFunction("User/getlist", null, HeaderParameter, "GET");

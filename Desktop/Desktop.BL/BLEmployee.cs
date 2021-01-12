@@ -12,33 +12,36 @@ namespace Desktop.BL
     {
         public BLEmployee() : base()
         {
-            TableMasterName = "Customer";
+            TableMasterName = "Employee";
             TableDetailName = "";
-            oDL = new DL.DLCustomer(Session.Token);
+            oDL = new DL.DLEmployee(Session.Token);
         }
 
         /// <summary>
         /// Khởi tạo dữ liệu
         /// </summary>
         /// <param name="table"></param>
-        public DataRow InitNewRow(DictionaryDataSet.EmployeeInforDataTable table)
+        public DataRow InitNewRow(DictionaryDataSet.EmployeeDataTable table)
         {
-            DictionaryDataSet.EmployeeInforRow drNewRow = table.NewEmployeeInforRow();
+            DictionaryDataSet.EmployeeRow drNewRow = table.NewEmployeeRow();
             drNewRow.EmployeeID = Guid.NewGuid();
             drNewRow.EmployeeCode = "";
             drNewRow.EmployeeName = "";
             drNewRow.Birthday = DateTime.Now.AddYears(-10);
             drNewRow.Email = "";
             drNewRow.Mobile = "";
+            drNewRow.ProbationDate = DateTime.Now;
+            drNewRow.ReceiveDate = DateTime.Now;
+            drNewRow.TerminationDate = DateTime.Now;
             drNewRow.Address = "";
             drNewRow.Description = "";
             table.Rows.InsertAt(drNewRow, 0);
             return drNewRow;
         }
 
-        public DataRow InitCopyRow(DictionaryDataSet.EmployeeInforDataTable table, DictionaryDataSet.EmployeeInforRow row)
+        public DataRow InitCopyRow(DictionaryDataSet.EmployeeDataTable table, DictionaryDataSet.EmployeeRow row)
         {
-            DictionaryDataSet.EmployeeInforRow drNewRow = table.NewEmployeeInforRow();
+            DictionaryDataSet.EmployeeRow drNewRow = table.NewEmployeeRow();
             drNewRow.EmployeeID = Guid.NewGuid();
             drNewRow.EmployeeCode = row.EmployeeCode;
             drNewRow.EmployeeName = row.EmployeeName;
@@ -59,7 +62,8 @@ namespace Desktop.BL
         {
             return new DL.DLEmployee(Session.Token).InsertUpdate(drObjectChange);
         }
-
+        
+       
         public bool CheckCodeExists(DictionaryDataSet.EmployeeInforRow drObjectChange)
         {
             return new DL.DLEmployee(Session.Token).CheckCodeExists(drObjectChange);

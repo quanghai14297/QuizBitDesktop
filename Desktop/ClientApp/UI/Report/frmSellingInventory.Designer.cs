@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
@@ -48,20 +48,20 @@
             Infragistics.Win.UltraWinScrollBar.ScrollBarLook scrollBarLook1 = new Infragistics.Win.UltraWinScrollBar.ScrollBarLook();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinToolbars.UltraToolbar ultraToolbar1 = new Infragistics.Win.UltraWinToolbars.UltraToolbar("tbrFunction");
+            Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinToolbars.UltraToolbar ultraToolbar2 = new Infragistics.Win.UltraWinToolbars.UltraToolbar("tbrFunction");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool5 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuAdd");
-            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSellingInventory));
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool7 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuEdit");
-            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool8 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuDelete");
-            Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool9 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
-            Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool10 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuCopy");
-            Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool1 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("popMenuFunction");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool11 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuAdd");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool12 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuCopy");
@@ -76,28 +76,28 @@
             this._frmBaseList_Toolbars_Dock_Area_Left = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this._frmBaseList_Toolbars_Dock_Area_Right = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this.bsList = new System.Windows.Forms.BindingSource(this.components);
-            this.dsDictionary = new Desktop.Entity.DictionaryDataSet();
             this.ultraDateTimeEditor2 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ultraDateTimeEditor1 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.frmSellingInventory_Fill_Panel = new Infragistics.Win.Misc.UltraPanel();
+            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).BeginInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.SuspendLayout();
             this.frmSellingInventory_Fill_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
-            appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            appearance1.TextHAlignAsString = "Left";
-            appearance1.TextVAlignAsString = "Middle";
-            this.lblTitle.Appearance = appearance1;
+            appearance25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            appearance25.TextHAlignAsString = "Left";
+            appearance25.TextVAlignAsString = "Middle";
+            this.lblTitle.Appearance = appearance25;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
@@ -213,43 +213,43 @@
             // 
             // tbrFunction
             // 
-            appearance19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
-            this.tbrFunction.Appearance = appearance19;
+            appearance26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
+            this.tbrFunction.Appearance = appearance26;
             this.tbrFunction.DesignerFlags = 1;
             this.tbrFunction.DockWithinContainer = this;
             this.tbrFunction.DockWithinContainerBaseType = typeof(System.Windows.Forms.Form);
             this.tbrFunction.MultiMonitorDropDownBehavior = Infragistics.Win.UltraWinToolbars.MultiMonitorDropDownBehavior.ShiftToMonitorWithExclusionRect;
             this.tbrFunction.ShowFullMenusDelay = 500;
             this.tbrFunction.ShowQuickCustomizeButton = false;
-            ultraToolbar1.DockedColumn = 0;
-            ultraToolbar1.DockedRow = 0;
-            ultraToolbar1.NonInheritedTools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
+            ultraToolbar2.DockedColumn = 0;
+            ultraToolbar2.DockedRow = 0;
+            ultraToolbar2.NonInheritedTools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool5});
-            ultraToolbar1.Settings.ToolDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
-            ultraToolbar1.Text = "Thao tác dữ liệu";
+            ultraToolbar2.Settings.ToolDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
+            ultraToolbar2.Text = "Thao tác dữ liệu";
             this.tbrFunction.Toolbars.AddRange(new Infragistics.Win.UltraWinToolbars.UltraToolbar[] {
-            ultraToolbar1});
-            appearance20.Image = ((object)(resources.GetObject("appearance20.Image")));
-            ButtonTool6.SharedPropsInternal.AppearancesSmall.Appearance = appearance20;
+            ultraToolbar2});
+            appearance27.Image = ((object)(resources.GetObject("appearance27.Image")));
+            ButtonTool6.SharedPropsInternal.AppearancesSmall.Appearance = appearance27;
             ButtonTool6.SharedPropsInternal.Caption = "Thêm";
             ButtonTool6.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlN;
-            appearance21.Image = ((object)(resources.GetObject("appearance21.Image")));
-            ButtonTool7.SharedPropsInternal.AppearancesSmall.Appearance = appearance21;
+            appearance28.Image = ((object)(resources.GetObject("appearance28.Image")));
+            ButtonTool7.SharedPropsInternal.AppearancesSmall.Appearance = appearance28;
             ButtonTool7.SharedPropsInternal.Caption = "Sửa";
             ButtonTool7.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
             ButtonTool7.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlE;
-            appearance22.Image = ((object)(resources.GetObject("appearance22.Image")));
-            ButtonTool8.SharedPropsInternal.AppearancesSmall.Appearance = appearance22;
+            appearance29.Image = ((object)(resources.GetObject("appearance29.Image")));
+            ButtonTool8.SharedPropsInternal.AppearancesSmall.Appearance = appearance29;
             ButtonTool8.SharedPropsInternal.Caption = "Xóa";
             ButtonTool8.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
             ButtonTool8.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlD;
-            appearance23.Image = ((object)(resources.GetObject("appearance23.Image")));
-            ButtonTool9.SharedPropsInternal.AppearancesSmall.Appearance = appearance23;
+            appearance30.Image = ((object)(resources.GetObject("appearance30.Image")));
+            ButtonTool9.SharedPropsInternal.AppearancesSmall.Appearance = appearance30;
             ButtonTool9.SharedPropsInternal.Caption = "Nạp";
             ButtonTool9.SharedPropsInternal.DisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
             ButtonTool9.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.F5;
-            appearance24.Image = ((object)(resources.GetObject("appearance24.Image")));
-            ButtonTool10.SharedPropsInternal.AppearancesSmall.Appearance = appearance24;
+            appearance31.Image = ((object)(resources.GetObject("appearance31.Image")));
+            ButtonTool10.SharedPropsInternal.AppearancesSmall.Appearance = appearance31;
             ButtonTool10.SharedPropsInternal.Caption = "Nhân bản";
             ButtonTool10.SharedPropsInternal.Shortcut = System.Windows.Forms.Shortcut.CtrlC;
             PopupMenuTool1.SharedPropsInternal.Caption = "Chức năng";
@@ -311,10 +311,10 @@
             this._frmBaseList_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(0, 425);
             this._frmBaseList_Toolbars_Dock_Area_Right.ToolbarsManager = this.tbrFunction;
             // 
-            // dsDictionary
+            // bsList
             // 
-            this.dsDictionary.DataSetName = "DictionaryDataSet";
-            this.dsDictionary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bsList.DataSource = this.dsReport;
+            this.bsList.Position = 0;
             // 
             // ultraDateTimeEditor2
             // 
@@ -370,6 +370,11 @@
             this.frmSellingInventory_Fill_Panel.Size = new System.Drawing.Size(800, 425);
             this.frmSellingInventory_Fill_Panel.TabIndex = 24;
             // 
+            // dsReport
+            // 
+            this.dsReport.DataSetName = "ReportDataSet";
+            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmSellingInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,12 +391,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).EndInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.ResumeLayout(false);
             this.frmSellingInventory_Fill_Panel.ClientArea.PerformLayout();
             this.frmSellingInventory_Fill_Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -406,11 +411,11 @@
         internal Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea _frmBaseList_Toolbars_Dock_Area_Left;
         internal Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea _frmBaseList_Toolbars_Dock_Area_Right;
         protected System.Windows.Forms.BindingSource bsList;
-        protected Desktop.Entity.DictionaryDataSet dsDictionary;
         private Infragistics.Win.UltraWinEditors.UltraDateTimeEditor ultraDateTimeEditor2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Infragistics.Win.UltraWinEditors.UltraDateTimeEditor ultraDateTimeEditor1;
         private Infragistics.Win.Misc.UltraPanel frmSellingInventory_Fill_Panel;
+        private ReportDataSet dsReport;
     }
 }

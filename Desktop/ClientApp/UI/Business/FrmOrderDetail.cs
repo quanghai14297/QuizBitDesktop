@@ -161,7 +161,6 @@ namespace ClientApp.UI.Business
             }
 
             cboArea.Value = ((Desktop.Entity.BusinessDataSet.AreaTableMappingRow)((System.Data.DataRowView)bsTableMapping.Current).Row).AreaID;
-
             cboCustomerID.DataBindings.Add(new Binding("Value", BsDetail, DsDictionary.Order.CustomerIDColumn.ColumnName, true));
 
             txtNumberOfPeople.DataBindings.Add(new Binding("Text", BsDetail, DsDictionary.Order.NumberOfPeopleColumn.ColumnName, true));
@@ -429,7 +428,9 @@ namespace ClientApp.UI.Business
             //DictionaryDataSet.OrderRow drObjectChange = (DictionaryDataSet.OrderRow)CurrentRow;
             DictionaryDataSet.OrderDataTable table = DsDictionary.Order;
             DictionaryDataSet.OrderRow drObjectChange = table.NewOrderRow();
-            drObjectChange.OrderID = Guid.NewGuid();
+           
+                drObjectChange.OrderID = Guid.NewGuid();
+           
             drObjectChange.OrderNo = txtOrderNo.Text;
             drObjectChange.OrderDate = DateTime.Now;
             drObjectChange.OrderStatus = 0;
@@ -444,6 +445,7 @@ namespace ClientApp.UI.Business
             drObjectChange.NumberOfPeople = Int32.Parse(txtNumberOfPeople.Text);
             drObjectChange.OrderDate = DateTime.Now;
             drObjectChange.CancelReason = txtCancelReason.Text;
+            drObjectChange.BookingID = BookingID;
             //////Chỗ này nhớ lấy booking id
             if (drObjectChange != null)
             {

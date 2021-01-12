@@ -217,14 +217,6 @@ namespace ClientApp
                         fList.MdiParent = this;
                     }
                     break;
-                case "expOverview":
-                    fList = findOpenedForm("frmOverview");
-                    if (fList == null)
-                    {
-                        fList = new frmOverview();
-                        fList.MdiParent = this;
-                    }
-                    break;
                 case expUnit:
                 case btnUnit:
                     fList = findOpenedForm("FrmUnit");

@@ -31,6 +31,13 @@
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("ReportSalesEmployee", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalVATAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalSaleAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Position");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -75,7 +82,7 @@
             this._frmBaseList_Toolbars_Dock_Area_Bottom = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this._frmBaseList_Toolbars_Dock_Area_Left = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this._frmBaseList_Toolbars_Dock_Area_Right = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
-            this.bsList = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
             this.ultraDateTimeEditor2 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,16 +90,16 @@
             this.frmSellingInventory_Fill_Panel = new Infragistics.Win.Misc.UltraPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.ultraDateTimeEditor3 = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
-            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
+            this.bsList = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).BeginInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.SuspendLayout();
             this.frmSellingInventory_Fill_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -116,11 +123,32 @@
             this.grdList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdList.DataSource = this.bsList;
             appearance2.BackColor = System.Drawing.SystemColors.Window;
             appearance2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
             appearance2.TextVAlignAsString = "Middle";
             this.grdList.DisplayLayout.Appearance = appearance2;
             this.grdList.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
+            ultraGridColumn7.Header.Caption = "Mã nhân viên";
+            ultraGridColumn7.Header.VisiblePosition = 0;
+            ultraGridColumn8.Header.Caption = "Tổng";
+            ultraGridColumn8.Header.VisiblePosition = 5;
+            ultraGridColumn9.Header.Caption = "Tiền thuế";
+            ultraGridColumn9.Header.VisiblePosition = 4;
+            ultraGridColumn10.Header.Caption = "Tiền bán hàng";
+            ultraGridColumn10.Header.VisiblePosition = 3;
+            ultraGridColumn11.Header.Caption = "Tên nhân viên";
+            ultraGridColumn11.Header.VisiblePosition = 1;
+            ultraGridColumn12.Header.Caption = "Vị trí";
+            ultraGridColumn12.Header.VisiblePosition = 2;
+            ultraGridBand1.Columns.AddRange(new object[] {
+            ultraGridColumn7,
+            ultraGridColumn8,
+            ultraGridColumn9,
+            ultraGridColumn10,
+            ultraGridColumn11,
+            ultraGridColumn12});
+            this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.grdList.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
             this.grdList.DisplayLayout.DefaultSelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(244)))), ((int)(((byte)(202)))));
@@ -314,10 +342,10 @@
             this._frmBaseList_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(0, 425);
             this._frmBaseList_Toolbars_Dock_Area_Right.ToolbarsManager = this.tbrFunction;
             // 
-            // bsList
+            // dsReport
             // 
-            this.bsList.DataMember = "ReportSalesEmployee";
-            this.bsList.DataSource = this.dsReport;
+            this.dsReport.DataSetName = "ReportDataSet";
+            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ultraDateTimeEditor2
             // 
@@ -393,10 +421,10 @@
             this.ultraDateTimeEditor3.Size = new System.Drawing.Size(90, 21);
             this.ultraDateTimeEditor3.TabIndex = 28;
             // 
-            // dsReport
+            // bsList
             // 
-            this.dsReport.DataSetName = "ReportDataSet";
-            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bsList.DataMember = "ReportSalesEmployee";
+            this.bsList.DataSource = this.dsReport;
             // 
             // frmReportSalesByEmployee
             // 
@@ -413,14 +441,14 @@
             this.Text = "frmReportSalesByEmployee";
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor1)).EndInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.ResumeLayout(false);
             this.frmSellingInventory_Fill_Panel.ClientArea.PerformLayout();
             this.frmSellingInventory_Fill_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraDateTimeEditor3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
             this.ResumeLayout(false);
 
         }

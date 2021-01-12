@@ -293,12 +293,13 @@ namespace ClientApp.UI.Controls
             }
             using (FrmOrderDetail frm = new FrmOrderDetail())
             {
+                if (TableStatus == EnumTableStatus.Booking)
+                    frm.BookingID = BookingID;
                 frm.FormActionMode = ActionMode.AddNew;
                 frm.DsDictionary = new DictionaryDataSet();
                 frm.BsDetail.DataSource = frm.DsDictionary;
                 frm.TableID = TableID;
-                if (TableStatus == EnumTableStatus.Booking)
-                    frm.BookingID = BookingID;
+                
                 if (frm.ShowDialog() == DialogResult.OK || frm.IsSendKitchen)
                 {
                     //if (TableStatus == EnumTableStatus.Booking)

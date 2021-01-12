@@ -82,6 +82,10 @@
             // 
             this.tabInfo.TabPageMargins.ForceSerialization = true;
             // 
+            // UltraTabPageControl1
+            // 
+            this.UltraTabPageControl1.Location = new System.Drawing.Point(1, 20);
+            // 
             // pnlTitle
             // 
             // 

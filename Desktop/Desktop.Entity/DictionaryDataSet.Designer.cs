@@ -3627,6 +3627,10 @@ namespace Desktop.Entity {
             
             private global::System.Data.DataColumn columnReasonTermination;
             
+            private global::System.Data.DataColumn columnGenderDisplay;
+            
+            private global::System.Data.DataColumn columnJobStatusDisplay;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public EmployeeDataTable() {
@@ -3902,6 +3906,22 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GenderDisplayColumn {
+                get {
+                    return this.columnGenderDisplay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobStatusDisplayColumn {
+                get {
+                    return this.columnJobStatusDisplay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3967,7 +3987,9 @@ namespace Desktop.Entity {
                         string UserName, 
                         string Password, 
                         string DisplayName, 
-                        string ReasonTermination) {
+                        string ReasonTermination, 
+                        string GenderDisplay, 
+                        string JobStatusDisplay) {
                 EmployeeRow rowEmployeeRow = ((EmployeeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         EmployeeID,
@@ -3999,7 +4021,9 @@ namespace Desktop.Entity {
                         UserName,
                         Password,
                         DisplayName,
-                        ReasonTermination};
+                        ReasonTermination,
+                        GenderDisplay,
+                        JobStatusDisplay};
                 rowEmployeeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeeRow);
                 return rowEmployeeRow;
@@ -4059,6 +4083,8 @@ namespace Desktop.Entity {
                 this.columnPassword = base.Columns["Password"];
                 this.columnDisplayName = base.Columns["DisplayName"];
                 this.columnReasonTermination = base.Columns["ReasonTermination"];
+                this.columnGenderDisplay = base.Columns["GenderDisplay"];
+                this.columnJobStatusDisplay = base.Columns["JobStatusDisplay"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4124,6 +4150,10 @@ namespace Desktop.Entity {
                 base.Columns.Add(this.columnDisplayName);
                 this.columnReasonTermination = new global::System.Data.DataColumn("ReasonTermination", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnReasonTermination);
+                this.columnGenderDisplay = new global::System.Data.DataColumn("GenderDisplay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGenderDisplay);
+                this.columnJobStatusDisplay = new global::System.Data.DataColumn("JobStatusDisplay", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobStatusDisplay);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnEmployeeID}, true));
                 this.columnEmployeeID.AllowDBNull = false;
@@ -4142,11 +4172,8 @@ namespace Desktop.Entity {
                 this.columnMaritalStatus.MaxLength = 255;
                 this.columnReligion.MaxLength = 255;
                 this.columnNationality.MaxLength = 255;
-                this.columnUserName.AllowDBNull = false;
                 this.columnUserName.MaxLength = 255;
-                this.columnPassword.AllowDBNull = false;
                 this.columnPassword.MaxLength = 2147483647;
-                this.columnDisplayName.AllowDBNull = false;
                 this.columnDisplayName.MaxLength = 255;
                 this.columnReasonTermination.MaxLength = 255;
             }
@@ -14046,7 +14073,12 @@ namespace Desktop.Entity {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string UserName {
                 get {
-                    return ((string)(this[this.tableEmployee.UserNameColumn]));
+                    try {
+                        return ((string)(this[this.tableEmployee.UserNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserName\' in table \'Employee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableEmployee.UserNameColumn] = value;
@@ -14057,7 +14089,12 @@ namespace Desktop.Entity {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Password {
                 get {
-                    return ((string)(this[this.tableEmployee.PasswordColumn]));
+                    try {
+                        return ((string)(this[this.tableEmployee.PasswordColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Password\' in table \'Employee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableEmployee.PasswordColumn] = value;
@@ -14068,7 +14105,12 @@ namespace Desktop.Entity {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string DisplayName {
                 get {
-                    return ((string)(this[this.tableEmployee.DisplayNameColumn]));
+                    try {
+                        return ((string)(this[this.tableEmployee.DisplayNameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DisplayName\' in table \'Employee\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableEmployee.DisplayNameColumn] = value;
@@ -14088,6 +14130,38 @@ namespace Desktop.Entity {
                 }
                 set {
                     this[this.tableEmployee.ReasonTerminationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string GenderDisplay {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployee.GenderDisplayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'GenderDisplay\' in table \'Employee\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployee.GenderDisplayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string JobStatusDisplay {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmployee.JobStatusDisplayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'JobStatusDisplay\' in table \'Employee\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmployee.JobStatusDisplayColumn] = value;
                 }
             }
             
@@ -14393,6 +14467,42 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUserNameNull() {
+                return this.IsNull(this.tableEmployee.UserNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUserNameNull() {
+                this[this.tableEmployee.UserNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPasswordNull() {
+                return this.IsNull(this.tableEmployee.PasswordColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPasswordNull() {
+                this[this.tableEmployee.PasswordColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDisplayNameNull() {
+                return this.IsNull(this.tableEmployee.DisplayNameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDisplayNameNull() {
+                this[this.tableEmployee.DisplayNameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsReasonTerminationNull() {
                 return this.IsNull(this.tableEmployee.ReasonTerminationColumn);
             }
@@ -14401,6 +14511,30 @@ namespace Desktop.Entity {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetReasonTerminationNull() {
                 this[this.tableEmployee.ReasonTerminationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsGenderDisplayNull() {
+                return this.IsNull(this.tableEmployee.GenderDisplayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetGenderDisplayNull() {
+                this[this.tableEmployee.GenderDisplayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsJobStatusDisplayNull() {
+                return this.IsNull(this.tableEmployee.JobStatusDisplayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetJobStatusDisplayNull() {
+                this[this.tableEmployee.JobStatusDisplayColumn] = global::System.Convert.DBNull;
             }
         }
         
