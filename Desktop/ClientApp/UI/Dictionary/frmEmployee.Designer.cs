@@ -150,7 +150,7 @@
             ultraGridColumn2.Header.VisiblePosition = 1;
             ultraGridColumn5.Header.Caption = "Tên nhân viên";
             ultraGridColumn5.Header.VisiblePosition = 2;
-            ultraGridColumn5.Width = 233;
+            ultraGridColumn5.Width = 347;
             ultraGridColumn6.Header.Caption = "Giới tính";
             ultraGridColumn6.Header.VisiblePosition = 4;
             ultraGridColumn6.Hidden = true;
@@ -207,7 +207,7 @@
             ultraGridColumn27.Hidden = true;
             ultraGridColumn31.Header.Caption = "Giới tính";
             ultraGridColumn31.Header.VisiblePosition = 6;
-            ultraGridColumn32.Header.Caption = "Trạng thái";
+            ultraGridColumn32.Header.Caption = "Vị trí";
             ultraGridColumn32.Header.VisiblePosition = 31;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,

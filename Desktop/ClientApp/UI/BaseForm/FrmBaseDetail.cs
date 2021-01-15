@@ -317,9 +317,10 @@ namespace ClientApp.UI.BaseForm
                 if (!ValidateForm()) return;
                 if (!CheckCodeIsExists()) return;
                 var result = SaveData();
+               
                 if (result == (int)EnumResultInsertUpdate.Success)
                 {
-                    //DsDictionary.AcceptChanges();
+                    DsDictionary.AcceptChanges();
                     DialogResult = DialogResult.OK;
                 }
                 else if (result == (int)EnumResultInsertUpdate.DuplicateCode)

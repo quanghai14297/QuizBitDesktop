@@ -158,6 +158,8 @@
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
             this.lblTitle = new Infragistics.Win.Misc.UltraLabel();
             this.grdList = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.bsList = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
             this._frmBaseList_Toolbars_Dock_Area_Top = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this.tbrFunction = new Infragistics.Win.UltraWinToolbars.UltraToolbarsManager(this.components);
             this._frmBaseList_Toolbars_Dock_Area_Bottom = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
@@ -169,16 +171,14 @@
             this.dtFromDate = new Infragistics.Win.UltraWinEditors.UltraDateTimeEditor();
             this.frmSellingInventory_Fill_Panel = new Infragistics.Win.Misc.UltraPanel();
             this.btnGetData = new Infragistics.Win.Misc.UltraButton();
-            this.bsList = new System.Windows.Forms.BindingSource(this.components);
-            this.dsReport = new ClientApp.UI.Report.ReportDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtToDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFromDate)).BeginInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.SuspendLayout();
             this.frmSellingInventory_Fill_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -559,6 +559,16 @@
             this.grdList.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.grdList.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
+            // bsList
+            // 
+            this.bsList.DataMember = "SAInvoiceViewer";
+            this.bsList.DataSource = this.dsReport;
+            // 
+            // dsReport
+            // 
+            this.dsReport.DataSetName = "ReportDataSet";
+            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // _frmBaseList_Toolbars_Dock_Area_Top
             // 
             this._frmBaseList_Toolbars_Dock_Area_Top.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
@@ -739,16 +749,6 @@
             this.btnGetData.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.btnGetData.Click += new System.EventHandler(this.btnGetData_Click);
             // 
-            // bsList
-            // 
-            this.bsList.DataMember = "SAInvoiceViewer";
-            this.bsList.DataSource = this.dsReport;
-            // 
-            // dsReport
-            // 
-            this.dsReport.DataSetName = "ReportDataSet";
-            this.dsReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmReportSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,14 +764,14 @@
             this.Text = "frmReportSales";
             this.Load += new System.EventHandler(this.frmReportSales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtToDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtFromDate)).EndInit();
             this.frmSellingInventory_Fill_Panel.ClientArea.ResumeLayout(false);
             this.frmSellingInventory_Fill_Panel.ClientArea.PerformLayout();
             this.frmSellingInventory_Fill_Panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReport)).EndInit();
             this.ResumeLayout(false);
 
         }

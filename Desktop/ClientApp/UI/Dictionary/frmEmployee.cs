@@ -42,17 +42,21 @@ namespace ClientApp.UI.Dictionary
                     {
                         dr["GenderDisplay"] = "Nữ";
                     }
-                    if (dr["JobStatus"].ToString() == "0") // if id==2
+                    if (dr["RoleID"].ToString() == "0") // if id==2
                     {
-                        dr["JobStatusDisplay"] = "Thử việc";
+                        dr["JobStatusDisplay"] = "Quản lý";
                     }
-                    else if (dr["JobStatus"].ToString() == "1") // if id==2
+                    else if (dr["RoleID"].ToString() == "2") // if id==2
                     {
-                        dr["JobStatusDisplay"] = "Đang làm việc";
+                        dr["JobStatusDisplay"] = "Nhân viên phục vụ / Order";
                     }
-                    else
+                    else if (dr["RoleID"].ToString() == "3")
                     {
-                        dr["JobStatusDisplay"] = "Đã nghỉ việc";
+                        dr["JobStatusDisplay"] = "Nhân viên lễ tân";
+                    }
+                    else if (dr["RoleID"].ToString() == "5")
+                    {
+                        dr["JobStatusDisplay"] = "Nhân viên bếp";
                     }
                 }
                 dsDictionary.Merge(table);

@@ -380,6 +380,7 @@
     <Compile Include="Common\CommonFunction.cs" />
     <Compile Include="Common\CommonKey.cs" />
     <Compile Include="Common\Constant.cs" />
+    <Compile Include="Common\EncryptUtil.cs" />
     <Compile Include="Common\Enumeration\Description.cs" />
     <Compile Include="Common\Enumeration\EnumBusiness.cs" />
     <Compile Include="Common\Enumeration\EnumCommon.cs" />

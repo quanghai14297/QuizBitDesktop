@@ -284,6 +284,15 @@ namespace ClientApp
             }
             fList.Show();
             fList.Select();
+            if (Session.UserLogin.RoleName.Contains("Lễ tân"))
+            {
+                exbMain.Groups[0].Items[0].Visible = false;
+                exbMain.Groups[0].Items[1].Visible = false;
+                exbMain.Groups[0].Items[2].Visible = false;
+                exbMain.Groups[0].Items[3].Visible = false;
+                exbMain.Groups[1].Visible = false;
+                exbMain.Groups[2].Visible = false;
+            }
         }
 
         /// <summary>

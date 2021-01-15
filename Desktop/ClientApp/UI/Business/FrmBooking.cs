@@ -636,5 +636,18 @@ namespace ClientApp.UI.Business
                 MessageBoxCommon.ShowException(ex);
             }
         }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                LoadTableByAreaID();
+                ChangeAreaStatus(sender, e);
+            }
+            catch (Exception ex)
+            {
+                MessageBoxCommon.ShowException(ex);
+            }
+        }
     }
 }

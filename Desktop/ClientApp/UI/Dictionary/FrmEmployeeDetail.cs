@@ -50,13 +50,7 @@ namespace ClientApp.UI.Dictionary
             if (DsDictionary.UserJoinRole.Rows.Count > 0 && (((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "Admin" || ((Desktop.Entity.DictionaryDataSet.UserJoinRoleRow)DsDictionary.UserJoinRole.Rows[0]).RoleCode == "QL"))
             {
                 rbAdmin.Checked = true;
-                ckCooker.Enabled = false;
-                ckOrder.Enabled = false;
-                ckReceptionist.Enabled = false;
-
-                ckCooker.Checked = true;
-                ckOrder.Checked = true;
-                ckReceptionist.Checked = true;
+                
             }
             else
             {
@@ -102,6 +96,7 @@ namespace ClientApp.UI.Dictionary
         protected override int SaveData()
         {
             int result = 1;
+            int resultAccount = 0;
             bool checkAccount = false;
             BsDetail.EndEdit();
             if (!string.IsNullOrEmpty(txtUserName.Text) && !string.IsNullOrEmpty(txtPassword.Text) && !string.IsNullOrEmpty(txtCofirmPassword.Text))
@@ -127,16 +122,48 @@ namespace ClientApp.UI.Dictionary
             if (drObjectChange != null)
             {
                 result = objBLDetail.InsertUpdate(drObjectChange);
+               
+                
                 if (result == 1 && checkAccount)
                 {
                     DictionaryDataSet.UserDataTable table = new DictionaryDataSet.UserDataTable();
                     DictionaryDataSet.UserRow drUser = table.NewUserRow();
                     drUser.UserID = Guid.NewGuid();
                     drUser.UserName = txtUserName.Text;
-                    drUser.Password = txtPassword.Text;
+                    drUser.Password = EncryptUtil.MD5Hash(txtPassword.Text);
                     drUser.DisplayName = txtEmployeeName.Text;
+                    drUser.ChangedPasswordTime = DateTime.Now;
                     drUser.Inactive = false;
-                    objBLDetail.InsertUpdateUser(drUser);
+                    
+                    resultAccount = objBLDetail.InsertUpdateUser(drUser);
+                    if (resultAccount==1)
+                    {
+                        DictionaryDataSet.UserJoinRoleDataTable tableRole = new DictionaryDataSet.UserJoinRoleDataTable();
+                        DictionaryDataSet.UserJoinRoleRow drRole = tableRole.NewUserJoinRoleRow();
+                        drRole.UserID = drUser.UserID;
+                        drRole.UserJoinRoleID = Guid.NewGuid();
+                        if (rbAdmin.Checked)
+                        {
+                            drRole.RoleID = 0;
+                        }
+                        else if (rbBep.Checked)
+                        {
+                            drRole.RoleID = 5;
+
+                        }
+                        else if (rbLeTan.Checked)
+                        {
+                            drRole.RoleID = 3;
+
+                        }
+                        else if (rbPV.Checked)
+                        {
+                            drRole.RoleID = 2;
+
+                        }
+                        objBLDetail.InsertUpdateRole(drRole);
+                        
+                    }
                 }
             }
             return result;
@@ -167,26 +194,7 @@ namespace ClientApp.UI.Dictionary
                 else if (e.Tab.Key == "tabRole")
                 {
                     this.Size = new System.Drawing.Size(465, 195);
-                    if (rbAdmin.Checked)
-                    {
-                        ckCooker.Enabled = false;
-                        ckOrder.Enabled = false;
-                        ckReceptionist.Enabled = false;
-
-                        ckCooker.Checked = true;
-                        ckOrder.Checked = true;
-                        ckReceptionist.Checked = true;
-                    }
-                    else
-                    {
-                        ckCooker.Enabled = true;
-                        ckOrder.Enabled = true;
-                        ckReceptionist.Enabled = true;
-
-                        ckCooker.Checked = false;
-                        ckOrder.Checked = false;
-                        ckReceptionist.Checked = false;
-                    }
+                   
                 }
             }
             catch (System.Exception)
@@ -199,26 +207,7 @@ namespace ClientApp.UI.Dictionary
 
         private void rbAdmin_CheckedChanged(object sender, System.EventArgs e)
         {
-            if (rbAdmin.Checked)
-            {
-                ckCooker.Enabled = false;
-                ckOrder.Enabled = false;
-                ckReceptionist.Enabled = false;
-
-                ckCooker.Checked = true;
-                ckOrder.Checked = true;
-                ckReceptionist.Checked = true;
-            }
-            else
-            {
-                ckCooker.Enabled = true;
-                ckOrder.Enabled = true;
-                ckReceptionist.Enabled = true;
-
-                ckCooker.Checked = false;
-                ckOrder.Checked = false;
-                ckReceptionist.Checked = false;
-            }
+          
         }
 
         private void rbEmployee_CheckedChanged(object sender, System.EventArgs e)

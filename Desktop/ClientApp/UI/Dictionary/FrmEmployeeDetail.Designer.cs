@@ -58,10 +58,9 @@
             this.txtUserName = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.ultraLabel7 = new Infragistics.Win.Misc.UltraLabel();
             this.ultraTabPageControl2 = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
-            this.ckCooker = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.ckOrder = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.ckReceptionist = new Infragistics.Win.UltraWinEditors.UltraCheckEditor();
-            this.rbEmployee = new System.Windows.Forms.RadioButton();
+            this.rbBep = new System.Windows.Forms.RadioButton();
+            this.rbPV = new System.Windows.Forms.RadioButton();
+            this.rbLeTan = new System.Windows.Forms.RadioButton();
             this.rbAdmin = new System.Windows.Forms.RadioButton();
             this.txtEmployeeName = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.lblInventoryItemCategoryNameTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -94,9 +93,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).BeginInit();
             this.ultraTabPageControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ckCooker)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckOrder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckReceptionist)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeCode)).BeginInit();
@@ -174,6 +170,7 @@
             this.tabGeneralInfo.Controls.Add(this.txtEmployeeCode);
             this.tabGeneralInfo.Controls.Add(this.lblDescriptionTitle);
             this.tabGeneralInfo.Controls.Add(this.lblInventoryItemCategoryCodeTitle);
+            this.tabGeneralInfo.Location = new System.Drawing.Point(-10000, -10000);
             this.tabGeneralInfo.Size = new System.Drawing.Size(444, 229);
             this.tabGeneralInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tabGeneralInfo_Paint);
             // 
@@ -287,56 +284,50 @@
             // 
             // ultraTabPageControl2
             // 
-            this.ultraTabPageControl2.Controls.Add(this.ckCooker);
-            this.ultraTabPageControl2.Controls.Add(this.ckOrder);
-            this.ultraTabPageControl2.Controls.Add(this.ckReceptionist);
-            this.ultraTabPageControl2.Controls.Add(this.rbEmployee);
+            this.ultraTabPageControl2.Controls.Add(this.rbBep);
+            this.ultraTabPageControl2.Controls.Add(this.rbPV);
+            this.ultraTabPageControl2.Controls.Add(this.rbLeTan);
             this.ultraTabPageControl2.Controls.Add(this.rbAdmin);
             this.ultraTabPageControl2.Enabled = false;
-            this.ultraTabPageControl2.Location = new System.Drawing.Point(-10000, -10000);
+            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 20);
             this.ultraTabPageControl2.Name = "ultraTabPageControl2";
             this.ultraTabPageControl2.Size = new System.Drawing.Size(444, 229);
             // 
-            // ckCooker
+            // rbBep
             // 
-            this.ckCooker.Location = new System.Drawing.Point(301, 71);
-            this.ckCooker.Name = "ckCooker";
-            this.ckCooker.Size = new System.Drawing.Size(118, 20);
-            this.ckCooker.TabIndex = 7;
-            this.ckCooker.Text = "Nhân viên bếp";
+            this.rbBep.AutoSize = true;
+            this.rbBep.Location = new System.Drawing.Point(259, 46);
+            this.rbBep.Name = "rbBep";
+            this.rbBep.Size = new System.Drawing.Size(95, 17);
+            this.rbBep.TabIndex = 10;
+            this.rbBep.Text = "Nhân viên bếp";
+            this.rbBep.UseVisualStyleBackColor = true;
             // 
-            // ckOrder
+            // rbPV
             // 
-            this.ckOrder.Location = new System.Drawing.Point(139, 71);
-            this.ckOrder.Name = "ckOrder";
-            this.ckOrder.Size = new System.Drawing.Size(156, 20);
-            this.ckOrder.TabIndex = 6;
-            this.ckOrder.Text = "Nhân viên phục vụ / Order";
+            this.rbPV.AutoSize = true;
+            this.rbPV.Location = new System.Drawing.Point(56, 46);
+            this.rbPV.Name = "rbPV";
+            this.rbPV.Size = new System.Drawing.Size(153, 17);
+            this.rbPV.TabIndex = 9;
+            this.rbPV.Text = "Nhân viên phục vụ / Order";
+            this.rbPV.UseVisualStyleBackColor = true;
             // 
-            // ckReceptionist
+            // rbLeTan
             // 
-            this.ckReceptionist.Location = new System.Drawing.Point(22, 71);
-            this.ckReceptionist.Name = "ckReceptionist";
-            this.ckReceptionist.Size = new System.Drawing.Size(111, 20);
-            this.ckReceptionist.TabIndex = 5;
-            this.ckReceptionist.Text = "Nhân viên lễ tân";
-            // 
-            // rbEmployee
-            // 
-            this.rbEmployee.AutoSize = true;
-            this.rbEmployee.Location = new System.Drawing.Point(9, 45);
-            this.rbEmployee.Name = "rbEmployee";
-            this.rbEmployee.Size = new System.Drawing.Size(106, 17);
-            this.rbEmployee.TabIndex = 2;
-            this.rbEmployee.Text = "Quyền nhân viên";
-            this.rbEmployee.UseVisualStyleBackColor = true;
-            this.rbEmployee.CheckedChanged += new System.EventHandler(this.rbEmployee_CheckedChanged);
+            this.rbLeTan.AutoSize = true;
+            this.rbLeTan.Location = new System.Drawing.Point(259, 13);
+            this.rbLeTan.Name = "rbLeTan";
+            this.rbLeTan.Size = new System.Drawing.Size(103, 17);
+            this.rbLeTan.TabIndex = 8;
+            this.rbLeTan.Text = "Nhân viên lễ tân";
+            this.rbLeTan.UseVisualStyleBackColor = true;
             // 
             // rbAdmin
             // 
             this.rbAdmin.AutoSize = true;
             this.rbAdmin.Checked = true;
-            this.rbAdmin.Location = new System.Drawing.Point(9, 15);
+            this.rbAdmin.Location = new System.Drawing.Point(56, 13);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(94, 17);
             this.rbAdmin.TabIndex = 1;
@@ -563,9 +554,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName)).EndInit();
             this.ultraTabPageControl2.ResumeLayout(false);
             this.ultraTabPageControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ckCooker)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckOrder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ckReceptionist)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeCode)).EndInit();
@@ -601,10 +589,9 @@
         internal Infragistics.Win.Misc.UltraLabel ultraLabel7;
         internal Infragistics.Win.UltraWinEditors.UltraTextEditor txtCofirmPassword;
         private Infragistics.Win.UltraWinTabControl.UltraTabPageControl ultraTabPageControl2;
-        private System.Windows.Forms.RadioButton rbEmployee;
         private System.Windows.Forms.RadioButton rbAdmin;
-        private Infragistics.Win.UltraWinEditors.UltraCheckEditor ckCooker;
-        private Infragistics.Win.UltraWinEditors.UltraCheckEditor ckOrder;
-        private Infragistics.Win.UltraWinEditors.UltraCheckEditor ckReceptionist;
+        private System.Windows.Forms.RadioButton rbBep;
+        private System.Windows.Forms.RadioButton rbPV;
+        private System.Windows.Forms.RadioButton rbLeTan;
     }
 }

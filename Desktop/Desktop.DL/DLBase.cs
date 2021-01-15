@@ -415,6 +415,38 @@ namespace Desktop.DL
             return 1;
         }
         /// <summary>
+        /// Cập nhật dữ liệu chính
+        /// </summary>
+        /// <param name="masterData"></param>
+        /// <param name="detailData"></param>
+        /// <returns></returns>
+        public int InsertUpdateRole(DataRow masterData)
+        {
+            DbConnection con = Connection;
+            DbTransaction ts = null;
+            try
+            {
+                con.Open();
+                ts = con.BeginTransaction();
+                int iMaster = ExecuteNoneQueryTypedParam("Proc_InsertUpdateRole", masterData, ts);
+                ts.Commit();
+            }
+            catch (Exception ex)
+            {
+                ts.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                if (Connection != null && con.State != ConnectionState.Closed)
+                {
+                    con.Close();
+                    con.Dispose();
+                }
+            }
+            return 1;
+        }
+        /// <summary>
         /// Cập nhật dữ liệu DataTable
         /// </summary>
         /// <param name="tableName"></param>

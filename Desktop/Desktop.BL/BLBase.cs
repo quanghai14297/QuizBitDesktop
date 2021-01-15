@@ -52,7 +52,15 @@ namespace Desktop.BL
         {
             return oDL.InsertUpdateUser(row);
         }
-
+        /// <summary>
+        /// Cập nhật dữ liệu chính
+        /// </summary>
+        /// <param name="row"></param>
+        /// <returns></returns>
+        public int InsertUpdateRole(DataRow row)
+        {
+            return oDL.InsertUpdateRole(row);
+        }
         /// <summary>
         /// Cập nhật dữ liệu
         /// </summary>
