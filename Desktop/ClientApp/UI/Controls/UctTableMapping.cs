@@ -232,7 +232,7 @@ namespace ClientApp.UI.Controls
                 frm.SAInvoiceID = OrderID;
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
-                    Empty();
+                  // frm.SAInvoiceRow =;
                 }
             }
         }

@@ -85,7 +85,6 @@ namespace Desktop.BL
         {
             return new DL.DLTableMapping().GetTableMappingByAreaID(id, today);
         }
-
         /// <summary>
         /// Lấy ra danh sách bàn theo Khu vực
         /// </summary>

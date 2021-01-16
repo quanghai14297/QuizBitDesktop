@@ -105,13 +105,15 @@ namespace ClientApp.UI.Business
             try
             {
                 dsDictionary.EnforceConstraints = false;
+                BLOrder oBL = new BLOrder();
+                var table = oBL.GetDataByID(SAInvoiceID);
                 // Nếu tạo mới từ Order
-                if (OrderID != Guid.Empty)
+                if (SAInvoiceID != Guid.Empty)
                 {
                     btnSave.Visible = true;
                     dsDictionary.Clear();
-                    dsDictionary.Order.Merge(oBLOrder.GetDataByID(OrderID), false, MissingSchemaAction.Ignore);
-                    dsDictionary.OrderDetail.Merge(oBLOrder.GetDataDetailByID(OrderID), false, MissingSchemaAction.Ignore);
+                    dsDictionary.Order.Merge(oBLOrder.GetDataByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
+                    dsDictionary.OrderDetail.Merge(oBLOrder.GetDataDetailByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
                     CreateSAInvoice();
                 }
                 // Nếu không phải tạo mới thì load dữ liệu
@@ -120,10 +122,14 @@ namespace ClientApp.UI.Business
                     btnSave.Visible = false;
                     LoadSAInvoice();
                 }
-                SAInvoiceRow = dsDictionary.SAInvoice.FirstOrDefault();
-                dsDictionary.Customer.Merge(new BLCustomer().GetDataByID(SAInvoiceRow.CustomerID));
-                CustomerRow = dsDictionary.Customer.FindByCustomerID(SAInvoiceRow.CustomerID);
-                BindingData();
+                if (table != null && table.Rows.Count > 0)
+                {
+                    SAInvoiceRow = dsDictionary.SAInvoice.FirstOrDefault();
+                    dsDictionary.Customer.Merge(new BLCustomer().GetDataByID(Guid.Parse(table.Rows[0][5].ToString())));
+                    CustomerRow = dsDictionary.Customer.FindByCustomerID(Guid.Parse(table.Rows[0][5].ToString()));
+                }
+               
+                BindingData(table);
 
             }
             catch (Exception ex)
@@ -151,11 +157,11 @@ namespace ClientApp.UI.Business
         /// <summary>
         /// Thêm Binding vào control
         /// </summary>
-        private void BindingData()
+        private void BindingData(DataTable table)
         {
-            lblRefNo.Text = SAInvoiceRow.RefNo;
-            lblRefDate.Text = SAInvoiceRow.RefDate.ToString("dd-MM-yyyy HH:mm");
-            lblJournalMemo.Text = SAInvoiceRow.JournalMemo;
+            lblRefNo.Text = table.Rows[0][1].ToString();
+            lblRefDate.Text = table.Rows[0][3].ToString();
+           //lblJournalMemo.Text=
             if (CustomerRow != null)
                 lblCustomer.Text = CustomerRow.CustomerName + (string.IsNullOrEmpty(CustomerRow.Mobile) ? "" : " - " + CustomerRow.Mobile);
         }

@@ -220,6 +220,7 @@ namespace ClientApp.UI.Business
             base.LoadDataForm();
             LoadInventoryItem();
             LoadDetail();
+            LoadInfo();
         }
 
         /// <summary>
@@ -232,10 +233,29 @@ namespace ClientApp.UI.Business
             fpnlChooseFood.Controls.Clear();
             foreach (var row in dsDictionary.OrderDetail.Rows)
             {
+               
                 var uct = CreateUctChooseFoodByOrderDetail((DictionaryDataSet.OrderDetailRow)row);
                 fpnlChooseFood.Controls.Add(uct);
                 TotalAmount += uct.UnitPrice * uct.Quantity;
             }
+        }
+        private void LoadInfo()
+        {
+            BLBooking bLBooking = new BLBooking();
+            DsDictionary.Booking.Clear();
+            DsDictionary.Booking.Merge(bLBooking.GetDataByID(BookingID));
+            if (dsDictionary.Booking.Rows.Count > 0)
+            {
+                foreach (DictionaryDataSet.BookingRow row in dsDictionary.Booking.Rows)
+                {
+                    txtOrderNo.Text = row.BookingNo;
+                    cboTableMapping.Value = row.TableID;
+                    cboCustomerID.Value = row.CustomerID;
+                    txtNumberOfPeople.Value = row.NumberOfPeople;
+                    dteOrderDate.Value = DateTime.Now;
+                }
+            }
+            
         }
 
         protected override void ChangeFormByActionMode()
@@ -260,6 +280,12 @@ namespace ClientApp.UI.Business
             {
                 MessageBoxCommon.ShowExclamation(string.Format(Properties.Resources.Message_Validate_Control, txtOrderNo.Tag));
                 txtOrderNo.Focus();
+                return false;
+            }
+            if (txtNumberOfPeople.Text == ".., ")
+            {
+                MessageBoxCommon.ShowExclamation(string.Format(Properties.Resources.Message_Validate_Control, txtNumberOfPeople.Tag));
+                txtNumberOfPeople.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(txtOrderNo.Text.Trim()))
@@ -428,8 +454,14 @@ namespace ClientApp.UI.Business
             //DictionaryDataSet.OrderRow drObjectChange = (DictionaryDataSet.OrderRow)CurrentRow;
             DictionaryDataSet.OrderDataTable table = DsDictionary.Order;
             DictionaryDataSet.OrderRow drObjectChange = table.NewOrderRow();
-           
+            if (FormActionMode == ActionMode.AddNew){
                 drObjectChange.OrderID = Guid.NewGuid();
+            }
+            else
+            {
+                drObjectChange.OrderID = OrderID;
+
+            }
            
             drObjectChange.OrderNo = txtOrderNo.Text;
             drObjectChange.OrderDate = DateTime.Now;
@@ -445,12 +477,25 @@ namespace ClientApp.UI.Business
             drObjectChange.NumberOfPeople = Int32.Parse(txtNumberOfPeople.Text);
             drObjectChange.OrderDate = DateTime.Now;
             drObjectChange.CancelReason = txtCancelReason.Text;
-            drObjectChange.BookingID = BookingID;
+            if(BookingID== Guid.Empty)
+            {
+                drObjectChange.BookingID = _bookingID;
+            }
+            else
+            {
+                drObjectChange.BookingID = BookingID;
+            }
+            
             //////Chỗ này nhớ lấy booking id
             if (drObjectChange != null)
             {
                 drObjectChange.ModifiedDate = DateTime.Now;
                 drObjectChange.ModifiedBy = Session.UserLogin.UserName;
+                for (int i=0;i< DsDictionary.Tables[10].Rows.Count; i++)
+                {
+                    DsDictionary.Tables[10].Rows[i][1] = drObjectChange.OrderID;
+                }
+               
                 objBLDetail.InsertUpdateOrder(drObjectChange,DsDictionary);
             }
             return result;

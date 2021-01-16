@@ -333,6 +333,20 @@ namespace ClientApp.UI.Business
                         Area_All_Status_Empty[areaID.ToString()] += 1;
                         Area_All_Status_Empty[Key_All] += 1;
                     }
+                    else if (tableStatus == EnumTableStatus.Booking)
+                    {
+
+                        TimeSpan timeSpan;
+                        timeSpan = iAreaTable.BookingDate - DateTime.Now;
+                        if (timeSpan.Minutes >= 15)
+                        {
+                            BLBooking bLBooking = new BLBooking();
+                            DictionaryDataSet.BookingRow row=dsDictionary.Booking.FindByBookingID(iAreaTable.BookingID);
+                            row.BookingStatus = 2;
+                            bLBooking.InsertUpdate(row);
+                        }
+                        
+                    }
                     UctTableMapping tableMapping = CreateUctTableMapping(iAreaTable);
                     tableMapping.Click += Table_Click;
                     tableMapping.DoubleClick += Table_DoubleClick;
@@ -381,6 +395,7 @@ namespace ClientApp.UI.Business
                 frm.BsDetail.DataSource = frm.DsDictionary;
                 frm.OrderID = control.OrderID;
                 frm.TableID = control.TableID;
+                frm.BookingID = control.BookingID;
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     dsDictionary.AcceptChanges();
@@ -643,6 +658,8 @@ namespace ClientApp.UI.Business
             {
                 LoadTableByAreaID();
                 ChangeAreaStatus(sender, e);
+                LoadOrderPanel();
+                LoadSAInvoice(dteInvoice.DateTime);
             }
             catch (Exception ex)
             {

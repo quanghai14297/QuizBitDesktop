@@ -122,7 +122,6 @@
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem10 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem12 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem13 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
-            Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem ultraExplorerBarItem14 = new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
@@ -489,14 +488,11 @@
             ultraExplorerBarItem12.Text = "Báo cáo DT theo khách hàng";
             ultraExplorerBarItem13.Key = "expReportSalesEmployee";
             ultraExplorerBarItem13.Text = "Báo cáo DT theo nhân viên";
-            ultraExplorerBarItem14.Key = "expSellingInventory";
-            ultraExplorerBarItem14.Text = "Báo cáo DT theo mặt hàng";
             ultraExplorerBarGroup3.Items.AddRange(new Infragistics.Win.UltraWinExplorerBar.UltraExplorerBarItem[] {
             ultraExplorerBarItem9,
             ultraExplorerBarItem10,
             ultraExplorerBarItem12,
-            ultraExplorerBarItem13,
-            ultraExplorerBarItem14});
+            ultraExplorerBarItem13});
             ultraExplorerBarGroup3.ItemSettings.AllowDragCopy = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
             ultraExplorerBarGroup3.ItemSettings.AllowDragMove = Infragistics.Win.UltraWinExplorerBar.ItemDragStyle.None;
             ultraExplorerBarGroup3.ItemSettings.AllowEdit = Infragistics.Win.DefaultableBoolean.False;

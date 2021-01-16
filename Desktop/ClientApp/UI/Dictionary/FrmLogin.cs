@@ -34,9 +34,9 @@ namespace ClientApp.UI.Dictionary
                 if (!string.IsNullOrEmpty(Session.Token))
                 {
                     Session.UserLogin = connect.GetUserLogin(txtUserName.Text, txtPassword.Text);
-                    if(Session.UserLogin.RoleName.Contains("Chạy bàn") && Session.UserLogin.RoleName.Contains("Nhân viên bếp"))
+                    if(Session.UserLogin.RoleName.Contains("Chạy bàn") || Session.UserLogin.RoleName.Contains("Nhân viên bếp"))
                     {
-                        MessageBoxCommon.ShowExclamation("Bạn không có quyền để đăng nhập vào đây.");
+                        MessageBoxCommon.ShowExclamation("Bạn không có quyền để sử dụng chức năng này.");
                     }
                     else
                     {

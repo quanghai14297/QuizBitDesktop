@@ -32,28 +32,28 @@
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinTabControl.UltraTab ultraTab1 = new Infragistics.Win.UltraWinTabControl.UltraTab();
-            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance53 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance79 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance80 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance81 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance82 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab3 = new Infragistics.Win.UltraWinTabControl.UltraTab();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab5 = new Infragistics.Win.UltraWinTabControl.UltraTab();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab6 = new Infragistics.Win.UltraWinTabControl.UltraTab();
-            Infragistics.Win.Appearance appearance54 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance83 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance84 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance85 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab2 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab3 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab4 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("SAInvoice", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RefID");
@@ -67,53 +67,53 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PromotionID");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalAmount");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("VATRate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("VATAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PaymentAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReceiveAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReturnAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OtherPromotionAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("JournalMemo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CancelReason");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PaymentStatus");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IsApplyTaxWhenRequire");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCode");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Birthday_C");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email_C");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Mobile_C");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn35 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Address_C");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn36 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn37 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeCode");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn38 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn39 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Gender");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn40 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Birthday_E");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn41 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("BirthPlace");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn42 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("HomeLand");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn43 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email_E");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn44 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Mobile_E");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn45 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("HomePhone");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn46 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Address_E");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn47 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Avatar");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn48 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UserID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn49 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RoleID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn50 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumber");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn51 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumberIssuedPlace");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn52 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumberIssuedDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn53 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MaritalStatus");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn54 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Religion");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn55 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Nationality");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn56 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("JobStatus");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn57 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ProbationDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn58 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReceiveDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn59 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TerminationDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn60 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReasonTermination");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn61 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderID");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn62 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn63 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderStatus");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn64 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderDate");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn65 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("NumberOfPeople");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn66 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TableID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("VATAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PaymentAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReceiveAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReturnAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OtherPromotionAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("JournalMemo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CancelReason");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("PaymentStatus");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IsApplyTaxWhenRequire");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Birthday_C");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email_C");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Mobile_C");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Address_C");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("EmployeeName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Gender");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn32 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Birthday_E");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn33 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("BirthPlace");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("HomeLand");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn35 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Email_E");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn36 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Mobile_E");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn37 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("HomePhone");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn38 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Address_E");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn39 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Avatar");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn40 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("UserID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn41 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("RoleID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn42 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumber");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn43 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumberIssuedPlace");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn44 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("IdentifyNumberIssuedDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn45 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("MaritalStatus");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn46 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Religion");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn47 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("Nationality");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn48 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("JobStatus");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn49 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ProbationDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn50 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReceiveDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn51 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TerminationDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn52 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("ReasonTermination");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn53 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderID");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn54 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn55 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderStatus");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn56 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn57 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("NumberOfPeople");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn58 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TableID");
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
@@ -131,24 +131,24 @@
             Infragistics.Win.UltraWinScrollBar.ScrollBarLook scrollBarLook1 = new Infragistics.Win.UltraWinScrollBar.ScrollBarLook();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance86 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance87 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance88 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance89 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance69 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance90 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance91 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance92 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance53 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab7 = new Infragistics.Win.UltraWinTabControl.UltraTab();
             Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab9 = new Infragistics.Win.UltraWinTabControl.UltraTab();
             Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab10 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab5 = new Infragistics.Win.UltraWinTabControl.UltraTab();
             Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab6 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinTabControl.UltraTab ultraTab7 = new Infragistics.Win.UltraWinTabControl.UltraTab();
+            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool1 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuSave");
             Infragistics.Win.UltraWinToolbars.PopupMenuTool PopupMenuTool1 = new Infragistics.Win.UltraWinToolbars.PopupMenuTool("popMenu");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuSave");
@@ -196,8 +196,6 @@
             this.ultraTabPageControl3 = new Infragistics.Win.UltraWinTabControl.UltraTabPageControl();
             this.ultraPanel4 = new Infragistics.Win.Misc.UltraPanel();
             this.grdList = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.bsInvoice = new System.Windows.Forms.BindingSource(this.components);
-            this.dsBusiness = new Desktop.Entity.BusinessDataSet();
             this.ultraPanel8 = new Infragistics.Win.Misc.UltraPanel();
             this.ultraPanel7 = new Infragistics.Win.Misc.UltraPanel();
             this.ultraPanel6 = new Infragistics.Win.Misc.UltraPanel();
@@ -221,8 +219,10 @@
             this._ClientArea_Toolbars_Dock_Area_Bottom = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this._ClientArea_Toolbars_Dock_Area_Top = new Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea();
             this.ultraFlowLayoutManager = new Infragistics.Win.Misc.UltraFlowLayoutManager(this.components);
-            this.dsDictionary = new Desktop.Entity.DictionaryDataSet();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.bsInvoice = new System.Windows.Forms.BindingSource(this.components);
+            this.dsBusiness = new Desktop.Entity.BusinessDataSet();
+            this.dsDictionary = new Desktop.Entity.DictionaryDataSet();
             this.ultraTabPageControl5.SuspendLayout();
             this.ultraTabPageControl6.SuspendLayout();
             this.ultraTabPageControl7.SuspendLayout();
@@ -247,8 +247,6 @@
             this.ultraPanel4.ClientArea.SuspendLayout();
             this.ultraPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsInvoice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsBusiness)).BeginInit();
             this.ultraPanel8.SuspendLayout();
             this.ultraPanel7.SuspendLayout();
             this.ultraPanel6.SuspendLayout();
@@ -266,6 +264,8 @@
             this.tabManager.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraFlowLayoutManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBusiness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             this.SuspendLayout();
             // 
@@ -379,8 +379,8 @@
             // 
             // pnlArea_Info
             // 
-            appearance49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlArea_Info.Appearance = appearance49;
+            appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlArea_Info.Appearance = appearance3;
             // 
             // pnlArea_Info.ClientArea
             // 
@@ -415,9 +415,9 @@
             // 
             // dteDateAreaTableMapping
             // 
-            appearance50.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance50.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.dteDateAreaTableMapping.Appearance = appearance50;
+            appearance4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.dteDateAreaTableMapping.Appearance = appearance4;
             this.dteDateAreaTableMapping.AutoSize = false;
             this.dteDateAreaTableMapping.Location = new System.Drawing.Point(8, 8);
             this.dteDateAreaTableMapping.Name = "dteDateAreaTableMapping";
@@ -430,10 +430,10 @@
             // 
             // btnLoadArea
             // 
-            appearance51.Image = global::ClientApp.Properties.Resources.btnItemGet;
-            appearance51.TextHAlignAsString = "Right";
-            appearance51.TextVAlignAsString = "Middle";
-            this.btnLoadArea.Appearance = appearance51;
+            appearance5.Image = global::ClientApp.Properties.Resources.btnItemGet;
+            appearance5.TextHAlignAsString = "Right";
+            appearance5.TextVAlignAsString = "Middle";
+            this.btnLoadArea.Appearance = appearance5;
             this.btnLoadArea.AutoSize = true;
             this.btnLoadArea.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLoadArea.Location = new System.Drawing.Point(643, 0);
@@ -445,9 +445,9 @@
             // 
             // ultraLabel4
             // 
-            appearance52.TextHAlignAsString = "Right";
-            appearance52.TextVAlignAsString = "Middle";
-            this.ultraLabel4.Appearance = appearance52;
+            appearance6.TextHAlignAsString = "Right";
+            appearance6.TextVAlignAsString = "Middle";
+            this.ultraLabel4.Appearance = appearance6;
             this.ultraLabel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel4.Location = new System.Drawing.Point(669, 0);
             this.ultraLabel4.Name = "ultraLabel4";
@@ -457,9 +457,9 @@
             // 
             // lblArea_Detail
             // 
-            appearance53.TextHAlignAsString = "Right";
-            appearance53.TextVAlignAsString = "Middle";
-            this.lblArea_Detail.Appearance = appearance53;
+            appearance7.TextHAlignAsString = "Right";
+            appearance7.TextVAlignAsString = "Middle";
+            this.lblArea_Detail.Appearance = appearance7;
             this.lblArea_Detail.AutoSize = true;
             this.lblArea_Detail.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblArea_Detail.Location = new System.Drawing.Point(300, 0);
@@ -470,10 +470,10 @@
             // 
             // lblArea_Detail_Title
             // 
-            appearance76.FontData.BoldAsString = "True";
-            appearance76.TextHAlignAsString = "Left";
-            appearance76.TextVAlignAsString = "Middle";
-            this.lblArea_Detail_Title.Appearance = appearance76;
+            appearance8.FontData.BoldAsString = "True";
+            appearance8.TextHAlignAsString = "Left";
+            appearance8.TextVAlignAsString = "Middle";
+            this.lblArea_Detail_Title.Appearance = appearance8;
             this.lblArea_Detail_Title.AutoSize = true;
             this.lblArea_Detail_Title.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblArea_Detail_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -486,9 +486,9 @@
             // 
             // ultraLabel8
             // 
-            appearance77.TextHAlignAsString = "Right";
-            appearance77.TextVAlignAsString = "Middle";
-            this.ultraLabel8.Appearance = appearance77;
+            appearance9.TextHAlignAsString = "Right";
+            appearance9.TextVAlignAsString = "Middle";
+            this.ultraLabel8.Appearance = appearance9;
             this.ultraLabel8.AutoSize = true;
             this.ultraLabel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.ultraLabel8.Location = new System.Drawing.Point(216, 0);
@@ -500,9 +500,9 @@
             // 
             // lblArea_All
             // 
-            appearance78.TextHAlignAsString = "Right";
-            appearance78.TextVAlignAsString = "Middle";
-            this.lblArea_All.Appearance = appearance78;
+            appearance10.TextHAlignAsString = "Right";
+            appearance10.TextVAlignAsString = "Middle";
+            this.lblArea_All.Appearance = appearance10;
             this.lblArea_All.AutoSize = true;
             this.lblArea_All.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblArea_All.Location = new System.Drawing.Point(129, 0);
@@ -513,10 +513,10 @@
             // 
             // lblArea_All_Title
             // 
-            appearance79.FontData.BoldAsString = "True";
-            appearance79.TextHAlignAsString = "Left";
-            appearance79.TextVAlignAsString = "Middle";
-            this.lblArea_All_Title.Appearance = appearance79;
+            appearance11.FontData.BoldAsString = "True";
+            appearance11.TextHAlignAsString = "Left";
+            appearance11.TextVAlignAsString = "Middle";
+            this.lblArea_All_Title.Appearance = appearance11;
             this.lblArea_All_Title.AutoSize = true;
             this.lblArea_All_Title.Dock = System.Windows.Forms.DockStyle.Left;
             this.lblArea_All_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -529,10 +529,10 @@
             // 
             // ultraLabel3
             // 
-            appearance80.Image = global::ClientApp.Properties.Resources.area_empty;
-            appearance80.TextHAlignAsString = "Right";
-            appearance80.TextVAlignAsString = "Middle";
-            this.ultraLabel3.Appearance = appearance80;
+            appearance12.Image = global::ClientApp.Properties.Resources.area_empty;
+            appearance12.TextHAlignAsString = "Right";
+            appearance12.TextVAlignAsString = "Middle";
+            this.ultraLabel3.Appearance = appearance12;
             this.ultraLabel3.AutoSize = true;
             this.ultraLabel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel3.Location = new System.Drawing.Point(699, 0);
@@ -544,10 +544,10 @@
             // 
             // ultraLabel2
             // 
-            appearance81.Image = global::ClientApp.Properties.Resources.area_using;
-            appearance81.TextHAlignAsString = "Right";
-            appearance81.TextVAlignAsString = "Middle";
-            this.ultraLabel2.Appearance = appearance81;
+            appearance13.Image = global::ClientApp.Properties.Resources.area_using;
+            appearance13.TextHAlignAsString = "Right";
+            appearance13.TextVAlignAsString = "Middle";
+            this.ultraLabel2.Appearance = appearance13;
             this.ultraLabel2.AutoSize = true;
             this.ultraLabel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel2.Location = new System.Drawing.Point(778, 0);
@@ -559,10 +559,10 @@
             // 
             // ultraLabel1
             // 
-            appearance82.Image = global::ClientApp.Properties.Resources.area_booking;
-            appearance82.TextHAlignAsString = "Right";
-            appearance82.TextVAlignAsString = "Middle";
-            this.ultraLabel1.Appearance = appearance82;
+            appearance14.Image = global::ClientApp.Properties.Resources.area_booking;
+            appearance14.TextHAlignAsString = "Right";
+            appearance14.TextVAlignAsString = "Middle";
+            this.ultraLabel1.Appearance = appearance14;
             this.ultraLabel1.AutoSize = true;
             this.ultraLabel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel1.Location = new System.Drawing.Point(899, 0);
@@ -582,9 +582,9 @@
             // 
             // fpnlBooking
             // 
-            appearance3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            appearance3.TextHAlignAsString = "Left";
-            this.fpnlBooking.Appearance = appearance3;
+            appearance15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            appearance15.TextHAlignAsString = "Left";
+            this.fpnlBooking.Appearance = appearance15;
             this.fpnlBooking.Controls.Add(this.ultraTabSharedControlsPage3);
             this.fpnlBooking.Controls.Add(this.ultraTabPageControl6);
             this.fpnlBooking.Controls.Add(this.ultraTabPageControl7);
@@ -592,27 +592,27 @@
             this.fpnlBooking.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fpnlBooking.Location = new System.Drawing.Point(0, 40);
             this.fpnlBooking.Name = "fpnlBooking";
-            appearance15.BackColor = System.Drawing.Color.White;
-            this.fpnlBooking.SelectedTabAppearance = appearance15;
+            appearance16.BackColor = System.Drawing.Color.White;
+            this.fpnlBooking.SelectedTabAppearance = appearance16;
             this.fpnlBooking.SharedControlsPage = this.ultraTabSharedControlsPage3;
             this.fpnlBooking.Size = new System.Drawing.Size(996, 618);
             this.fpnlBooking.TabIndex = 3;
             this.fpnlBooking.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.TopLeft;
             this.fpnlBooking.TabPadding = new System.Drawing.Size(10, 5);
-            ultraTab3.Key = "Ordering";
-            ultraTab3.TabPage = this.ultraTabPageControl6;
-            ultraTab3.Text = "Đang phục vụ";
-            ultraTab5.Key = "WaitPay";
-            ultraTab5.TabPage = this.ultraTabPageControl7;
-            ultraTab5.Text = "Chờ thanh toán";
-            ultraTab6.Key = "Cancel";
-            ultraTab6.TabPage = this.ultraTabPageControl9;
-            ultraTab6.Text = "Đã hủy";
-            ultraTab6.Visible = false;
+            ultraTab2.Key = "Ordering";
+            ultraTab2.TabPage = this.ultraTabPageControl6;
+            ultraTab2.Text = "Đang phục vụ";
+            ultraTab3.Key = "WaitPay";
+            ultraTab3.TabPage = this.ultraTabPageControl7;
+            ultraTab3.Text = "Chờ thanh toán";
+            ultraTab4.Key = "Cancel";
+            ultraTab4.TabPage = this.ultraTabPageControl9;
+            ultraTab4.Text = "Đã hủy";
+            ultraTab4.Visible = false;
             this.fpnlBooking.Tabs.AddRange(new Infragistics.Win.UltraWinTabControl.UltraTab[] {
+            ultraTab2,
             ultraTab3,
-            ultraTab5,
-            ultraTab6});
+            ultraTab4});
             this.fpnlBooking.TextOrientation = Infragistics.Win.UltraWinTabs.TextOrientation.Horizontal;
             this.fpnlBooking.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.fpnlBooking.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
@@ -625,8 +625,8 @@
             // 
             // ultraPanel1
             // 
-            appearance54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ultraPanel1.Appearance = appearance54;
+            appearance17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ultraPanel1.Appearance = appearance17;
             // 
             // ultraPanel1.ClientArea
             // 
@@ -653,9 +653,9 @@
             // 
             // dteDateOrder
             // 
-            appearance83.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance83.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.dteDateOrder.Appearance = appearance83;
+            appearance18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance18.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.dteDateOrder.Appearance = appearance18;
             this.dteDateOrder.AutoSize = false;
             this.dteDateOrder.Location = new System.Drawing.Point(8, 8);
             this.dteDateOrder.Name = "dteDateOrder";
@@ -668,9 +668,9 @@
             // 
             // ultraLabel6
             // 
-            appearance84.TextHAlignAsString = "Right";
-            appearance84.TextVAlignAsString = "Middle";
-            this.ultraLabel6.Appearance = appearance84;
+            appearance19.TextHAlignAsString = "Right";
+            appearance19.TextVAlignAsString = "Middle";
+            this.ultraLabel6.Appearance = appearance19;
             this.ultraLabel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel6.Location = new System.Drawing.Point(940, 0);
             this.ultraLabel6.Name = "ultraLabel6";
@@ -680,10 +680,10 @@
             // 
             // btnLoadOrder
             // 
-            appearance85.Image = global::ClientApp.Properties.Resources.btnItemGet;
-            appearance85.TextHAlignAsString = "Right";
-            appearance85.TextVAlignAsString = "Middle";
-            this.btnLoadOrder.Appearance = appearance85;
+            appearance20.Image = global::ClientApp.Properties.Resources.btnItemGet;
+            appearance20.TextHAlignAsString = "Right";
+            appearance20.TextVAlignAsString = "Middle";
+            this.btnLoadOrder.Appearance = appearance20;
             this.btnLoadOrder.AutoSize = true;
             this.btnLoadOrder.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLoadOrder.Location = new System.Drawing.Point(970, 0);
@@ -702,8 +702,8 @@
             // 
             // ultraPanel4
             // 
-            appearance16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
-            this.ultraPanel4.Appearance = appearance16;
+            appearance21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this.ultraPanel4.Appearance = appearance21;
             // 
             // ultraPanel4.ClientArea
             // 
@@ -755,104 +755,104 @@
             ultraGridColumn10.Hidden = true;
             ultraGridColumn11.Header.VisiblePosition = 14;
             ultraGridColumn11.Hidden = true;
-            ultraGridColumn13.Header.VisiblePosition = 15;
+            ultraGridColumn12.Header.VisiblePosition = 15;
+            ultraGridColumn12.Hidden = true;
+            ultraGridColumn13.Header.VisiblePosition = 16;
             ultraGridColumn13.Hidden = true;
-            ultraGridColumn14.Header.VisiblePosition = 16;
+            ultraGridColumn14.Header.VisiblePosition = 17;
             ultraGridColumn14.Hidden = true;
-            ultraGridColumn17.Header.VisiblePosition = 17;
+            ultraGridColumn15.Header.VisiblePosition = 18;
+            ultraGridColumn15.Hidden = true;
+            ultraGridColumn16.Header.VisiblePosition = 19;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn17.Header.VisiblePosition = 20;
             ultraGridColumn17.Hidden = true;
-            ultraGridColumn22.Header.VisiblePosition = 18;
+            ultraGridColumn18.Header.VisiblePosition = 21;
+            ultraGridColumn18.Hidden = true;
+            ultraGridColumn19.Header.VisiblePosition = 22;
+            ultraGridColumn19.Hidden = true;
+            ultraGridColumn20.Header.VisiblePosition = 23;
+            ultraGridColumn20.Hidden = true;
+            ultraGridColumn21.Header.VisiblePosition = 24;
+            ultraGridColumn21.Hidden = true;
+            ultraGridColumn22.Header.VisiblePosition = 25;
             ultraGridColumn22.Hidden = true;
-            ultraGridColumn23.Header.VisiblePosition = 19;
-            ultraGridColumn23.Hidden = true;
-            ultraGridColumn24.Header.VisiblePosition = 20;
+            ultraGridColumn23.Header.Caption = "Tên khách hàng";
+            ultraGridColumn23.Header.VisiblePosition = 26;
+            ultraGridColumn23.Width = 161;
+            ultraGridColumn24.Header.VisiblePosition = 27;
             ultraGridColumn24.Hidden = true;
-            ultraGridColumn26.Header.VisiblePosition = 21;
-            ultraGridColumn26.Hidden = true;
-            ultraGridColumn27.Header.VisiblePosition = 22;
-            ultraGridColumn27.Hidden = true;
-            ultraGridColumn28.Header.VisiblePosition = 23;
+            ultraGridColumn25.Header.VisiblePosition = 28;
+            ultraGridColumn25.Hidden = true;
+            ultraGridColumn26.Header.Caption = "SĐT";
+            ultraGridColumn26.Header.VisiblePosition = 29;
+            ultraGridColumn26.Width = 147;
+            ultraGridColumn27.Header.Caption = "Địa chỉ";
+            ultraGridColumn27.Header.VisiblePosition = 30;
+            ultraGridColumn27.Width = 197;
+            ultraGridColumn28.Header.VisiblePosition = 31;
             ultraGridColumn28.Hidden = true;
-            ultraGridColumn29.Header.VisiblePosition = 24;
+            ultraGridColumn29.Header.VisiblePosition = 32;
             ultraGridColumn29.Hidden = true;
-            ultraGridColumn30.Header.VisiblePosition = 25;
+            ultraGridColumn30.Header.VisiblePosition = 33;
             ultraGridColumn30.Hidden = true;
-            ultraGridColumn31.Header.Caption = "Tên khách hàng";
-            ultraGridColumn31.Header.VisiblePosition = 26;
-            ultraGridColumn31.Width = 161;
-            ultraGridColumn32.Header.VisiblePosition = 27;
+            ultraGridColumn31.Header.VisiblePosition = 34;
+            ultraGridColumn31.Hidden = true;
+            ultraGridColumn32.Header.VisiblePosition = 35;
             ultraGridColumn32.Hidden = true;
-            ultraGridColumn33.Header.VisiblePosition = 28;
+            ultraGridColumn33.Header.VisiblePosition = 36;
             ultraGridColumn33.Hidden = true;
-            ultraGridColumn34.Header.Caption = "SĐT";
-            ultraGridColumn34.Header.VisiblePosition = 29;
-            ultraGridColumn34.Width = 147;
-            ultraGridColumn35.Header.Caption = "Địa chỉ";
-            ultraGridColumn35.Header.VisiblePosition = 30;
-            ultraGridColumn35.Width = 197;
-            ultraGridColumn36.Header.VisiblePosition = 31;
+            ultraGridColumn34.Header.VisiblePosition = 37;
+            ultraGridColumn34.Hidden = true;
+            ultraGridColumn35.Header.VisiblePosition = 38;
+            ultraGridColumn35.Hidden = true;
+            ultraGridColumn36.Header.VisiblePosition = 39;
             ultraGridColumn36.Hidden = true;
-            ultraGridColumn37.Header.VisiblePosition = 32;
+            ultraGridColumn37.Header.VisiblePosition = 40;
             ultraGridColumn37.Hidden = true;
-            ultraGridColumn38.Header.VisiblePosition = 33;
+            ultraGridColumn38.Header.VisiblePosition = 41;
             ultraGridColumn38.Hidden = true;
-            ultraGridColumn39.Header.VisiblePosition = 34;
+            ultraGridColumn39.Header.VisiblePosition = 42;
             ultraGridColumn39.Hidden = true;
-            ultraGridColumn40.Header.VisiblePosition = 35;
+            ultraGridColumn40.Header.VisiblePosition = 43;
             ultraGridColumn40.Hidden = true;
-            ultraGridColumn41.Header.VisiblePosition = 36;
+            ultraGridColumn41.Header.VisiblePosition = 44;
             ultraGridColumn41.Hidden = true;
-            ultraGridColumn42.Header.VisiblePosition = 37;
+            ultraGridColumn42.Header.VisiblePosition = 45;
             ultraGridColumn42.Hidden = true;
-            ultraGridColumn43.Header.VisiblePosition = 38;
+            ultraGridColumn43.Header.VisiblePosition = 46;
             ultraGridColumn43.Hidden = true;
-            ultraGridColumn44.Header.VisiblePosition = 39;
+            ultraGridColumn44.Header.VisiblePosition = 47;
             ultraGridColumn44.Hidden = true;
-            ultraGridColumn45.Header.VisiblePosition = 40;
+            ultraGridColumn45.Header.VisiblePosition = 48;
             ultraGridColumn45.Hidden = true;
-            ultraGridColumn46.Header.VisiblePosition = 41;
+            ultraGridColumn46.Header.VisiblePosition = 49;
             ultraGridColumn46.Hidden = true;
-            ultraGridColumn47.Header.VisiblePosition = 42;
+            ultraGridColumn47.Header.VisiblePosition = 50;
             ultraGridColumn47.Hidden = true;
-            ultraGridColumn48.Header.VisiblePosition = 43;
+            ultraGridColumn48.Header.VisiblePosition = 51;
             ultraGridColumn48.Hidden = true;
-            ultraGridColumn49.Header.VisiblePosition = 44;
+            ultraGridColumn49.Header.VisiblePosition = 52;
             ultraGridColumn49.Hidden = true;
-            ultraGridColumn50.Header.VisiblePosition = 45;
+            ultraGridColumn50.Header.VisiblePosition = 53;
             ultraGridColumn50.Hidden = true;
-            ultraGridColumn51.Header.VisiblePosition = 46;
+            ultraGridColumn51.Header.VisiblePosition = 54;
             ultraGridColumn51.Hidden = true;
-            ultraGridColumn52.Header.VisiblePosition = 47;
+            ultraGridColumn52.Header.VisiblePosition = 55;
             ultraGridColumn52.Hidden = true;
-            ultraGridColumn53.Header.VisiblePosition = 48;
+            ultraGridColumn53.Header.VisiblePosition = 10;
             ultraGridColumn53.Hidden = true;
-            ultraGridColumn54.Header.VisiblePosition = 49;
-            ultraGridColumn54.Hidden = true;
-            ultraGridColumn55.Header.VisiblePosition = 50;
+            ultraGridColumn54.Header.Caption = "Mã Order";
+            ultraGridColumn54.Header.VisiblePosition = 2;
+            ultraGridColumn54.Width = 88;
+            ultraGridColumn55.Header.VisiblePosition = 56;
             ultraGridColumn55.Hidden = true;
-            ultraGridColumn56.Header.VisiblePosition = 51;
+            ultraGridColumn56.Header.VisiblePosition = 13;
             ultraGridColumn56.Hidden = true;
-            ultraGridColumn57.Header.VisiblePosition = 52;
+            ultraGridColumn57.Header.VisiblePosition = 57;
             ultraGridColumn57.Hidden = true;
-            ultraGridColumn58.Header.VisiblePosition = 53;
+            ultraGridColumn58.Header.VisiblePosition = 4;
             ultraGridColumn58.Hidden = true;
-            ultraGridColumn59.Header.VisiblePosition = 54;
-            ultraGridColumn59.Hidden = true;
-            ultraGridColumn60.Header.VisiblePosition = 55;
-            ultraGridColumn60.Hidden = true;
-            ultraGridColumn61.Header.VisiblePosition = 10;
-            ultraGridColumn61.Hidden = true;
-            ultraGridColumn62.Header.Caption = "Mã Order";
-            ultraGridColumn62.Header.VisiblePosition = 2;
-            ultraGridColumn62.Width = 88;
-            ultraGridColumn63.Header.VisiblePosition = 56;
-            ultraGridColumn63.Hidden = true;
-            ultraGridColumn64.Header.VisiblePosition = 13;
-            ultraGridColumn64.Hidden = true;
-            ultraGridColumn65.Header.VisiblePosition = 57;
-            ultraGridColumn65.Hidden = true;
-            ultraGridColumn66.Header.VisiblePosition = 4;
-            ultraGridColumn66.Hidden = true;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -865,12 +865,20 @@
             ultraGridColumn9,
             ultraGridColumn10,
             ultraGridColumn11,
+            ultraGridColumn12,
             ultraGridColumn13,
             ultraGridColumn14,
+            ultraGridColumn15,
+            ultraGridColumn16,
             ultraGridColumn17,
+            ultraGridColumn18,
+            ultraGridColumn19,
+            ultraGridColumn20,
+            ultraGridColumn21,
             ultraGridColumn22,
             ultraGridColumn23,
             ultraGridColumn24,
+            ultraGridColumn25,
             ultraGridColumn26,
             ultraGridColumn27,
             ultraGridColumn28,
@@ -903,15 +911,7 @@
             ultraGridColumn55,
             ultraGridColumn56,
             ultraGridColumn57,
-            ultraGridColumn58,
-            ultraGridColumn59,
-            ultraGridColumn60,
-            ultraGridColumn61,
-            ultraGridColumn62,
-            ultraGridColumn63,
-            ultraGridColumn64,
-            ultraGridColumn65,
-            ultraGridColumn66});
+            ultraGridColumn58});
             this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.grdList.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
@@ -1010,16 +1010,6 @@
             this.grdList.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             this.grdList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.grdList_MouseDoubleClick);
             // 
-            // bsInvoice
-            // 
-            this.bsInvoice.DataMember = "SAInvoice";
-            this.bsInvoice.DataSource = this.dsBusiness;
-            // 
-            // dsBusiness
-            // 
-            this.dsBusiness.DataSetName = "BusinessDataSet";
-            this.dsBusiness.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // ultraPanel8
             // 
             this.ultraPanel8.Dock = System.Windows.Forms.DockStyle.Right;
@@ -1058,8 +1048,8 @@
             // 
             // ultraPanel9
             // 
-            appearance86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ultraPanel9.Appearance = appearance86;
+            appearance39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ultraPanel9.Appearance = appearance39;
             // 
             // ultraPanel9.ClientArea
             // 
@@ -1086,9 +1076,9 @@
             // 
             // dteInvoice
             // 
-            appearance87.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance87.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.dteInvoice.Appearance = appearance87;
+            appearance40.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance40.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.dteInvoice.Appearance = appearance40;
             this.dteInvoice.AutoSize = false;
             this.dteInvoice.Location = new System.Drawing.Point(8, 8);
             this.dteInvoice.Name = "dteInvoice";
@@ -1100,9 +1090,9 @@
             // 
             // ultraLabel7
             // 
-            appearance88.TextHAlignAsString = "Right";
-            appearance88.TextVAlignAsString = "Middle";
-            this.ultraLabel7.Appearance = appearance88;
+            appearance41.TextHAlignAsString = "Right";
+            appearance41.TextVAlignAsString = "Middle";
+            this.ultraLabel7.Appearance = appearance41;
             this.ultraLabel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.ultraLabel7.Location = new System.Drawing.Point(940, 0);
             this.ultraLabel7.Name = "ultraLabel7";
@@ -1112,10 +1102,10 @@
             // 
             // btnLoadInvoice
             // 
-            appearance89.Image = global::ClientApp.Properties.Resources.btnItemGet;
-            appearance89.TextHAlignAsString = "Right";
-            appearance89.TextVAlignAsString = "Middle";
-            this.btnLoadInvoice.Appearance = appearance89;
+            appearance42.Image = global::ClientApp.Properties.Resources.btnItemGet;
+            appearance42.TextHAlignAsString = "Right";
+            appearance42.TextVAlignAsString = "Middle";
+            this.btnLoadInvoice.Appearance = appearance42;
             this.btnLoadInvoice.AutoSize = true;
             this.btnLoadInvoice.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnLoadInvoice.Location = new System.Drawing.Point(970, 0);
@@ -1128,26 +1118,26 @@
             // ufmDictionaryBaseDetail
             // 
             this.ufmDictionaryBaseDetail.Form = this;
-            appearance17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance17.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance17.ForeColor = System.Drawing.Color.White;
-            this.ufmDictionaryBaseDetail.FormStyleSettings.CaptionAreaActiveAppearance = appearance17;
-            appearance69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance69.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance69.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            appearance69.TextHAlignAsString = "Left";
-            this.ufmDictionaryBaseDetail.FormStyleSettings.CaptionAreaAppearance = appearance69;
-            appearance90.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.ufmDictionaryBaseDetail.FormStyleSettings.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.Appearance = appearance90;
-            appearance91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            appearance91.BorderColor = System.Drawing.Color.Red;
-            appearance91.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.ufmDictionaryBaseDetail.FormStyleSettings.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.HotTrackAppearance = appearance91;
-            appearance92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance92.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance92.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            appearance92.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
-            this.ufmDictionaryBaseDetail.FormStyleSettings.FormBorderAppearance = appearance92;
+            appearance49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance49.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance49.ForeColor = System.Drawing.Color.White;
+            this.ufmDictionaryBaseDetail.FormStyleSettings.CaptionAreaActiveAppearance = appearance49;
+            appearance50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance50.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            appearance50.TextHAlignAsString = "Left";
+            this.ufmDictionaryBaseDetail.FormStyleSettings.CaptionAreaAppearance = appearance50;
+            appearance51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.ufmDictionaryBaseDetail.FormStyleSettings.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.Appearance = appearance51;
+            appearance52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            appearance52.BorderColor = System.Drawing.Color.Red;
+            appearance52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.ufmDictionaryBaseDetail.FormStyleSettings.DefaultCaptionButtonsAppearances.DefaultButtonAppearances.HotTrackAppearance = appearance52;
+            appearance53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance53.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            appearance53.ForeColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(150)))), ((int)(((byte)(200)))));
+            this.ufmDictionaryBaseDetail.FormStyleSettings.FormBorderAppearance = appearance53;
             this.ufmDictionaryBaseDetail.FormStyleSettings.Style = Infragistics.Win.UltraWinForm.UltraFormStyle.Office2013;
             this.ufmDictionaryBaseDetail.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.ufmDictionaryBaseDetail.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
@@ -1218,13 +1208,13 @@
             // 
             // tabManager
             // 
-            appearance21.BackColor = System.Drawing.Color.SteelBlue;
-            appearance21.ImageBackgroundOrigin = Infragistics.Win.ImageBackgroundOrigin.Form;
-            appearance21.TextHAlignAsString = "Center";
-            appearance21.TextVAlignAsString = "Middle";
-            this.tabManager.Appearance = appearance21;
-            appearance39.BackColor = System.Drawing.Color.White;
-            this.tabManager.ClientAreaAppearance = appearance39;
+            appearance43.BackColor = System.Drawing.Color.SteelBlue;
+            appearance43.ImageBackgroundOrigin = Infragistics.Win.ImageBackgroundOrigin.Form;
+            appearance43.TextHAlignAsString = "Center";
+            appearance43.TextVAlignAsString = "Middle";
+            this.tabManager.Appearance = appearance43;
+            appearance44.BackColor = System.Drawing.Color.White;
+            this.tabManager.ClientAreaAppearance = appearance44;
             this.tabManager.Controls.Add(this.ultraTabSharedControlsPage1);
             this.tabManager.Controls.Add(this.ultraTabPageControl1);
             this.tabManager.Controls.Add(this.ultraTabPageControl2);
@@ -1234,34 +1224,34 @@
             this.tabManager.Location = new System.Drawing.Point(0, 0);
             this.tabManager.MinTabWidth = 80;
             this.tabManager.Name = "tabManager";
-            appearance43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            appearance43.ForeColor = System.Drawing.Color.White;
-            this.tabManager.SelectedTabAppearance = appearance43;
+            appearance45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            appearance45.ForeColor = System.Drawing.Color.White;
+            this.tabManager.SelectedTabAppearance = appearance45;
             this.tabManager.SharedControlsPage = this.ultraTabSharedControlsPage1;
             this.tabManager.Size = new System.Drawing.Size(998, 717);
             this.tabManager.Style = Infragistics.Win.UltraWinTabControl.UltraTabControlStyle.Flat;
             this.tabManager.TabIndex = 6;
             this.tabManager.TabOrientation = Infragistics.Win.UltraWinTabs.TabOrientation.TopLeft;
             this.tabManager.TabPadding = new System.Drawing.Size(10, 10);
-            appearance44.Image = global::ClientApp.Properties.Resources.Home_NewProduct;
-            ultraTab7.Appearance = appearance44;
-            ultraTab7.Key = "Area";
-            ultraTab7.TabPage = this.ultraTabPageControl2;
-            ultraTab7.Text = "Sơ đồ";
-            appearance45.Image = global::ClientApp.Properties.Resources.Orders___Gray___36x36;
-            ultraTab9.Appearance = appearance45;
-            ultraTab9.Key = "Order";
-            ultraTab9.TabPage = this.ultraTabPageControl1;
-            ultraTab9.Text = "Order";
-            appearance46.Image = global::ClientApp.Properties.Resources.bill;
-            ultraTab10.Appearance = appearance46;
-            ultraTab10.Key = "Booking";
-            ultraTab10.TabPage = this.ultraTabPageControl3;
-            ultraTab10.Text = "Hóa đơn";
+            appearance46.Image = global::ClientApp.Properties.Resources.Home_NewProduct;
+            ultraTab5.Appearance = appearance46;
+            ultraTab5.Key = "Area";
+            ultraTab5.TabPage = this.ultraTabPageControl2;
+            ultraTab5.Text = "Sơ đồ";
+            appearance47.Image = global::ClientApp.Properties.Resources.Orders___Gray___36x36;
+            ultraTab6.Appearance = appearance47;
+            ultraTab6.Key = "Order";
+            ultraTab6.TabPage = this.ultraTabPageControl1;
+            ultraTab6.Text = "Order";
+            appearance48.Image = global::ClientApp.Properties.Resources.bill;
+            ultraTab7.Appearance = appearance48;
+            ultraTab7.Key = "Booking";
+            ultraTab7.TabPage = this.ultraTabPageControl3;
+            ultraTab7.Text = "Hóa đơn";
             this.tabManager.Tabs.AddRange(new Infragistics.Win.UltraWinTabControl.UltraTab[] {
-            ultraTab7,
-            ultraTab9,
-            ultraTab10});
+            ultraTab5,
+            ultraTab6,
+            ultraTab7});
             this.tabManager.TextOrientation = Infragistics.Win.UltraWinTabs.TextOrientation.Horizontal;
             this.tabManager.UseAppStyling = false;
             this.tabManager.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
@@ -1276,7 +1266,7 @@
             // _ClientArea_Toolbars_Dock_Area_Left
             // 
             this._ClientArea_Toolbars_Dock_Area_Left.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this._ClientArea_Toolbars_Dock_Area_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this._ClientArea_Toolbars_Dock_Area_Left.BackColor = System.Drawing.SystemColors.Control;
             this._ClientArea_Toolbars_Dock_Area_Left.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left;
             this._ClientArea_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText;
             this._ClientArea_Toolbars_Dock_Area_Left.Location = new System.Drawing.Point(0, 0);
@@ -1317,7 +1307,7 @@
             // _ClientArea_Toolbars_Dock_Area_Right
             // 
             this._ClientArea_Toolbars_Dock_Area_Right.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this._ClientArea_Toolbars_Dock_Area_Right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this._ClientArea_Toolbars_Dock_Area_Right.BackColor = System.Drawing.SystemColors.Control;
             this._ClientArea_Toolbars_Dock_Area_Right.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Right;
             this._ClientArea_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText;
             this._ClientArea_Toolbars_Dock_Area_Right.Location = new System.Drawing.Point(998, 0);
@@ -1328,7 +1318,7 @@
             // _ClientArea_Toolbars_Dock_Area_Bottom
             // 
             this._ClientArea_Toolbars_Dock_Area_Bottom.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this._ClientArea_Toolbars_Dock_Area_Bottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this._ClientArea_Toolbars_Dock_Area_Bottom.BackColor = System.Drawing.SystemColors.Control;
             this._ClientArea_Toolbars_Dock_Area_Bottom.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Bottom;
             this._ClientArea_Toolbars_Dock_Area_Bottom.ForeColor = System.Drawing.SystemColors.ControlText;
             this._ClientArea_Toolbars_Dock_Area_Bottom.Location = new System.Drawing.Point(0, 717);
@@ -1339,7 +1329,7 @@
             // _ClientArea_Toolbars_Dock_Area_Top
             // 
             this._ClientArea_Toolbars_Dock_Area_Top.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
-            this._ClientArea_Toolbars_Dock_Area_Top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(220)))), ((int)(((byte)(240)))));
+            this._ClientArea_Toolbars_Dock_Area_Top.BackColor = System.Drawing.SystemColors.Control;
             this._ClientArea_Toolbars_Dock_Area_Top.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Top;
             this._ClientArea_Toolbars_Dock_Area_Top.ForeColor = System.Drawing.SystemColors.ControlText;
             this._ClientArea_Toolbars_Dock_Area_Top.Location = new System.Drawing.Point(0, 0);
@@ -1347,16 +1337,26 @@
             this._ClientArea_Toolbars_Dock_Area_Top.Size = new System.Drawing.Size(998, 0);
             this._ClientArea_Toolbars_Dock_Area_Top.ToolbarsManager = this.tbrFunction;
             // 
-            // dsDictionary
-            // 
-            this.dsDictionary.DataSetName = "DictionaryDataSet";
-            this.dsDictionary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 5000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // bsInvoice
+            // 
+            this.bsInvoice.DataMember = "SAInvoice";
+            this.bsInvoice.DataSource = this.dsBusiness;
+            // 
+            // dsBusiness
+            // 
+            this.dsBusiness.DataSetName = "BusinessDataSet";
+            this.dsBusiness.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsDictionary
+            // 
+            this.dsDictionary.DataSetName = "DictionaryDataSet";
+            this.dsDictionary.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // FrmBooking
             // 
@@ -1399,8 +1399,6 @@
             this.ultraPanel4.ClientArea.ResumeLayout(false);
             this.ultraPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bsInvoice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsBusiness)).EndInit();
             this.ultraPanel8.ResumeLayout(false);
             this.ultraPanel7.ResumeLayout(false);
             this.ultraPanel6.ResumeLayout(false);
@@ -1419,6 +1417,8 @@
             this.tabManager.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ultraFlowLayoutManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsBusiness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             this.ResumeLayout(false);
 

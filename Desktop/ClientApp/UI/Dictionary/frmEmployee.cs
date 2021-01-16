@@ -26,9 +26,9 @@ namespace ClientApp.UI.Dictionary
             base.LoadDataForm();
             SetVisibleTabInfo(false);
            
-            var table = oBL.Get();
-           
+             var table = oBL.Get();
 
+            tbrFunction.Tools["mnuCopy"].SharedProps.Visible = false;
             if (table != null && table.Rows.Count > 0)
             {
                 dsDictionary.Employee.Clear();

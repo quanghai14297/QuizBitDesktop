@@ -169,6 +169,12 @@ namespace ClientApp.UI.Business
                 txtBookingNo.Focus();
                 return false;
             }
+            if (txtNumberOfPeople.Text == ".., ")
+            {
+                MessageBoxCommon.ShowExclamation(string.Format(Properties.Resources.Message_Validate_Control, txtNumberOfPeople.Tag));
+                txtNumberOfPeople.Focus();
+                return false;
+            }
             if (dteBookingDate.Value == null)
             {
                 MessageBoxCommon.ShowExclamation(string.Format(Properties.Resources.Message_Validate_Control, dteBookingDate.Tag));

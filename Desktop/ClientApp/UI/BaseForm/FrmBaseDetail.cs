@@ -320,8 +320,12 @@ namespace ClientApp.UI.BaseForm
                
                 if (result == (int)EnumResultInsertUpdate.Success)
                 {
-                    DsDictionary.AcceptChanges();
-                    DialogResult = DialogResult.OK;
+                    //if (BsDetail.DataMember != "Order")
+                    //{
+                        DsDictionary.AcceptChanges();
+                        DialogResult = DialogResult.OK;
+                    //}
+                    
                 }
                 else if (result == (int)EnumResultInsertUpdate.DuplicateCode)
                 {
