@@ -56,76 +56,155 @@ namespace Desktop.BL
         {
             var orderRow = ds.Order.FirstOrDefault();
             DictionaryDataSet.SAInvoiceRow masterRow = ds.SAInvoice.NewSAInvoiceRow();
-            masterRow.RefID = Guid.NewGuid();
-            masterRow.RefNo = orderRow.OrderNo;
-            masterRow.RefDate = DateTime.Now;
-            masterRow.OrderID = orderRow.OrderID;
-            masterRow.CustomerID = orderRow.CustomerID;
-            masterRow.EmployeeID = Session.UserLogin.EmployeeID;
-            masterRow.CreatedDate = DateTime.Now;
-            masterRow.CreatedBy = Session.UserLogin.UserName;
-            masterRow.ModifiedDate = DateTime.Now;
-            masterRow.ModifiedBy = Session.UserLogin.UserName;
-            var table = new DL.DLTableMapping().GetTableMappingDetailByTableID(orderRow.TableID, orderRow.OrderDate);
-            if (table != null)
-                if (table.Rows.Count > 0)
-                {
-                    var row = table.Rows[0];
-                    masterRow.JournalMemo = row["TableName"] + " - " + row["AreaName"];
-                }
-            // Gán tổng tiền mua trước
-            masterRow.TotalSaleAmount = 0;
-            masterRow.TotalDiscountAmount = 0;
-
-            BLInventoryItem oBLInventoryItem = new BLInventoryItem();
-            // Duyệt chi tiết
-            foreach (DictionaryDataSet.OrderDetailRow orderDetailRow in ds.OrderDetail)
+            if (orderRow == null)
             {
-                // Tìm xem có dòng nào trùng Mặt hàng thì tăng số lượng thôi
-                DictionaryDataSet.SAInvoiceDetailRow findRow = ds.SAInvoiceDetail.FirstOrDefault((t) => t.ItemID == orderDetailRow.InventoryItemID);
-                if (findRow != null)
+                var saRow = ds.SAInvoice.FirstOrDefault();
+                masterRow.RefID = Guid.NewGuid();
+                masterRow.RefNo = saRow.RefNo;
+                masterRow.RefDate = DateTime.Now;
+                masterRow.OrderID = saRow.OrderID;
+                masterRow.CustomerID = saRow.CustomerID;
+                masterRow.EmployeeID = Session.UserLogin.EmployeeID;
+                masterRow.CreatedDate = DateTime.Now;
+                masterRow.CreatedBy = Session.UserLogin.UserName;
+                masterRow.ModifiedDate = DateTime.Now;
+                masterRow.ModifiedBy = Session.UserLogin.UserName;
+                //var table = new DL.DLTableMapping().GetTableMappingDetailByTableID(saRow., saRow.RefDate);
+                //if (table != null)
+                //    if (table.Rows.Count > 0)
+                //    {
+                //        var row = table.Rows[0];
+                //        masterRow.JournalMemo = row["TableName"] + " - " + row["AreaName"];
+                //    }
+                // Gán tổng tiền mua trước
+                masterRow.TotalSaleAmount = 0;
+                masterRow.TotalDiscountAmount = 0;
+
+                BLInventoryItem oBLInventoryItem = new BLInventoryItem();
+                // Duyệt chi tiết
+                foreach (DictionaryDataSet.OrderDetailRow orderDetailRow in ds.OrderDetail)
                 {
-                    findRow.Quantity += orderDetailRow.Quantity;
-                    findRow.SaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
-                    masterRow.TotalSaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
+                    // Tìm xem có dòng nào trùng Mặt hàng thì tăng số lượng thôi
+                    DictionaryDataSet.SAInvoiceDetailRow findRow = ds.SAInvoiceDetail.FirstOrDefault((t) => t.ItemID == orderDetailRow.InventoryItemID);
+                    if (findRow != null)
+                    {
+                        findRow.Quantity += orderDetailRow.Quantity;
+                        findRow.SaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
+                        masterRow.TotalSaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
+                    }
+                    // Chưa có thì thêm mới vào hóa đơn
+                    else
+                    {
+                        DictionaryDataSet.SAInvoiceDetailRow detailRow = ds.SAInvoiceDetail.NewSAInvoiceDetailRow();
+                        detailRow.RefDetailID = Guid.NewGuid();
+                        detailRow.RefID = masterRow.RefID;
+                        detailRow.ItemID = orderDetailRow.InventoryItemID;
+                        detailRow.Quantity = orderDetailRow.Quantity;
+                        var inventory = oBLInventoryItem.GetByID(orderDetailRow.InventoryItemID);
+                        if (ds.InventoryItem.FindByInventoryItemID(inventory.InventoryItemID) == null)
+                            ds.InventoryItem.Merge(oBLInventoryItem.GetByID_SAInvoice(orderDetailRow.InventoryItemID));
+                        detailRow.UnitPrice = inventory != null ? inventory.UnitPrice : 0;
+                        detailRow.SaleAmount = detailRow.Quantity * detailRow.UnitPrice;
+                        masterRow.TotalSaleAmount += detailRow.SaleAmount;
+                        detailRow.DiscountRate = 0;
+                        detailRow.DiscountAmount = 0;
+                        detailRow.OrderDetailID = orderDetailRow.OrderDetailID;
+                        detailRow.SortOrder = ds.SAInvoiceDetail.Count + 1;
+                        ds.SAInvoiceDetail.Rows.InsertAt(detailRow, ds.SAInvoiceDetail.Rows.Count);
+                    }
                 }
-                // Chưa có thì thêm mới vào hóa đơn
-                else
-                {
-                    DictionaryDataSet.SAInvoiceDetailRow detailRow = ds.SAInvoiceDetail.NewSAInvoiceDetailRow();
-                    detailRow.RefDetailID = Guid.NewGuid();
-                    detailRow.RefID = masterRow.RefID;
-                    detailRow.ItemID = orderDetailRow.InventoryItemID;
-                    detailRow.Quantity = orderDetailRow.Quantity;
-                    var inventory = oBLInventoryItem.GetByID(orderDetailRow.InventoryItemID);
-                    if (ds.InventoryItem.FindByInventoryItemID(inventory.InventoryItemID) == null)
-                        ds.InventoryItem.Merge(oBLInventoryItem.GetByID_SAInvoice(orderDetailRow.InventoryItemID));
-                    detailRow.UnitPrice = inventory != null ? inventory.UnitPrice : 0;
-                    detailRow.SaleAmount = detailRow.Quantity * detailRow.UnitPrice;
-                    masterRow.TotalSaleAmount += detailRow.SaleAmount;
-                    detailRow.DiscountRate = 0;
-                    detailRow.DiscountAmount = 0;
-                    detailRow.OrderDetailID = orderDetailRow.OrderDetailID;
-                    detailRow.SortOrder = ds.SAInvoiceDetail.Count + 1;
-                    ds.SAInvoiceDetail.Rows.InsertAt(detailRow, ds.SAInvoiceDetail.Rows.Count);
-                }
+
+                masterRow.TotalDiscountAmount = 0;
+                masterRow.ServiceRate = 0;
+                masterRow.ServiceAmount = masterRow.TotalSaleAmount * masterRow.ServiceRate;
+                masterRow.TotalAmount = masterRow.TotalSaleAmount - masterRow.TotalDiscountAmount + masterRow.ServiceAmount;
+                masterRow.VATRate = 0;
+                masterRow.VATAmount = masterRow.TotalAmount * masterRow.VATRate;
+                masterRow.PaymentAmount = masterRow.TotalAmount + masterRow.VATAmount;
+                masterRow.ReceiveAmount = 0;
+                masterRow.ReturnAmount = 0;
+                masterRow.PaymentStatus = 0;
+                masterRow.IsApplyTaxWhenRequire = false;
+
+                ds.SAInvoice.Rows.InsertAt(masterRow, 0);
+
+                return ds;
             }
+            else
+            {
+                masterRow.RefID = Guid.NewGuid();
+                masterRow.RefNo = orderRow.OrderNo;
+                masterRow.RefDate = DateTime.Now;
+                masterRow.OrderID = orderRow.OrderID;
+                masterRow.CustomerID = orderRow.CustomerID;
+                masterRow.EmployeeID = Session.UserLogin.EmployeeID;
+                masterRow.CreatedDate = DateTime.Now;
+                masterRow.CreatedBy = Session.UserLogin.UserName;
+                masterRow.ModifiedDate = DateTime.Now;
+                masterRow.ModifiedBy = Session.UserLogin.UserName;
+                var table = new DL.DLTableMapping().GetTableMappingDetailByTableID(orderRow.TableID, orderRow.OrderDate);
+                if (table != null)
+                    if (table.Rows.Count > 0)
+                    {
+                        var row = table.Rows[0];
+                        masterRow.JournalMemo = row["TableName"] + " - " + row["AreaName"];
+                    }
+                // Gán tổng tiền mua trước
+                masterRow.TotalSaleAmount = 0;
+                masterRow.TotalDiscountAmount = 0;
 
-            masterRow.TotalDiscountAmount = 0;
-            masterRow.ServiceRate = 0;
-            masterRow.ServiceAmount = masterRow.TotalSaleAmount * masterRow.ServiceRate;
-            masterRow.TotalAmount = masterRow.TotalSaleAmount - masterRow.TotalDiscountAmount + masterRow.ServiceAmount;
-            masterRow.VATRate = 0;
-            masterRow.VATAmount = masterRow.TotalAmount * masterRow.VATRate;
-            masterRow.PaymentAmount = masterRow.TotalAmount + masterRow.VATAmount;
-            masterRow.ReceiveAmount = 0;
-            masterRow.ReturnAmount = 0;
-            masterRow.PaymentStatus = 0;
-            masterRow.IsApplyTaxWhenRequire = false;
+                BLInventoryItem oBLInventoryItem = new BLInventoryItem();
+                // Duyệt chi tiết
+                foreach (DictionaryDataSet.OrderDetailRow orderDetailRow in ds.OrderDetail)
+                {
+                    // Tìm xem có dòng nào trùng Mặt hàng thì tăng số lượng thôi
+                    DictionaryDataSet.SAInvoiceDetailRow findRow = ds.SAInvoiceDetail.FirstOrDefault((t) => t.ItemID == orderDetailRow.InventoryItemID);
+                    if (findRow != null)
+                    {
+                        findRow.Quantity += orderDetailRow.Quantity;
+                        findRow.SaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
+                        masterRow.TotalSaleAmount += orderDetailRow.Quantity * findRow.UnitPrice;
+                    }
+                    // Chưa có thì thêm mới vào hóa đơn
+                    else
+                    {
+                        DictionaryDataSet.SAInvoiceDetailRow detailRow = ds.SAInvoiceDetail.NewSAInvoiceDetailRow();
+                        detailRow.RefDetailID = Guid.NewGuid();
+                        detailRow.RefID = masterRow.RefID;
+                        detailRow.ItemID = orderDetailRow.InventoryItemID;
+                        detailRow.Quantity = orderDetailRow.Quantity;
+                        var inventory = oBLInventoryItem.GetByID(orderDetailRow.InventoryItemID);
+                        if (ds.InventoryItem.FindByInventoryItemID(inventory.InventoryItemID) == null)
+                            ds.InventoryItem.Merge(oBLInventoryItem.GetByID_SAInvoice(orderDetailRow.InventoryItemID));
+                        detailRow.UnitPrice = inventory != null ? inventory.UnitPrice : 0;
+                        detailRow.SaleAmount = detailRow.Quantity * detailRow.UnitPrice;
+                        masterRow.TotalSaleAmount += detailRow.SaleAmount;
+                        detailRow.DiscountRate = 0;
+                        detailRow.DiscountAmount = 0;
+                        detailRow.OrderDetailID = orderDetailRow.OrderDetailID;
+                        detailRow.SortOrder = ds.SAInvoiceDetail.Count + 1;
+                        ds.SAInvoiceDetail.Rows.InsertAt(detailRow, ds.SAInvoiceDetail.Rows.Count);
+                    }
+                }
 
-            ds.SAInvoice.Rows.InsertAt(masterRow, 0);
+                masterRow.TotalDiscountAmount = 0;
+                masterRow.ServiceRate = 0;
+                masterRow.ServiceAmount = masterRow.TotalSaleAmount * masterRow.ServiceRate;
+                masterRow.TotalAmount = masterRow.TotalSaleAmount - masterRow.TotalDiscountAmount + masterRow.ServiceAmount;
+                masterRow.VATRate = 0;
+                masterRow.VATAmount = masterRow.TotalAmount * masterRow.VATRate;
+                masterRow.PaymentAmount = masterRow.TotalAmount + masterRow.VATAmount;
+                masterRow.ReceiveAmount = 0;
+                masterRow.ReturnAmount = 0;
+                masterRow.PaymentStatus = 0;
+                masterRow.IsApplyTaxWhenRequire = false;
 
-            return ds;
+                ds.SAInvoice.Rows.InsertAt(masterRow, 0);
+
+                return ds;
+            }
+            
+           
         }
 
         /// <summary>

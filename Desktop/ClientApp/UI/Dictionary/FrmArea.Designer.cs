@@ -111,9 +111,6 @@
             // pnlTitle
             // 
             // 
-            // pnlSearch
-            // 
-            // 
             // lblTitle
             // 
             this.lblTitle.Text = "Khu vực";
@@ -286,7 +283,6 @@
             this.UltraTabPageControl1.ResumeLayout(false);
             this.pnlTitle.ClientArea.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
-
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvTest)).EndInit();

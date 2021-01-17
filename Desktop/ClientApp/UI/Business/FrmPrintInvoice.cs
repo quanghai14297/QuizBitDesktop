@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CrystalDecisions.Windows.Forms;
+using log4net;
+
 
 namespace ClientApp.UI.Business
 {

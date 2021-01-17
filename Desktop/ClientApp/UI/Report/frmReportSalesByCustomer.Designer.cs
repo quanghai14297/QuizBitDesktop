@@ -57,6 +57,7 @@
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinToolbars.UltraToolbar ultraToolbar1 = new Infragistics.Win.UltraWinToolbars.UltraToolbar("tbrFunction");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool5 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
+            Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool1 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuExport");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool6 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuAdd");
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReportSalesByCustomer));
@@ -74,6 +75,7 @@
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool13 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuEdit");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool14 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuDelete");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool15 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
+            Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuExport");
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             this.lblTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -279,7 +281,8 @@
             ultraToolbar1.DockedColumn = 0;
             ultraToolbar1.DockedRow = 0;
             ultraToolbar1.NonInheritedTools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
-            ButtonTool5});
+            ButtonTool5,
+            buttonTool1});
             ultraToolbar1.Settings.ToolDisplayStyle = Infragistics.Win.UltraWinToolbars.ToolDisplayStyle.ImageAndText;
             ultraToolbar1.Text = "Thao tác dữ liệu";
             this.tbrFunction.Toolbars.AddRange(new Infragistics.Win.UltraWinToolbars.UltraToolbar[] {
@@ -314,13 +317,16 @@
             ButtonTool13,
             ButtonTool14,
             ButtonTool15});
+            buttonTool2.SharedPropsInternal.Caption = "Xuất báo cáo";
             this.tbrFunction.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool6,
             ButtonTool7,
             ButtonTool8,
             ButtonTool9,
             ButtonTool10,
-            PopupMenuTool1});
+            PopupMenuTool1,
+            buttonTool2});
+            this.tbrFunction.ToolClick += new Infragistics.Win.UltraWinToolbars.ToolClickEventHandler(this.tbrFunction_ToolClick);
             // 
             // _frmBaseList_Toolbars_Dock_Area_Bottom
             // 

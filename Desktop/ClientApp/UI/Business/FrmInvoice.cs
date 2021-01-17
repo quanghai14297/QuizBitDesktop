@@ -107,21 +107,45 @@ namespace ClientApp.UI.Business
                 dsDictionary.EnforceConstraints = false;
                 BLOrder oBL = new BLOrder();
                 var table = oBL.GetDataByID(SAInvoiceID);
-                // Nếu tạo mới từ Order
-                if (SAInvoiceID != Guid.Empty)
+                if(table.Rows.Count <= 0 )
                 {
-                    btnSave.Visible = true;
-                    dsDictionary.Clear();
-                    dsDictionary.Order.Merge(oBLOrder.GetDataByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
-                    dsDictionary.OrderDetail.Merge(oBLOrder.GetDataDetailByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
-                    CreateSAInvoice();
+                    BLSAInvoice oBLSAInvoice = new BLSAInvoice();
+                     table = oBLSAInvoice.GetDataByID(SAInvoiceID);
+                    // Nếu tạo mới từ Order
+                    if (SAInvoiceID != Guid.Empty)
+                    {
+                        btnSave.Visible = true;
+                        dsDictionary.Clear();
+                        dsDictionary.SAInvoice.Merge(oBLSAInvoice.GetDataByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
+                        dsDictionary.SAInvoiceDetail.Merge(oBLSAInvoice.GetDataDetailByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
+                        CreateSAInvoice();
+                    }
+                    // Nếu không phải tạo mới thì load dữ liệu
+                    else
+                    {
+                        btnSave.Visible = false;
+                        LoadSAInvoice();
+                    }
                 }
-                // Nếu không phải tạo mới thì load dữ liệu
                 else
                 {
-                    btnSave.Visible = false;
-                    LoadSAInvoice();
+                    // Nếu tạo mới từ Order
+                    if (SAInvoiceID != Guid.Empty)
+                    {
+                        btnSave.Visible = true;
+                        dsDictionary.Clear();
+                        dsDictionary.Order.Merge(oBLOrder.GetDataByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
+                        dsDictionary.OrderDetail.Merge(oBLOrder.GetDataDetailByID(SAInvoiceID), false, MissingSchemaAction.Ignore);
+                        CreateSAInvoice();
+                    }
+                    // Nếu không phải tạo mới thì load dữ liệu
+                    else
+                    {
+                        btnSave.Visible = false;
+                        LoadSAInvoice();
+                    }
                 }
+                
                 if (table != null && table.Rows.Count > 0)
                 {
                     SAInvoiceRow = dsDictionary.SAInvoice.FirstOrDefault();
@@ -162,8 +186,16 @@ namespace ClientApp.UI.Business
             lblRefNo.Text = table.Rows[0][1].ToString();
             lblRefDate.Text = table.Rows[0][3].ToString();
             BLArea bLArea = new BLArea();
-            DataTable dt=bLArea.GetTableMappingDetailByTableID(Guid.Parse(table.Rows[0][11].ToString()),DateTime.Now);
-            lblJournalMemo.Text = String.Format("{0} -  {1}", dt.Rows[0][1].ToString(), dt.Rows[0][3].ToString());
+            if (table.Columns.Contains("JournalMemo"))
+            {
+                lblJournalMemo.Text = table.Rows[0][18].ToString();
+            }
+            else
+            {
+                DataTable dt = bLArea.GetTableMappingDetailByTableID(Guid.Parse(table.Rows[0][11].ToString()), DateTime.Now);
+                lblJournalMemo.Text = String.Format("{0} -  {1}", dt.Rows[0][1].ToString(), dt.Rows[0][3].ToString());
+            }
+            
             if (CustomerRow != null)
                 lblCustomer.Text = CustomerRow.CustomerName + (string.IsNullOrEmpty(CustomerRow.Mobile) ? "" : " - " + CustomerRow.Mobile);
         }

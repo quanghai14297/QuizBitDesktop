@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Unit", -1);
@@ -91,7 +91,7 @@
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
             this.imgFileResource = new Infragistics.Win.UltraWinEditors.UltraPictureBox();
             this.txtInventoryItemName = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.lblInventoryItemCategoryNameTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -193,14 +193,19 @@
             this.tabGeneralInfo.Controls.Add(this.imgFileResource);
             this.tabGeneralInfo.Size = new System.Drawing.Size(638, 254);
             // 
+            // bsDetail
+            // 
+            this.bsDetail.DataMember = "InventoryItem";
+            this.bsDetail.DataSource = this.dsDictionary;
+            // 
             // ClientArea_Fill_Panel
             // 
             this.ClientArea_Fill_Panel.Size = new System.Drawing.Size(658, 325);
             // 
             // imgFileResource
             // 
-            appearance41.BorderColor = System.Drawing.Color.Black;
-            this.imgFileResource.Appearance = appearance41;
+            appearance42.BorderColor = System.Drawing.Color.Black;
+            this.imgFileResource.Appearance = appearance42;
             this.imgFileResource.BorderShadowColor = System.Drawing.Color.Empty;
             this.imgFileResource.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.imgFileResource.Location = new System.Drawing.Point(448, 32);
@@ -228,9 +233,9 @@
             // 
             // lblInventoryItemCategoryNameTitle
             // 
-            appearance36.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance36.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryNameTitle.Appearance = appearance36;
+            appearance43.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance43.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryNameTitle.Appearance = appearance43;
             this.lblInventoryItemCategoryNameTitle.Location = new System.Drawing.Point(8, 32);
             this.lblInventoryItemCategoryNameTitle.Name = "lblInventoryItemCategoryNameTitle";
             this.lblInventoryItemCategoryNameTitle.Size = new System.Drawing.Size(80, 23);
@@ -274,8 +279,8 @@
             // 
             // lblDescriptionTitle
             // 
-            appearance39.TextVAlignAsString = "Middle";
-            this.lblDescriptionTitle.Appearance = appearance39;
+            appearance44.TextVAlignAsString = "Middle";
+            this.lblDescriptionTitle.Appearance = appearance44;
             this.lblDescriptionTitle.Location = new System.Drawing.Point(8, 176);
             this.lblDescriptionTitle.Name = "lblDescriptionTitle";
             this.lblDescriptionTitle.Size = new System.Drawing.Size(80, 23);
@@ -284,9 +289,9 @@
             // 
             // lblInventoryItemCategoryCodeTitle
             // 
-            appearance40.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance40.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance40;
+            appearance45.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance45.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance45;
             this.lblInventoryItemCategoryCodeTitle.Location = new System.Drawing.Point(8, 8);
             this.lblInventoryItemCategoryCodeTitle.Name = "lblInventoryItemCategoryCodeTitle";
             this.lblInventoryItemCategoryCodeTitle.Size = new System.Drawing.Size(80, 23);
@@ -295,9 +300,9 @@
             // 
             // ultraLabel1
             // 
-            appearance34.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance34.TextVAlignAsString = "Middle";
-            this.ultraLabel1.Appearance = appearance34;
+            appearance46.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance46.TextVAlignAsString = "Middle";
+            this.ultraLabel1.Appearance = appearance46;
             this.ultraLabel1.Location = new System.Drawing.Point(8, 104);
             this.ultraLabel1.Name = "ultraLabel1";
             this.ultraLabel1.Size = new System.Drawing.Size(80, 23);
@@ -306,9 +311,9 @@
             // 
             // ultraLabel2
             // 
-            appearance33.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance33.TextVAlignAsString = "Middle";
-            this.ultraLabel2.Appearance = appearance33;
+            appearance47.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance47.TextVAlignAsString = "Middle";
+            this.ultraLabel2.Appearance = appearance47;
             this.ultraLabel2.Location = new System.Drawing.Point(8, 56);
             this.ultraLabel2.Name = "ultraLabel2";
             this.ultraLabel2.Size = new System.Drawing.Size(88, 23);
@@ -317,9 +322,9 @@
             // 
             // ultraLabel3
             // 
-            appearance32.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance32.TextVAlignAsString = "Middle";
-            this.ultraLabel3.Appearance = appearance32;
+            appearance48.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance48.TextVAlignAsString = "Middle";
+            this.ultraLabel3.Appearance = appearance48;
             this.ultraLabel3.Location = new System.Drawing.Point(8, 80);
             this.ultraLabel3.Name = "ultraLabel3";
             this.ultraLabel3.Size = new System.Drawing.Size(88, 23);
@@ -328,9 +333,9 @@
             // 
             // ultraLabel4
             // 
-            appearance31.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance31.TextVAlignAsString = "Middle";
-            this.ultraLabel4.Appearance = appearance31;
+            appearance49.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance49.TextVAlignAsString = "Middle";
+            this.ultraLabel4.Appearance = appearance49;
             this.ultraLabel4.Location = new System.Drawing.Point(8, 128);
             this.ultraLabel4.Name = "ultraLabel4";
             this.ultraLabel4.Size = new System.Drawing.Size(88, 23);
@@ -339,9 +344,9 @@
             // 
             // ultraLabel5
             // 
-            appearance30.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance30.TextVAlignAsString = "Middle";
-            this.ultraLabel5.Appearance = appearance30;
+            appearance50.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance50.TextVAlignAsString = "Middle";
+            this.ultraLabel5.Appearance = appearance50;
             this.ultraLabel5.Location = new System.Drawing.Point(8, 152);
             this.ultraLabel5.Name = "ultraLabel5";
             this.ultraLabel5.Size = new System.Drawing.Size(88, 23);
@@ -619,10 +624,10 @@
             // 
             // txtUnitPrice
             // 
-            appearance1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance1.TextHAlignAsString = "Right";
-            this.txtUnitPrice.Appearance = appearance1;
+            appearance51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance51.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance51.TextHAlignAsString = "Right";
+            this.txtUnitPrice.Appearance = appearance51;
             this.txtUnitPrice.AutoSize = false;
             this.txtUnitPrice.EditAs = Infragistics.Win.UltraWinMaskedEdit.EditAsType.UseSpecifiedMask;
             this.txtUnitPrice.InputMask = "{LOC}nn,nnn,nnn,nnn,nnn";

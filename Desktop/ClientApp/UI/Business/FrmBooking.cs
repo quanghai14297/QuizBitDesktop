@@ -234,23 +234,28 @@ namespace ClientApp.UI.Business
             int All = Area_All_Status.ContainsKey(Key_All) ? Area_All_Status[Key_All] : 0;
 
             int empty = 0;
-            foreach (var item in tabAreaTableMapping.ActiveTab.TabPage.Controls[0].Controls)
+            if(tabAreaTableMapping.ActiveTab != null)
             {
-                if (item.GetType() == typeof(UctTableMapping))
+                foreach (var item in tabAreaTableMapping.ActiveTab.TabPage.Controls[0].Controls)
                 {
-                    var uct = (UctTableMapping)item;
-                    if (uct.TableStatus == EnumTableStatus.Empty)
-                        empty++;
+                    if (item.GetType() == typeof(UctTableMapping))
+                    {
+                        var uct = (UctTableMapping)item;
+                        if (uct.TableStatus == EnumTableStatus.Empty)
+                            empty++;
+                    }
                 }
+                Area_All_Status_Empty[tabAreaTableMapping.ActiveTab.Key] = empty;
+                int Detail = Area_All_Status.ContainsKey(tabAreaTableMapping.ActiveTab.Key) ? Area_All_Status[tabAreaTableMapping.ActiveTab.Key] : 0;
+
+                lblArea_All.Text = string.Format(Properties.Resources.CountTableEmpty, emptyAll, All);
+                lblArea_Detail.Text = string.Format(Properties.Resources.CountTableEmpty, empty, Detail);
+                lblArea_Detail_Title.Text = tabAreaTableMapping.ActiveTab.Text.Replace(" (" + Detail.ToString() + ")", "");
             }
-            Area_All_Status_Empty[tabAreaTableMapping.ActiveTab.Key] = empty;
+            
 
             //int emptyDetail = Area_All_Status_Empty.ContainsKey(tabAreaTableMapping.ActiveTab.Key) ? Area_All_Status_Empty[tabAreaTableMapping.ActiveTab.Key] : 0;
-            int Detail = Area_All_Status.ContainsKey(tabAreaTableMapping.ActiveTab.Key) ? Area_All_Status[tabAreaTableMapping.ActiveTab.Key] : 0;
-
-            lblArea_All.Text = string.Format(Properties.Resources.CountTableEmpty, emptyAll, All);
-            lblArea_Detail.Text = string.Format(Properties.Resources.CountTableEmpty, empty, Detail);
-            lblArea_Detail_Title.Text = tabAreaTableMapping.ActiveTab.Text.Replace(" (" + Detail.ToString() + ")", "");
+           
         }
 
         private void ChangeAreaStatus()

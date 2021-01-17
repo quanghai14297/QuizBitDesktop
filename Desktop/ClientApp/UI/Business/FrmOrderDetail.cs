@@ -812,7 +812,7 @@ namespace ClientApp.UI.Business
                 using (var frm = new FrmInvoice())
                 {
                     frm.FormActionMode = ActionMode.AddNew;
-                    frm.OrderID = OrderID;
+                    frm.SAInvoiceID = OrderID;
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         OrderStatus = EnumOrderStatus.Done;

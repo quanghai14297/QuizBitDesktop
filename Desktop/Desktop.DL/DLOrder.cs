@@ -70,7 +70,7 @@ namespace Desktop.DL
             var table = new DataTable();
             using (var sqlAdapter = new SqlDataAdapter())
             {
-                using (var sqlCommand = CreateSqlCommand("Proc_GetOrderDetailByOrderID"))
+                using (var sqlCommand = CreateSqlCommand("Proc_GetOrderDetailByOrderIDAll"))
                 {
                     sqlCommand.Parameters.AddWithValue("OrderID", id);
                     sqlAdapter.SelectCommand = sqlCommand;

@@ -198,7 +198,7 @@
             this.ultraTabPageControl1.Enabled = false;
             this.ultraTabPageControl1.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl1.Name = "ultraTabPageControl1";
-            this.ultraTabPageControl1.Size = new System.Drawing.Size(444, 229);
+            this.ultraTabPageControl1.Size = new System.Drawing.Size(444, 225);
             // 
             // txtCofirmPassword
             // 
@@ -295,7 +295,7 @@
             this.ultraTabPageControl2.Enabled = false;
             this.ultraTabPageControl2.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl2.Name = "ultraTabPageControl2";
-            this.ultraTabPageControl2.Size = new System.Drawing.Size(444, 229);
+            this.ultraTabPageControl2.Size = new System.Drawing.Size(444, 225);
             // 
             // rbBep
             // 

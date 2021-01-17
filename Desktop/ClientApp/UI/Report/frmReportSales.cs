@@ -108,6 +108,19 @@ namespace ClientApp.UI.Report
                 MessageBoxCommon.ShowException(ex);
             }
         }
+        private void GetData()
+        {
+            oBL = new BLReport();
+            dtFromDate.Value = GetFirstDayOfMonth(DateTime.Now);
+            dtToDate.Value = GetLastDayOfMonth(DateTime.Now);
+            var table = oBL.GetReportSales(DateTime.Parse(dtFromDate.Value.ToString()), DateTime.Parse(dtToDate.Value.ToString()));
+            if (table != null && table.Rows.Count > 0)
+            {
+                dsReport.SAInvoiceViewer.Clear();
+                dsReport.Merge(table);
+                dsReport.AcceptChanges();
+            }
+        }
         /// <summary>
         /// Hàm khi click vào Toolbar
         /// </summary>
@@ -116,7 +129,7 @@ namespace ClientApp.UI.Report
             switch (itemKey)
             {
                 case "mnuExport": ExportData(); break;
-
+                case "mnuGet": GetData(); break;
             }
         }
         private void ExportData()
@@ -133,7 +146,8 @@ namespace ClientApp.UI.Report
             string datetime = string.Format("Tử ngày {0} đến ngày {1}", FromDate.ToString("dd/MM/yyyy"), ToDate.ToString("dd/MM/yyyy"));
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                string[] lstTitle = { "BÁO CÁO TÌNH HÌNH DOANH THU", datetime };
+                var row = Session.CompanyInfo;
+                string[] lstTitle = { String.Format("{0} - {1}", row.Name, row.Address),"BÁO CÁO TÌNH HÌNH DOANH THU", datetime };
                 Infragistics.Documents.Excel.Workbook workbook = new Infragistics.Documents.Excel.Workbook();
                 if (Path.GetExtension(saveFileDialog1.FileName) == ".xlsx")
                 {
@@ -164,18 +178,26 @@ namespace ClientApp.UI.Report
                 {
                     string sTitle = lstTitle[i];
                     {
+
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Alignment = HorizontalCellAlignment.Center;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Bold = ExcelDefaultableBoolean.True;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].Value = sTitle;
-                        if (i == 0)
-                        {
-                            SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Height = 280;
-                        }
+                       
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Name = "";
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.BottomBorderStyle = CellBorderLineStyle.None;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.TopBorderStyle = CellBorderLineStyle.None;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.LeftBorderStyle = CellBorderLineStyle.None;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.RightBorderStyle = CellBorderLineStyle.None;
+                        if (i == 0)
+                        {
+                            SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Height = 280;
+                            SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Alignment = HorizontalCellAlignment.Left;
+                        }
+                        else if (i == 1)
+                        {
+                            SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Height = 380;
+                        }
+
                     }
                     SheetExcel.MergedCellsRegions.Add(i, 0, i, iHeaderPosition - 1);
                 }
@@ -219,7 +241,7 @@ namespace ClientApp.UI.Report
             }
             else
             {
-                MessageBox.Show("You hit cancel or closed the dialog.");
+               
             }
             saveFileDialog1.Dispose();
             saveFileDialog1 = null;

@@ -110,18 +110,16 @@ namespace ClientApp.UI.Dictionary
         protected override int SaveData()
         {
             int result = 1;
-            BsDetail.EndEdit();
-
-            var tableChanged = dsDictionary.InventoryItem.GetChanges();
-            if (tableChanged == null)
-            {
-                return (int)EnumResultInsertUpdate.Success;
-            }
-            else
-            {
-                if (tableChanged.Rows.Count == 0)
-                    return (int)EnumResultInsertUpdate.Success;
-            }
+            //var tableChanged = dsDictionary.InventoryItem.GetChanges();
+            //if (tableChanged == null)
+            //{
+            //    return (int)EnumResultInsertUpdate.Success;
+            //}
+            //else
+            //{
+            //    if (tableChanged.Rows.Count == 0)
+            //        return (int)EnumResultInsertUpdate.Success;
+            //}
             DictionaryDataSet.InventoryItemRow drObjectChange = (DictionaryDataSet.InventoryItemRow)((System.Data.DataRowView)bsDetail.Current).Row;
             if (drObjectChange != null)
             {
