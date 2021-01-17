@@ -230,7 +230,6 @@ namespace ClientApp.UI.BaseForm
         {
             pnlDetail.Visible = isVisible;
             splContent.Visible = isVisible;
-            pnlSearch.Visible = isVisible;
         }
 
         /// <summary>

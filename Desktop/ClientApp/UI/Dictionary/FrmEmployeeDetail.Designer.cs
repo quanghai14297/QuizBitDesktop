@@ -36,15 +36,16 @@
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
@@ -76,6 +77,8 @@
             this.txtEmail = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.txtMobile = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.txtAddress = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.ultraLabel9 = new Infragistics.Win.Misc.UltraLabel();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tbrFunction)).BeginInit();
             this.pnlContent.ClientArea.SuspendLayout();
             this.pnlContent.SuspendLayout();
@@ -110,12 +113,12 @@
             // pnlContent
             // 
             this.pnlContent.Location = new System.Drawing.Point(1, 31);
-            this.pnlContent.Size = new System.Drawing.Size(463, 301);
+            this.pnlContent.Size = new System.Drawing.Size(460, 297);
             // 
             // pnlButton
             // 
-            this.pnlButton.Location = new System.Drawing.Point(0, 268);
-            this.pnlButton.Size = new System.Drawing.Size(463, 33);
+            this.pnlButton.Location = new System.Drawing.Point(0, 264);
+            this.pnlButton.Size = new System.Drawing.Size(460, 33);
             this.pnlButton.TabIndex = 1;
             // 
             // btnSaveAdd
@@ -137,7 +140,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.tabInfo.Controls.Add(this.ultraTabPageControl1);
             this.tabInfo.Controls.Add(this.ultraTabPageControl2);
-            this.tabInfo.Size = new System.Drawing.Size(446, 250);
+            this.tabInfo.Size = new System.Drawing.Size(446, 246);
             this.tabInfo.TabIndex = 0;
             this.tabInfo.TabPageMargins.ForceSerialization = true;
             ultraTab1.Key = "tabAccount";
@@ -156,6 +159,8 @@
             // 
             // tabGeneralInfo
             // 
+            this.tabGeneralInfo.Controls.Add(this.cbGender);
+            this.tabGeneralInfo.Controls.Add(this.ultraLabel9);
             this.tabGeneralInfo.Controls.Add(this.txtAddress);
             this.tabGeneralInfo.Controls.Add(this.txtMobile);
             this.tabGeneralInfo.Controls.Add(this.txtEmail);
@@ -170,8 +175,7 @@
             this.tabGeneralInfo.Controls.Add(this.txtEmployeeCode);
             this.tabGeneralInfo.Controls.Add(this.lblDescriptionTitle);
             this.tabGeneralInfo.Controls.Add(this.lblInventoryItemCategoryCodeTitle);
-            this.tabGeneralInfo.Location = new System.Drawing.Point(-10000, -10000);
-            this.tabGeneralInfo.Size = new System.Drawing.Size(444, 229);
+            this.tabGeneralInfo.Size = new System.Drawing.Size(444, 225);
             this.tabGeneralInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.tabGeneralInfo_Paint);
             // 
             // bsDetail
@@ -181,7 +185,7 @@
             // 
             // ClientArea_Fill_Panel
             // 
-            this.ClientArea_Fill_Panel.Size = new System.Drawing.Size(463, 301);
+            this.ClientArea_Fill_Panel.Size = new System.Drawing.Size(460, 297);
             // 
             // ultraTabPageControl1
             // 
@@ -289,7 +293,7 @@
             this.ultraTabPageControl2.Controls.Add(this.rbLeTan);
             this.ultraTabPageControl2.Controls.Add(this.rbAdmin);
             this.ultraTabPageControl2.Enabled = false;
-            this.ultraTabPageControl2.Location = new System.Drawing.Point(1, 20);
+            this.ultraTabPageControl2.Location = new System.Drawing.Point(-10000, -10000);
             this.ultraTabPageControl2.Name = "ultraTabPageControl2";
             this.ultraTabPageControl2.Size = new System.Drawing.Size(444, 229);
             // 
@@ -338,9 +342,9 @@
             // 
             // txtEmployeeName
             // 
-            appearance15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance15.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtEmployeeName.Appearance = appearance15;
+            appearance16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance16.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtEmployeeName.Appearance = appearance16;
             this.txtEmployeeName.AutoSize = false;
             this.txtEmployeeName.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.txtEmployeeName.Location = new System.Drawing.Point(88, 32);
@@ -356,9 +360,9 @@
             // 
             // lblInventoryItemCategoryNameTitle
             // 
-            appearance16.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance16.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryNameTitle.Appearance = appearance16;
+            appearance17.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance17.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryNameTitle.Appearance = appearance17;
             this.lblInventoryItemCategoryNameTitle.Location = new System.Drawing.Point(8, 32);
             this.lblInventoryItemCategoryNameTitle.Name = "lblInventoryItemCategoryNameTitle";
             this.lblInventoryItemCategoryNameTitle.Size = new System.Drawing.Size(80, 23);
@@ -368,10 +372,10 @@
             // txtDescription
             // 
             this.txtDescription.AlwaysInEditMode = true;
-            appearance17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtDescription.Appearance = appearance17;
+            appearance18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtDescription.Appearance = appearance18;
             this.txtDescription.AutoSize = false;
-            this.txtDescription.Location = new System.Drawing.Point(88, 152);
+            this.txtDescription.Location = new System.Drawing.Point(88, 151);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
             this.txtDescription.MaxLength = 255;
             this.txtDescription.Multiline = true;
@@ -385,9 +389,9 @@
             // 
             // txtEmployeeCode
             // 
-            appearance18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance18.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtEmployeeCode.Appearance = appearance18;
+            appearance19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance19.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtEmployeeCode.Appearance = appearance19;
             this.txtEmployeeCode.AutoSize = false;
             this.txtEmployeeCode.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.txtEmployeeCode.Location = new System.Drawing.Point(88, 8);
@@ -403,9 +407,9 @@
             // 
             // lblDescriptionTitle
             // 
-            appearance19.TextVAlignAsString = "Middle";
-            this.lblDescriptionTitle.Appearance = appearance19;
-            this.lblDescriptionTitle.Location = new System.Drawing.Point(8, 152);
+            appearance20.TextVAlignAsString = "Middle";
+            this.lblDescriptionTitle.Appearance = appearance20;
+            this.lblDescriptionTitle.Location = new System.Drawing.Point(8, 151);
             this.lblDescriptionTitle.Name = "lblDescriptionTitle";
             this.lblDescriptionTitle.Size = new System.Drawing.Size(80, 23);
             this.lblDescriptionTitle.TabIndex = 12;
@@ -413,9 +417,9 @@
             // 
             // lblInventoryItemCategoryCodeTitle
             // 
-            appearance20.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance20.TextVAlignAsString = "Middle";
-            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance20;
+            appearance21.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance21.TextVAlignAsString = "Middle";
+            this.lblInventoryItemCategoryCodeTitle.Appearance = appearance21;
             this.lblInventoryItemCategoryCodeTitle.Location = new System.Drawing.Point(8, 8);
             this.lblInventoryItemCategoryCodeTitle.Name = "lblInventoryItemCategoryCodeTitle";
             this.lblInventoryItemCategoryCodeTitle.Size = new System.Drawing.Size(80, 23);
@@ -424,10 +428,10 @@
             // 
             // ultraLabel3
             // 
-            appearance12.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance12.TextVAlignAsString = "Middle";
-            this.ultraLabel3.Appearance = appearance12;
-            this.ultraLabel3.Location = new System.Drawing.Point(8, 80);
+            appearance13.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance13.TextVAlignAsString = "Middle";
+            this.ultraLabel3.Appearance = appearance13;
+            this.ultraLabel3.Location = new System.Drawing.Point(8, 79);
             this.ultraLabel3.Name = "ultraLabel3";
             this.ultraLabel3.Size = new System.Drawing.Size(80, 23);
             this.ultraLabel3.TabIndex = 6;
@@ -435,10 +439,10 @@
             // 
             // ultraLabel2
             // 
-            appearance13.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance13.TextVAlignAsString = "Middle";
-            this.ultraLabel2.Appearance = appearance13;
-            this.ultraLabel2.Location = new System.Drawing.Point(8, 56);
+            appearance14.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance14.TextVAlignAsString = "Middle";
+            this.ultraLabel2.Appearance = appearance14;
+            this.ultraLabel2.Location = new System.Drawing.Point(230, 54);
             this.ultraLabel2.Name = "ultraLabel2";
             this.ultraLabel2.Size = new System.Drawing.Size(80, 23);
             this.ultraLabel2.TabIndex = 4;
@@ -446,10 +450,10 @@
             // 
             // ultraLabel1
             // 
-            appearance14.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance14.TextVAlignAsString = "Middle";
-            this.ultraLabel1.Appearance = appearance14;
-            this.ultraLabel1.Location = new System.Drawing.Point(8, 104);
+            appearance15.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance15.TextVAlignAsString = "Middle";
+            this.ultraLabel1.Appearance = appearance15;
+            this.ultraLabel1.Location = new System.Drawing.Point(8, 103);
             this.ultraLabel1.Name = "ultraLabel1";
             this.ultraLabel1.Size = new System.Drawing.Size(80, 23);
             this.ultraLabel1.TabIndex = 8;
@@ -457,10 +461,10 @@
             // 
             // ultraLabel4
             // 
-            appearance11.ImageVAlign = Infragistics.Win.VAlign.Middle;
-            appearance11.TextVAlignAsString = "Middle";
-            this.ultraLabel4.Appearance = appearance11;
-            this.ultraLabel4.Location = new System.Drawing.Point(8, 128);
+            appearance12.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance12.TextVAlignAsString = "Middle";
+            this.ultraLabel4.Appearance = appearance12;
+            this.ultraLabel4.Location = new System.Drawing.Point(8, 127);
             this.ultraLabel4.Name = "ultraLabel4";
             this.ultraLabel4.Size = new System.Drawing.Size(80, 23);
             this.ultraLabel4.TabIndex = 10;
@@ -468,26 +472,26 @@
             // 
             // dteBirthday
             // 
-            appearance10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance10.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.dteBirthday.Appearance = appearance10;
+            appearance11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance11.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.dteBirthday.Appearance = appearance11;
             this.dteBirthday.AutoSize = false;
             this.dteBirthday.FormatString = "dd/MM/yyyy";
-            this.dteBirthday.Location = new System.Drawing.Point(88, 56);
+            this.dteBirthday.Location = new System.Drawing.Point(306, 56);
             this.dteBirthday.Name = "dteBirthday";
-            this.dteBirthday.Size = new System.Drawing.Size(350, 21);
+            this.dteBirthday.Size = new System.Drawing.Size(132, 21);
             this.dteBirthday.TabIndex = 5;
             this.dteBirthday.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.dteBirthday.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
             // txtEmail
             // 
-            appearance9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance9.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtEmail.Appearance = appearance9;
+            appearance10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance10.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtEmail.Appearance = appearance10;
             this.txtEmail.AutoSize = false;
             this.txtEmail.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.txtEmail.Location = new System.Drawing.Point(88, 80);
+            this.txtEmail.Location = new System.Drawing.Point(88, 79);
             this.txtEmail.MaxLength = 255;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(350, 21);
@@ -498,12 +502,12 @@
             // 
             // txtMobile
             // 
-            appearance8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance8.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtMobile.Appearance = appearance8;
+            appearance9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance9.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtMobile.Appearance = appearance9;
             this.txtMobile.AutoSize = false;
             this.txtMobile.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.txtMobile.Location = new System.Drawing.Point(88, 104);
+            this.txtMobile.Location = new System.Drawing.Point(88, 103);
             this.txtMobile.MaxLength = 50;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(350, 21);
@@ -514,12 +518,12 @@
             // 
             // txtAddress
             // 
-            appearance7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            appearance7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
-            this.txtAddress.Appearance = appearance7;
+            appearance8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            appearance8.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(162)))), ((int)(((byte)(206)))));
+            this.txtAddress.Appearance = appearance8;
             this.txtAddress.AutoSize = false;
             this.txtAddress.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.txtAddress.Location = new System.Drawing.Point(88, 128);
+            this.txtAddress.Location = new System.Drawing.Point(88, 127);
             this.txtAddress.MaxLength = 255;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(350, 21);
@@ -528,11 +532,33 @@
             this.txtAddress.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.txtAddress.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
             // 
+            // ultraLabel9
+            // 
+            appearance7.ImageVAlign = Infragistics.Win.VAlign.Middle;
+            appearance7.TextVAlignAsString = "Middle";
+            this.ultraLabel9.Appearance = appearance7;
+            this.ultraLabel9.Location = new System.Drawing.Point(8, 54);
+            this.ultraLabel9.Name = "ultraLabel9";
+            this.ultraLabel9.Size = new System.Drawing.Size(80, 23);
+            this.ultraLabel9.TabIndex = 28;
+            this.ultraLabel9.Text = "Giới tính (*)";
+            // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbGender.Location = new System.Drawing.Point(88, 55);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(126, 21);
+            this.cbGender.TabIndex = 31;
+            // 
             // FrmEmployeeDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 333);
+            this.ClientSize = new System.Drawing.Size(462, 329);
             this.Name = "FrmEmployeeDetail";
             this.Tag = "Nhân viên";
             this.Text = "FrmEmployeeDetail";
@@ -593,5 +619,7 @@
         private System.Windows.Forms.RadioButton rbBep;
         private System.Windows.Forms.RadioButton rbPV;
         private System.Windows.Forms.RadioButton rbLeTan;
+        internal Infragistics.Win.Misc.UltraLabel ultraLabel9;
+        private System.Windows.Forms.ComboBox cbGender;
     }
 }

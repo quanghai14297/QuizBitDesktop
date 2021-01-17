@@ -123,9 +123,6 @@
             this.UltraTabPageControl1.SuspendLayout();
             this.pnlTitle.ClientArea.SuspendLayout();
             this.pnlTitle.SuspendLayout();
-            this.pnlSearch.ClientArea.SuspendLayout();
-            this.pnlSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drpInventoryItemCategory)).BeginInit();
@@ -165,12 +162,8 @@
             // 
             this.UltraTabPageControl1.Controls.Add(this.drpUnit);
             this.UltraTabPageControl1.Controls.Add(this.drpInventoryItemCategory);
-            this.UltraTabPageControl1.Location = new System.Drawing.Point(1, 20);
             // 
             // pnlTitle
-            // 
-            // 
-            // pnlSearch
             // 
             // 
             // lblTitle
@@ -531,9 +524,6 @@
             this.UltraTabPageControl1.ResumeLayout(false);
             this.pnlTitle.ClientArea.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
-            this.pnlSearch.ClientArea.ResumeLayout(false);
-            this.pnlSearch.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drpInventoryItemCategory)).EndInit();

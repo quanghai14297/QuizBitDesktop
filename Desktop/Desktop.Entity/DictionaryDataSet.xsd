@@ -957,6 +957,8 @@
               </xs:element>
               <xs:element name="Inactive" msprop:Generator_ColumnVarNameInTable="columnInactive" msprop:Generator_ColumnPropNameInRow="Inactive" msprop:Generator_ColumnPropNameInTable="InactiveColumn" msprop:Generator_UserColumnName="Inactive" type="xs:boolean" />
               <xs:element name="ChangedPasswordTime" msprop:Generator_ColumnVarNameInTable="columnChangedPasswordTime" msprop:Generator_ColumnPropNameInRow="ChangedPasswordTime" msprop:Generator_ColumnPropNameInTable="ChangedPasswordTimeColumn" msprop:Generator_UserColumnName="ChangedPasswordTime" type="xs:dateTime" />
+              <xs:element name="EmployeeID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:string" minOccurs="0" />
+              <xs:element name="UserJoinRoleID" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnUserJoinRoleID" msprop:Generator_ColumnPropNameInRow="UserJoinRoleID" msprop:Generator_ColumnPropNameInTable="UserJoinRoleIDColumn" msprop:Generator_UserColumnName="UserJoinRoleID" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

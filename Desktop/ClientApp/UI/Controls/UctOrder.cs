@@ -127,6 +127,7 @@ namespace ClientApp.UI.Controls
                 {
                     frm.FormActionMode = ActionMode.AddNew;
                     frm.OrderID = OrderID;
+                    frm.SAInvoiceID = OrderID;
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         this.OrderStatus = EnumOrderStatus.Done;

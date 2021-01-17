@@ -112,6 +112,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderNo");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("OrderDate");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TableStatus");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("BookingDate");
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
@@ -740,6 +741,8 @@
             ultraGridColumn24.Header.Caption = "Trạng thái";
             ultraGridColumn24.Header.VisiblePosition = 11;
             ultraGridColumn24.Hidden = true;
+            ultraGridColumn34.Header.VisiblePosition = 12;
+            ultraGridColumn34.Hidden = true;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn13,
             ultraGridColumn14,
@@ -752,7 +755,8 @@
             ultraGridColumn21,
             ultraGridColumn22,
             ultraGridColumn23,
-            ultraGridColumn24});
+            ultraGridColumn24,
+            ultraGridColumn34});
             this.cboTableMapping.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.cboTableMapping.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.cboTableMapping.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;

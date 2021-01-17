@@ -10066,6 +10066,10 @@ namespace Desktop.Entity {
             
             private global::System.Data.DataColumn columnChangedPasswordTime;
             
+            private global::System.Data.DataColumn columnEmployeeID;
+            
+            private global::System.Data.DataColumn columnUserJoinRoleID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public UserDataTable() {
@@ -10149,6 +10153,22 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EmployeeIDColumn {
+                get {
+                    return this.columnEmployeeID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UserJoinRoleIDColumn {
+                get {
+                    return this.columnUserJoinRoleID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -10184,7 +10204,7 @@ namespace Desktop.Entity {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UserRow AddUserRow(System.Guid UserID, string UserName, string Password, string DisplayName, bool Inactive, System.DateTime ChangedPasswordTime) {
+            public UserRow AddUserRow(System.Guid UserID, string UserName, string Password, string DisplayName, bool Inactive, System.DateTime ChangedPasswordTime, System.Guid EmployeeID, System.Guid UserJoinRoleID) {
                 UserRow rowUserRow = ((UserRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UserID,
@@ -10192,7 +10212,9 @@ namespace Desktop.Entity {
                         Password,
                         DisplayName,
                         Inactive,
-                        ChangedPasswordTime};
+                        ChangedPasswordTime,
+                        EmployeeID,
+                        UserJoinRoleID};
                 rowUserRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserRow);
                 return rowUserRow;
@@ -10228,6 +10250,8 @@ namespace Desktop.Entity {
                 this.columnDisplayName = base.Columns["DisplayName"];
                 this.columnInactive = base.Columns["Inactive"];
                 this.columnChangedPasswordTime = base.Columns["ChangedPasswordTime"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
+                this.columnUserJoinRoleID = base.Columns["UserJoinRoleID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10245,6 +10269,10 @@ namespace Desktop.Entity {
                 base.Columns.Add(this.columnInactive);
                 this.columnChangedPasswordTime = new global::System.Data.DataColumn("ChangedPasswordTime", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnChangedPasswordTime);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
+                this.columnUserJoinRoleID = new global::System.Data.DataColumn("UserJoinRoleID", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserJoinRoleID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUserID}, true));
                 this.columnUserID.AllowDBNull = false;
@@ -18563,6 +18591,62 @@ namespace Desktop.Entity {
                 set {
                     this[this.tableUser.ChangedPasswordTimeColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.Guid EmployeeID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableUser.EmployeeIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeID\' in table \'User\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUser.EmployeeIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.Guid UserJoinRoleID {
+                get {
+                    try {
+                        return ((global::System.Guid)(this[this.tableUser.UserJoinRoleIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'UserJoinRoleID\' in table \'User\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUser.UserJoinRoleIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEmployeeIDNull() {
+                return this.IsNull(this.tableUser.EmployeeIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEmployeeIDNull() {
+                this[this.tableUser.EmployeeIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsUserJoinRoleIDNull() {
+                return this.IsNull(this.tableUser.UserJoinRoleIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetUserJoinRoleIDNull() {
+                this[this.tableUser.UserJoinRoleIDColumn] = global::System.Convert.DBNull;
             }
         }
         

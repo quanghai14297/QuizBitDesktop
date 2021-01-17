@@ -161,7 +161,9 @@ namespace ClientApp.UI.Business
         {
             lblRefNo.Text = table.Rows[0][1].ToString();
             lblRefDate.Text = table.Rows[0][3].ToString();
-           //lblJournalMemo.Text=
+            BLArea bLArea = new BLArea();
+            DataTable dt=bLArea.GetTableMappingDetailByTableID(Guid.Parse(table.Rows[0][11].ToString()),DateTime.Now);
+            lblJournalMemo.Text = String.Format("{0} -  {1}", dt.Rows[0][1].ToString(), dt.Rows[0][3].ToString());
             if (CustomerRow != null)
                 lblCustomer.Text = CustomerRow.CustomerName + (string.IsNullOrEmpty(CustomerRow.Mobile) ? "" : " - " + CustomerRow.Mobile);
         }

@@ -25,8 +25,8 @@ namespace ClientApp.UI.Dictionary
         {
             base.LoadDataForm();
             SetVisibleTabInfo(false);
-           
-             var table = oBL.Get();
+
+            var table = oBL.Get();
 
             tbrFunction.Tools["mnuCopy"].SharedProps.Visible = false;
             if (table != null && table.Rows.Count > 0)
@@ -36,7 +36,7 @@ namespace ClientApp.UI.Dictionary
                 {
                     if (dr["Gender"].ToString() == "0") // if id==2
                     {
-                        dr["GenderDisplay"] = "Nam"; 
+                        dr["GenderDisplay"] = "Nam";
                     }
                     else
                     {
@@ -76,7 +76,12 @@ namespace ClientApp.UI.Dictionary
         protected override void ShowFormDetail(ActionMode actionMode)
         {
             base.ShowFormDetail(actionMode);
-            string UserID = ((Desktop.Entity.DictionaryDataSet.EmployeeRow)((System.Data.DataRowView)bsList.Current).Row).UserID.ToString();
+            string UserID = null;
+            if (actionMode != ActionMode.AddNew)
+            {
+                UserID = ((Desktop.Entity.DictionaryDataSet.EmployeeRow)((System.Data.DataRowView)bsList.Current).Row).UserID.ToString();
+            }
+
             var tableUser = oBLUser.Get();
             var tableRole = oBLRole.Get();
             DictionaryDataSet.UserDataTable dt = new DictionaryDataSet.UserDataTable();
@@ -105,7 +110,11 @@ namespace ClientApp.UI.Dictionary
                 fDetail.objBLDetail = oBL;
                 fDetail.FormActionMode = actionMode;
                 if (fDetail.ShowDialog() != DialogResult.OK) dsDictionary.Employee.RejectChanges();
-                else dsDictionary.Customer.AcceptChanges();
+                else
+                {
+                    dsDictionary.Customer.AcceptChanges();
+                    LoadDataForm();
+                }
             }
             ActiveAndSelectRow();
         }

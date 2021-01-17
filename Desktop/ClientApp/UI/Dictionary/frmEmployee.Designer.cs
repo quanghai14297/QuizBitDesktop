@@ -86,9 +86,6 @@
             this.tabInfo.SuspendLayout();
             this.pnlTitle.ClientArea.SuspendLayout();
             this.pnlTitle.SuspendLayout();
-            this.pnlSearch.ClientArea.SuspendLayout();
-            this.pnlSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).BeginInit();
             this.SuspendLayout();
@@ -120,14 +117,7 @@
             // 
             this.tabInfo.TabPageMargins.ForceSerialization = true;
             // 
-            // UltraTabPageControl1
-            // 
-            this.UltraTabPageControl1.Location = new System.Drawing.Point(1, 20);
-            // 
             // pnlTitle
-            // 
-            // 
-            // pnlSearch
             // 
             // 
             // lblTitle
@@ -335,9 +325,6 @@
             this.tabInfo.ResumeLayout(false);
             this.pnlTitle.ClientArea.ResumeLayout(false);
             this.pnlTitle.ResumeLayout(false);
-            this.pnlSearch.ClientArea.ResumeLayout(false);
-            this.pnlSearch.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDictionary)).EndInit();
             this.ResumeLayout(false);
