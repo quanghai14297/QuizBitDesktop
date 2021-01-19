@@ -13,7 +13,9 @@ using System.Windows.Forms;
 using Infragistics.Documents.Excel;
 using Infragistics.Win.UltraWinGrid;
 using System.Globalization;
-using  Infragistics.Win.UltraWinGrid;
+using Infragistics.Win.UltraWinGrid;
+using System.Net;
+using System.Diagnostics;
 
 namespace ClientApp.UI.Report
 {
@@ -130,7 +132,19 @@ namespace ClientApp.UI.Report
             {
                 case "mnuExport": ExportData(); break;
                 case "mnuGet": GetData(); break;
+                case "mnuViewInvoice": ViewInvoice(); break;
             }
+        }
+
+        private void ViewInvoice()
+        {
+            //grdList.Rows[bsList.Position]
+            BLSAInvoice bLSAInvoice = new BLSAInvoice();
+            string trans = bLSAInvoice.GetSAInvoiceTransactionID(((ClientApp.UI.Report.ReportDataSet.SAInvoiceViewerRow)((System.Data.DataRowView)bsList.Current).Row).RefID);
+            WebClient client = new WebClient();
+            string reply = client.DownloadString("https://meinvoice.vn/tra-cuu/GetRequestTimeEnCode");
+            var link = String.Format("http://meinvoice.vn/tra-cuu/downloadhandler.ashx?type=pdf&code={0}&viewer=1&ext={1}", trans, reply.ToString().Substring(55, 8));
+            Process.Start(link);
         }
         private void ExportData()
         {
@@ -147,19 +161,19 @@ namespace ClientApp.UI.Report
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var row = Session.CompanyInfo;
-                string[] lstTitle = { String.Format("{0} - {1}", row.Name, row.Address),"BÁO CÁO TÌNH HÌNH DOANH THU", datetime };
+                string[] lstTitle = { String.Format("{0} - {1}", row.Name, row.Address), "BÁO CÁO TÌNH HÌNH DOANH THU", datetime };
                 Infragistics.Documents.Excel.Workbook workbook = new Infragistics.Documents.Excel.Workbook();
                 if (Path.GetExtension(saveFileDialog1.FileName) == ".xlsx")
                 {
                     workbook.SetCurrentFormat(WorkbookFormat.Excel2007);
                 }
                 workbook.Culture = CultureInfo.CurrentCulture;
-                Infragistics.Documents.Excel.Worksheet SheetExcel  =null;
+                Infragistics.Documents.Excel.Worksheet SheetExcel = null;
                 string sGroupSeparator = workbook.Culture.NumberFormat.CurrencyGroupSeparator;
                 string sDecimalSeparator = workbook.Culture.NumberFormat.CurrencyDecimalSeparator;
                 List<UltraGridColumn> lstColumn = new List<UltraGridColumn>();
                 UltraGridColumn clColumn = grdList.DisplayLayout.Bands[0].GetFirstVisibleCol(grdList.ActiveColScrollRegion, true);
-                while(clColumn != null)
+                while (clColumn != null)
                 {
                     lstColumn.Add(clColumn);
                     clColumn = clColumn.GetRelatedVisibleColumn(VisibleRelation.Next);
@@ -182,7 +196,7 @@ namespace ClientApp.UI.Report
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Alignment = HorizontalCellAlignment.Center;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Bold = ExcelDefaultableBoolean.True;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].Value = sTitle;
-                       
+
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.Font.Name = "";
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.BottomBorderStyle = CellBorderLineStyle.None;
                         SheetExcel.Rows[i].Cells[iHeaderPosition / 2].CellFormat.TopBorderStyle = CellBorderLineStyle.None;
@@ -238,14 +252,28 @@ namespace ClientApp.UI.Report
                     }
                 }
                 workbook.Save(saveFileDialog1.FileName);
+                if (MessageBox.Show("Xuất báo cáo thành công. Bạn có muốn xem không?","Thông báo",MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    var StartInfo = new System.Diagnostics.ProcessStartInfo();
+                    StartInfo.FileName = saveFileDialog1.FileName;
+                    StartInfo.CreateNoWindow = false;
+                    try
+                    {
+                        Process.Start(StartInfo);
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
             }
             else
             {
-               
+
             }
             saveFileDialog1.Dispose();
             saveFileDialog1 = null;
-                         
+
         }
         //Hàm thu hồi bộ nhớ cho COM Excel
         private static void releaseObject(object obj)

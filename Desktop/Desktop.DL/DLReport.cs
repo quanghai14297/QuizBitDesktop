@@ -40,9 +40,9 @@ namespace Desktop.DL
             var objects= new Dictionary<string, DateTime>();
             objects.Add("FromDate", FromDate);
             objects.Add("ToDate", ToDate);
-            ServiceResult<ReportSalesCustomer> list = CloudServiceFactory<ReportSalesCustomer>.ExecuteFunction("Report/getReportSalesCustomer", objects, HeaderParameter, "POST");
+            ServiceResult< List < ReportSalesCustomer >> list = CloudServiceFactory< List<ReportSalesCustomer>>.ExecuteFunction("Report/getReportSalesCustomer", objects, HeaderParameter, "POST");
             if (list.Success && list.Data != null)
-                return CommonFunction.ConvertItemToDataTable(list.Data);
+                return CommonFunction.ConvertToDataTable(list.Data);
             else return null;
         }
         public DataTable GetReportSalesArea(DateTime FromDate, DateTime ToDate)
@@ -50,9 +50,9 @@ namespace Desktop.DL
             var objects = new Dictionary<string, DateTime>();
             objects.Add("FromDate", FromDate);
             objects.Add("ToDate", ToDate);
-            ServiceResult<ReportSalesArea> item = CloudServiceFactory<ReportSalesArea>.ExecuteFunction("Report/getReportSalesArea", objects, HeaderParameter, "POST");
+            ServiceResult<List<ReportSalesArea>> item = CloudServiceFactory< List<ReportSalesArea>>.ExecuteFunction("Report/getReportSalesArea", objects, HeaderParameter, "POST");
             if (item.Success && item.Data != null)
-                return CommonFunction.ConvertItemToDataTable(item.Data);
+                return CommonFunction.ConvertToDataTable(item.Data);
             else return null;
         }
         public DataTable GetReportSales(DateTime FromDate, DateTime ToDate)
@@ -60,12 +60,21 @@ namespace Desktop.DL
             var objects = new Dictionary<string, DateTime>();
             objects.Add("FromDate", FromDate);
             objects.Add("ToDate", ToDate);
-            ServiceResult<SAInvoiceViewer> list = CloudServiceFactory<SAInvoiceViewer>.ExecuteFunction("Report/getReportSales", objects, HeaderParameter, "POST");
+            ServiceResult<List<SAInvoiceViewer>> list = CloudServiceFactory< List<SAInvoiceViewer>>.ExecuteFunction("Report/getReportSales", objects, HeaderParameter, "POST");
             if (list.Success && list.Data != null)
-                return CommonFunction.ConvertItemToDataTable(list.Data);
+                return CommonFunction.ConvertToDataTable(list.Data);
+            else return null;
+        }
+        public DataTable GetReportSalesEmployee(DateTime FromDate, DateTime ToDate)
+        {
+            var objects = new Dictionary<string, DateTime>();
+            objects.Add("FromDate", FromDate);
+            objects.Add("ToDate", ToDate);
+            ServiceResult<List<ReportSalesEmployee>> list = CloudServiceFactory< List<ReportSalesEmployee>>.ExecuteFunction("Report/getReportSalesEmployee", objects, HeaderParameter, "POST");
+            if (list.Success && list.Data != null)
+                return CommonFunction.ConvertToDataTable(list.Data);
             else return null;
         }
         
-
     }
 }

@@ -79,6 +79,7 @@
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool14 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuDelete");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool15 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
             Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuExport");
+            Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
             this.lblTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -330,6 +331,8 @@
             ButtonTool13,
             ButtonTool14,
             ButtonTool15});
+            appearance30.Image = ((object)(resources.GetObject("appearance30.Image")));
+            buttonTool2.SharedPropsInternal.AppearancesSmall.Appearance = appearance30;
             buttonTool2.SharedPropsInternal.Caption = "Xuất báo cáo";
             this.tbrFunction.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool6,
@@ -377,10 +380,12 @@
             // dtToDate
             // 
             this.dtToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtToDate.DateTime = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             this.dtToDate.Location = new System.Drawing.Point(589, 5);
             this.dtToDate.Name = "dtToDate";
             this.dtToDate.Size = new System.Drawing.Size(90, 21);
             this.dtToDate.TabIndex = 27;
+            this.dtToDate.Value = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -405,10 +410,12 @@
             // dtFromDate
             // 
             this.dtFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtFromDate.DateTime = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             this.dtFromDate.Location = new System.Drawing.Point(441, 5);
             this.dtFromDate.Name = "dtFromDate";
             this.dtFromDate.Size = new System.Drawing.Size(90, 21);
             this.dtFromDate.TabIndex = 24;
+            this.dtFromDate.Value = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             // 
             // frmSellingInventory_Fill_Panel
             // 

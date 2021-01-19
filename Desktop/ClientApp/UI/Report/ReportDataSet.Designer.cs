@@ -579,6 +579,10 @@ namespace ClientApp.UI.Report {
             
             private global::System.Data.DataColumn columnCompanyAddress;
             
+            private global::System.Data.DataColumn columnInvNo;
+            
+            private global::System.Data.DataColumn columnTransactionID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SAInvoiceViewerDataTable() {
@@ -1254,6 +1258,22 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InvNoColumn {
+                get {
+                    return this.columnInvNo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TransactionIDColumn {
+                get {
+                    return this.columnTransactionID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1369,7 +1389,9 @@ namespace ClientApp.UI.Report {
                         string CompanyEmail, 
                         string CompanyHotline, 
                         string CompanyWebsite, 
-                        string CompanyAddress) {
+                        string CompanyAddress, 
+                        string InvNo, 
+                        string TransactionID) {
                 SAInvoiceViewerRow rowSAInvoiceViewerRow = ((SAInvoiceViewerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RefID,
@@ -1451,7 +1473,9 @@ namespace ClientApp.UI.Report {
                         CompanyEmail,
                         CompanyHotline,
                         CompanyWebsite,
-                        CompanyAddress};
+                        CompanyAddress,
+                        InvNo,
+                        TransactionID};
                 rowSAInvoiceViewerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSAInvoiceViewerRow);
                 return rowSAInvoiceViewerRow;
@@ -1561,6 +1585,8 @@ namespace ClientApp.UI.Report {
                 this.columnCompanyHotline = base.Columns["CompanyHotline"];
                 this.columnCompanyWebsite = base.Columns["CompanyWebsite"];
                 this.columnCompanyAddress = base.Columns["CompanyAddress"];
+                this.columnInvNo = base.Columns["InvNo"];
+                this.columnTransactionID = base.Columns["TransactionID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1726,6 +1752,10 @@ namespace ClientApp.UI.Report {
                 base.Columns.Add(this.columnCompanyWebsite);
                 this.columnCompanyAddress = new global::System.Data.DataColumn("CompanyAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCompanyAddress);
+                this.columnInvNo = new global::System.Data.DataColumn("InvNo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvNo);
+                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRefID}, true));
                 this.columnRefID.AllowDBNull = false;
@@ -4418,6 +4448,38 @@ namespace ClientApp.UI.Report {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string InvNo {
+                get {
+                    try {
+                        return ((string)(this[this.tableSAInvoiceViewer.InvNoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'InvNo\' in table \'SAInvoiceViewer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSAInvoiceViewer.InvNoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TransactionID {
+                get {
+                    try {
+                        return ((string)(this[this.tableSAInvoiceViewer.TransactionIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TransactionID\' in table \'SAInvoiceViewer\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableSAInvoiceViewer.TransactionIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsBranchIDNull() {
                 return this.IsNull(this.tableSAInvoiceViewer.BranchIDColumn);
             }
@@ -5362,6 +5424,30 @@ namespace ClientApp.UI.Report {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetCompanyAddressNull() {
                 this[this.tableSAInvoiceViewer.CompanyAddressColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsInvNoNull() {
+                return this.IsNull(this.tableSAInvoiceViewer.InvNoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetInvNoNull() {
+                this[this.tableSAInvoiceViewer.InvNoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTransactionIDNull() {
+                return this.IsNull(this.tableSAInvoiceViewer.TransactionIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTransactionIDNull() {
+                this[this.tableSAInvoiceViewer.TransactionIDColumn] = global::System.Convert.DBNull;
             }
         }
         

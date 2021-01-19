@@ -29,5 +29,10 @@ namespace Desktop.BL
         {
             return new DL.DLReport(Session.Token).GetReportSales(FromDate, ToDate);
         }
+        public DataTable GetReportSalesEmployee(DateTime FromDate, DateTime ToDate)
+        {
+            return new DL.DLReport(Session.Token).GetReportSalesEmployee(FromDate, ToDate);
+        }
+
     }
 }

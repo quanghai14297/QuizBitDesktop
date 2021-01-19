@@ -226,5 +226,33 @@ namespace Desktop.BL
         {
             return new DL.DLSAInvoice().GetSAInvoice_Today_ByID(id);
         }
+        /// <summary>
+        /// Lấy ra Hóa đơn theo ID
+        /// </summary>
+        /// <typeparam name="T">Kiểu đối tượng</typeparam>
+        /// <returns></returns>
+        public DataTable UpdateInvoiceNumber(Guid id,string invNo, string TransactionID)
+        {
+            return new DL.DLSAInvoice().UpdateInvoiceNumber(id,invNo, TransactionID);
+        }
+        
+        /// <summary>
+        /// Lấy ra Hóa đơn theo ID
+        /// </summary>
+        /// <typeparam name="T">Kiểu đối tượng</typeparam>
+        /// <returns></returns>
+        public DataTable GetSAInvoiceDetailAll(Guid id)
+        {
+            return new DL.DLSAInvoice().GetSAInvoiceDetailAll(id);
+        }
+        /// <summary>
+        /// Lấy ra Hóa đơn theo ID
+        /// </summary>
+        /// <typeparam name="T">Kiểu đối tượng</typeparam>
+        /// <returns></returns>
+        public string GetSAInvoiceTransactionID(Guid id)
+        {
+            return new DL.DLSAInvoice().GetSAInvoiceTransactionID(id);
+        }
     }
 }

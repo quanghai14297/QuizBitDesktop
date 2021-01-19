@@ -32,11 +32,11 @@
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("ReportSalesCustomer", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCode");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalVATAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalSaleAmount");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalVATAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("TotalSaleAmount");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("CustomerName");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -76,6 +76,7 @@
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool14 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuDelete");
             Infragistics.Win.UltraWinToolbars.ButtonTool ButtonTool15 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuGet");
             Infragistics.Win.UltraWinToolbars.ButtonTool buttonTool2 = new Infragistics.Win.UltraWinToolbars.ButtonTool("mnuExport");
+            Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             this.lblTitle = new Infragistics.Win.Misc.UltraLabel();
@@ -130,29 +131,29 @@
             appearance2.TextVAlignAsString = "Middle";
             this.grdList.DisplayLayout.Appearance = appearance2;
             this.grdList.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn3.Header.Caption = "Mã khách hàng";
-            ultraGridColumn3.Header.VisiblePosition = 0;
-            ultraGridColumn7.Header.Caption = "Tổng";
-            ultraGridColumn7.Header.VisiblePosition = 4;
-            ultraGridColumn7.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
-            ultraGridColumn7.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
-            ultraGridColumn8.Header.Caption = "Tiền thuế";
-            ultraGridColumn8.Header.VisiblePosition = 2;
-            ultraGridColumn8.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
-            ultraGridColumn8.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
-            ultraGridColumn9.Header.Caption = "Tiền hàng";
-            ultraGridColumn9.Header.VisiblePosition = 3;
-            ultraGridColumn9.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
-            ultraGridColumn9.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
-            ultraGridColumn4.Header.Caption = "Tên khách hàng";
-            ultraGridColumn4.Header.VisiblePosition = 1;
-            ultraGridColumn4.Width = 147;
+            ultraGridColumn1.Header.Caption = "Mã khách hàng";
+            ultraGridColumn1.Header.VisiblePosition = 0;
+            ultraGridColumn2.Header.Caption = "Tổng";
+            ultraGridColumn2.Header.VisiblePosition = 4;
+            ultraGridColumn2.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
+            ultraGridColumn2.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
+            ultraGridColumn5.Header.Caption = "Tiền thuế";
+            ultraGridColumn5.Header.VisiblePosition = 2;
+            ultraGridColumn5.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
+            ultraGridColumn5.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
+            ultraGridColumn6.Header.Caption = "Tiền hàng";
+            ultraGridColumn6.Header.VisiblePosition = 3;
+            ultraGridColumn6.MaskDisplayMode = Infragistics.Win.UltraWinMaskedEdit.MaskMode.IncludeLiterals;
+            ultraGridColumn6.MaskInput = "{LOC}nn,nnn,nnn,nnn,nnn.nn đ";
+            ultraGridColumn10.Header.Caption = "Tên khách hàng";
+            ultraGridColumn10.Header.VisiblePosition = 1;
+            ultraGridColumn10.Width = 147;
             ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn3,
-            ultraGridColumn7,
-            ultraGridColumn8,
-            ultraGridColumn9,
-            ultraGridColumn4});
+            ultraGridColumn1,
+            ultraGridColumn2,
+            ultraGridColumn5,
+            ultraGridColumn6,
+            ultraGridColumn10});
             this.grdList.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.grdList.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.grdList.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
@@ -241,7 +242,7 @@
             this.grdList.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand;
             this.grdList.Location = new System.Drawing.Point(0, 31);
             this.grdList.Name = "grdList";
-            this.grdList.Size = new System.Drawing.Size(800, 391);
+            this.grdList.Size = new System.Drawing.Size(800, 366);
             this.grdList.TabIndex = 18;
             this.grdList.Text = "Danh sách";
             this.grdList.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
@@ -265,7 +266,7 @@
             this._frmBaseList_Toolbars_Dock_Area_Top.ForeColor = System.Drawing.SystemColors.ControlText;
             this._frmBaseList_Toolbars_Dock_Area_Top.Location = new System.Drawing.Point(0, 0);
             this._frmBaseList_Toolbars_Dock_Area_Top.Name = "_frmBaseList_Toolbars_Dock_Area_Top";
-            this._frmBaseList_Toolbars_Dock_Area_Top.Size = new System.Drawing.Size(800, 25);
+            this._frmBaseList_Toolbars_Dock_Area_Top.Size = new System.Drawing.Size(800, 50);
             this._frmBaseList_Toolbars_Dock_Area_Top.ToolbarsManager = this.tbrFunction;
             // 
             // tbrFunction
@@ -317,6 +318,8 @@
             ButtonTool13,
             ButtonTool14,
             ButtonTool15});
+            appearance27.Image = ((object)(resources.GetObject("appearance27.Image")));
+            buttonTool2.SharedPropsInternal.AppearancesSmall.Appearance = appearance27;
             buttonTool2.SharedPropsInternal.Caption = "Xuất báo cáo";
             this.tbrFunction.Tools.AddRange(new Infragistics.Win.UltraWinToolbars.ToolBase[] {
             ButtonTool6,
@@ -345,9 +348,9 @@
             this._frmBaseList_Toolbars_Dock_Area_Left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
             this._frmBaseList_Toolbars_Dock_Area_Left.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Left;
             this._frmBaseList_Toolbars_Dock_Area_Left.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._frmBaseList_Toolbars_Dock_Area_Left.Location = new System.Drawing.Point(0, 25);
+            this._frmBaseList_Toolbars_Dock_Area_Left.Location = new System.Drawing.Point(0, 50);
             this._frmBaseList_Toolbars_Dock_Area_Left.Name = "_frmBaseList_Toolbars_Dock_Area_Left";
-            this._frmBaseList_Toolbars_Dock_Area_Left.Size = new System.Drawing.Size(0, 425);
+            this._frmBaseList_Toolbars_Dock_Area_Left.Size = new System.Drawing.Size(0, 400);
             this._frmBaseList_Toolbars_Dock_Area_Left.ToolbarsManager = this.tbrFunction;
             // 
             // _frmBaseList_Toolbars_Dock_Area_Right
@@ -356,18 +359,20 @@
             this._frmBaseList_Toolbars_Dock_Area_Right.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(199)))), ((int)(((byte)(231)))));
             this._frmBaseList_Toolbars_Dock_Area_Right.DockedPosition = Infragistics.Win.UltraWinToolbars.DockedPosition.Right;
             this._frmBaseList_Toolbars_Dock_Area_Right.ForeColor = System.Drawing.SystemColors.ControlText;
-            this._frmBaseList_Toolbars_Dock_Area_Right.Location = new System.Drawing.Point(800, 25);
+            this._frmBaseList_Toolbars_Dock_Area_Right.Location = new System.Drawing.Point(800, 50);
             this._frmBaseList_Toolbars_Dock_Area_Right.Name = "_frmBaseList_Toolbars_Dock_Area_Right";
-            this._frmBaseList_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(0, 425);
+            this._frmBaseList_Toolbars_Dock_Area_Right.Size = new System.Drawing.Size(0, 400);
             this._frmBaseList_Toolbars_Dock_Area_Right.ToolbarsManager = this.tbrFunction;
             // 
             // dtToDate
             // 
             this.dtToDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtToDate.DateTime = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             this.dtToDate.Location = new System.Drawing.Point(593, 3);
             this.dtToDate.Name = "dtToDate";
             this.dtToDate.Size = new System.Drawing.Size(90, 21);
             this.dtToDate.TabIndex = 27;
+            this.dtToDate.Value = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -392,10 +397,12 @@
             // dtFromDate
             // 
             this.dtFromDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtFromDate.DateTime = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             this.dtFromDate.Location = new System.Drawing.Point(445, 3);
             this.dtFromDate.Name = "dtFromDate";
             this.dtFromDate.Size = new System.Drawing.Size(90, 21);
             this.dtFromDate.TabIndex = 24;
+            this.dtFromDate.Value = new System.DateTime(2021, 1, 18, 0, 0, 0, 0);
             // 
             // frmSellingInventory_Fill_Panel
             // 
@@ -411,9 +418,9 @@
             this.frmSellingInventory_Fill_Panel.ClientArea.Controls.Add(this.dtFromDate);
             this.frmSellingInventory_Fill_Panel.Cursor = System.Windows.Forms.Cursors.Default;
             this.frmSellingInventory_Fill_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.frmSellingInventory_Fill_Panel.Location = new System.Drawing.Point(0, 25);
+            this.frmSellingInventory_Fill_Panel.Location = new System.Drawing.Point(0, 50);
             this.frmSellingInventory_Fill_Panel.Name = "frmSellingInventory_Fill_Panel";
-            this.frmSellingInventory_Fill_Panel.Size = new System.Drawing.Size(800, 425);
+            this.frmSellingInventory_Fill_Panel.Size = new System.Drawing.Size(800, 400);
             this.frmSellingInventory_Fill_Panel.TabIndex = 29;
             // 
             // btnGetData
